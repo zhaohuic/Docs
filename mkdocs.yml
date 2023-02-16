@@ -8,7 +8,7 @@ nav:
     - Wulver: systems/wulver/index.md
     - Lochness: systems/lochness/index.md
     - Stheno: systems/stheno/index.md
-  - Policies
+  - Policies:
     - Policies: policies/index.md
   - Software:
     - Development:
