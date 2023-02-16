@@ -9,7 +9,7 @@ nav:
     - Lochness: systems/lochness/index.md
     - Stheno: systems/stheno/index.md
   - Policies
-    - policies/index.md
+    - Policies: policies/index.md
   - Software:
     - Development:
       - Compilers: software/devel/compilers.md
