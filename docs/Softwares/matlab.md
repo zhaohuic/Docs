@@ -52,6 +52,10 @@ Following this procedure a user will be able to submit jobs to lochness or sthen
 login-1-45 ~ >: echo $HOME
 /home/g/guest24
 ```
+
+For details on how to Logon to Lochness from local computer please see this [link](https://hackmd.io/@absrocks/BJRlQtBVi)
+
+
 7. Make sure to check the box "Use unique subfolders." Click "Next" to continue.
 
 ![matlab_profile6](img/GenericProfile6.png)
