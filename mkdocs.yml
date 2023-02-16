@@ -1,10 +1,15 @@
 nav:
   - Home: index.md
+  - About Us:
+    - Staff: about/index.md
+    - Contact Us: about/contact.md
   - Systems:
     - systems/index.md
     - Wulver: systems/wulver/index.md
     - Lochness: systems/lochness/index.md
     - Stheno: systems/stheno/index.md
+  - Policies
+    - policies/index.md
   - Software:
     - Development:
       - Compilers: software/devel/compilers.md
@@ -15,6 +20,8 @@ nav:
         - OpenMP: software/devel/openmp.md
         - CUDA: software/devel/cuda.md
         - OpenACC: software/devel/openacc.md
+  - Tutorials: 
+    - tutorials/index.md
 site_name: ARCS HPC Documentation
 site_description: ARCS HPC Documentation
 site_author: ARCS HPC
