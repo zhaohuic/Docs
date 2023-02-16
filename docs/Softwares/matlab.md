@@ -6,12 +6,13 @@
 3. User needs to select the correct installer based on the OS (Mac or Windows).
 4. Run the installer. 
 
-![](https://i.imgur.com/V82x3C2.png)
-![](https://i.imgur.com/TV7YqUd.png)
+![matlab_install_1](img/matlab_installation_1.png)
+![matlab_install_2](img/matlab_installation_2.png)
+
 
 5. Make sure to check **Parallel Computing Toolbox** option.
 
-![](https://i.imgur.com/axkAt62.png)
+![matlab_install_3](img/matlab_installation_3.png)
 
 6. Continue by selecting **Next** and MATLAB will be installed on your computer.
 
@@ -24,13 +25,13 @@ Following this procedure a user will be able to submit jobs to lochness or sthen
 
 1. From the Matlab window, click on "Add-ons" and select "Get Add-Ons."
 
-![](https://i.imgur.com/pL4CnaA.png)
+![matlab_addons](img/ClickOnAddons.png)
 
 2. In the search box enter "slurm" and click on the magnifying glass icon. Select "Parallel Computing Toolbox plugin for MATLAB Parallel Server with Slurm". Alternatively, this Add-On can be downloaded directly from the [Mathworks](https://www.mathworks.com/matlabcentral/fileexchange/52807-parallel-computing-toolbox-plugin-for-matlab-parallel-server-with-slurm) site.
-![](https://i.imgur.com/Hgq3Izp.jpg)
+![matlab_slurm](img/SlurmAddOn.png)
 
 3. Click on "Install."
-![](https://i.imgur.com/2z5Yi1Q.jpg)
+![matlab_addons_install](img/ClickOnInstall.png)
 
 4. The installation of the Add-On is complete. Click on "OK" the start the "Generic Profile Wizard for Slurm."
 

@@ -7,7 +7,7 @@ nav:
     - 'Policies': 
       - 'Lochness User Policies': 'Policies/lochness_policies.md'
       - 'Wulver Usage and Condo Policies': 'Policies/wulver_policies.md'
-    - 'Facilities': facilities/
+    - 'Facilities': facilities/facilities.md
     - Softwares:
       - 'Matlab': 'Softwares/matlab.md'
 theme: readthedocs
