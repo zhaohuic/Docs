@@ -1,0 +1,34 @@
+nav:
+  - Home: index.md
+  - Systems:
+    - systems/index.md
+    - Wulver: systems/wulver/index.md
+    - Lochness: systems/lochness/index.md
+    - Stheno: systems/stheno/index.md
+  - Software:
+    - Development:
+      - Compilers: software/devel/compilers.md
+      - Build Tools:
+        - CMake: software/devel/cmake.md
+      - Programming Models:
+        - MPI: software/devel/mpi.md
+        - OpenMP: software/devel/openmp.md
+        - CUDA: software/devel/cuda.md
+        - OpenACC: software/devel/openacc.md
+site_name: ARCS HPC Documentation
+site_description: ARCS HPC Documentation
+site_author: ARCS HPC
+site_url: ""
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.path
+extra_css:
+  - stylesheets/extra.css
+repo_url: https://github.com/arcs-njit-edu/Docs
+repo_name: arcs-njit-edu/Docs

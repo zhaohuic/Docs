@@ -1,0 +1,16 @@
+:root {
+  /* Default color shades */
+  -md-default-fg-color:       #CC0000;
+  -md-default-fg-color-light: #CC0000;
+  -md-default-fg-color-dark:  #CC0000;
+
+  /* Primary color shades */
+  -md-primary-fg-color:       #CC0000;
+  -md-primary-fg-color-light: #CC0000;
+  -md-primary-fg-color-dark:  #CC0000;
+}
+
+.md-grid {
+  max-width: initial;
+}
+  
