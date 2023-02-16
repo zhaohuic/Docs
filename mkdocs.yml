@@ -1,0 +1,17 @@
+site_name: NJIT HPC
+site_url: https://example.com/
+repo_url: https://github.com/absrocks/mkdocs
+nav:
+    - Home: index.md
+    - Clusters: clusters.md
+    - 'Policies': 
+      - 'Lochness User Policies': 'Policies/lochness_policies.md'
+      - 'Wulver Usage and Condo Policies': 'Policies/wulver_policies.md'
+    - 'Facilities': facilities/
+    - Softwares:
+      - 'Matlab': 'Softwares/matlab.md'
+theme: readthedocs
+highlightjs: true
+hljs_languages:
+    - yaml
+    - django
