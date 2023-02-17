@@ -26,6 +26,7 @@ site_name: ARCS HPC Documentation
 site_description: ARCS HPC Documentation
 site_author: ARCS HPC
 site_url: ""
+use_directory_urls: false
 theme:
   name: material
   features:
@@ -35,6 +36,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.expand
     - navigation.path
+    - toc.follow
 extra_css:
   - stylesheets/extra.css
 repo_url: https://github.com/arcs-njit-edu/Docs
