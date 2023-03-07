@@ -1,16 +1,45 @@
 site_name: NJIT HPC
 site_url: https://example.com/
 repo_url: https://github.com/absrocks/mkdocs
+repo_name: arcs-njit-edu/Docs
 nav:
     - Home: index.md
-    - Clusters: clusters.md
+    - Clusters:
+      - 'Wulver': 'clusters/wulver.md'
+      - 'Lochness': 'clusters/lochness.md'
+      - 'Stheno': 'clusters/stheno.md'
     - 'Policies': 
       - 'Lochness User Policies': 'Policies/lochness_policies.md'
       - 'Wulver Usage and Condo Policies': 'Policies/wulver_policies.md'
-    - 'Facilities': facilities/facilities.md
+    - 'Facilities': 'facilities/facilities.md'
     - Softwares:
       - 'Matlab': 'Softwares/matlab.md'
-theme: readthedocs
+theme: 
+  name: material
+  logo: img/njit_logo.png
+  favicon: favicon.ico
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.path
+    - toc.follow
+extra_css:
+    - stylesheets/extra.css
 highlightjs: true
 hljs_languages:
     - yaml

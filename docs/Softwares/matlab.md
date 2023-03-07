@@ -1,73 +1,89 @@
 # Use MATLAB on NJIT HPC
 
 ## Installation steps of MATLAB on local machine
-1. Go to https://www.mathworks.com/downloads/ and register with your NJIT email address.
-2. Select the **R2022a** version to download.
-3. User needs to select the correct installer based on the OS (Mac or Windows).
-4. Run the installer.
+* Go to [Mathworks Download](https://www.mathworks.com/downloads/) and register with your NJIT email address.
+* Select the **R2022a** version to download. 
+* User needs to select the correct installer based on the OS (Mac or Windows). 
+* Run the installer.
 
-![matlab_install_1](img/matlab_installation_1.png)
-![matlab_install_2](img/matlab_installation_2.png)
-5. Make sure to check **Parallel Computing Toolbox** option.
+   ![matlab_install_1](img/matlab_installation_1.png)
+   ![matlab_install_2](img/matlab_installation_2.png)
 
-![matlab_install_3](img/matlab_installation_3.png)
-6. Continue by selecting **Next** and MATLAB will be installed on your computer.
+* Make sure to check **Parallel Computing Toolbox** option.
+   
+    ![matlab_install_3](img/matlab_installation_3.png)
+
+* Continue by selecting **Next** and MATLAB will be installed on your computer.
 
 ## Setup Slurm profile to run MATLAB on Lochness
 Following this procedure a user will be able to submit jobs to lochness or stheno from Matlab running locally on the user's computer.
 
 ### Installing the Add-On
 
-1. From the Matlab window, click on "Add-ons" and select "Get Add-Ons."
+From the Matlab window, click on "Add-ons" and select "Get Add-Ons."
+ 
+   ![matlab_addons](img/ClickOnAddons.png)
 
-![matlab_addons](img/ClickOnAddons.png)
-2. In the search box enter "slurm" and click on the magnifying glass icon. Select "Parallel Computing Toolbox plugin for MATLAB Parallel Server with Slurm". Alternatively, this Add-On can be downloaded directly from the [Mathworks](https://www.mathworks.com/matlabcentral/fileexchange/52807-parallel-computing-toolbox-plugin-for-matlab-parallel-server-with-slurm) site.
+In the search box enter "slurm" and click on the magnifying glass icon. Select "Parallel Computing Toolbox plugin for MATLAB Parallel Server with Slurm". Alternatively, this Add-On can be downloaded directly from the [Mathworks](https://www.mathworks.com/matlabcentral/fileexchange/52807-parallel-computing-toolbox-plugin-for-matlab-parallel-server-with-slurm) site.
+   
+   ![matlab_slurm](img/SlurmAddOn.png)
 
-![matlab_slurm](img/SlurmAddOn.png)
-3. Click on "Install."
+Click on "Install."
+
 ![matlab_addons_install](img/ClickOnInstall.png)
-4. The installation of the Add-On is complete. Click on "OK" the start the "Generic Profile Wizard for Slurm."
-![matlab_addons_install_complete](img/InstallationComplete.png)
 
 ### Creating a Profile for Lochness or Stheno
 
-1. The following steps will create a profile for lochness (or stheno). Click "Next" to begin.
+The following steps will create a profile for lochness (or stheno). Click "Next" to begin.
 
 ![matlab_profile1](img/GenericProfile1.png)
-2. In the "Operating System" screen "Unix" is already selected. Click "Next" to continue.
+
+In the "Operating System" screen "Unix" is already selected. Click "Next" to continue.
 
 ![matlab_profile2](img/GenericProfile2.png)
-3. This "Submission Mode" screen determines whether or not to use a "shared" or "nonshared" submission mode. Since Matlab installed on your personal computer or laptop does not use a shared job location storage, select "No" where indicated and click "Next" to continue.
+
+This "Submission Mode" screen determines whether or not to use a "shared" or "nonshared" submission mode. Since Matlab installed on your personal computer or laptop does not use a shared job location storage, select "No" where indicated and click "Next" to continue.
 
 ![matlab_profile3](img/GenericProfile3.png)
-4. Click "Next" to continue.
+
+Click "Next" to continue.
 
 ![matlab_profile4](img/GenericProfile4.png)
-5. In the "Connection Details" screen, enter the cluster host, either "lochness.njit.edu" or "stheno.njit.edu." Enter your UCID for the username. Select "No" for the "Do you want to use an identity file to log in to the cluster" option and click next to continue.
+
+In the "Connection Details" screen, enter the cluster host, either "lochness.njit.edu" or "stheno.njit.edu." Enter your UCID for the username. Select "No" for the "Do you want to use an identity file to log in to the cluster" option and click next to continue.
 
 ![matlab_profile5](img/GenericProfile5.png)
-6. In the "Cluster Details" screen enter the full path to the directory on lochness to store the Matlab job files. In the case the directory is $HOME/MDCS. MDCS stands for Matlab Distributed Computing Server. It is not necessary to name this directory MDCS. This directory can be named anything you wish. To determine the value of $HOME, logon to lochness. For details on how to Logon to Lochness from local computer please see this [link](https://hackmd.io/@absrocks/BJRlQtBVi). Once connected to Lochness run the following:
+
+In the "Cluster Details" screen enter the full path to the directory on lochness to store the Matlab job files. In the case the directory is $HOME/MDCS. MDCS stands for Matlab Distributed Computing Server. It is not necessary to name this directory MDCS. This directory can be named anything you wish. To determine the value of $HOME, logon to lochness. For details on how to Logon to Lochness from local computer please see this [link](https://hackmd.io/@absrocks/BJRlQtBVi). Once connected to Lochness run the following:
 
 ```
-login-1-45 ~ >: echo $HOME
-/home/g/guest24
+  login-1-45 ~ >: echo $HOME
+  /home/g/guest24
 ```
 
-For details on how to Logon to Lochness from local computer please see this [link](https://hackmd.io/@absrocks/BJRlQtBVi)
-
-
-7. Make sure to check the box "Use unique subfolders." Click "Next" to continue.
+Make sure to check the box "Use unique subfolders." Click "Next" to continue.
 
 ![matlab_profile6](img/GenericProfile6.png)
-8. In the "Workers" screen enter "512" for the number of workers and "/opt/site/easybuild/software/MATLAB/2022a" for "MATLAB installation folders for workers." Click "Next" to continue.
+
+In the "Workers" screen enter "512" for the number of workers and "/opt/site/easybuild/software/MATLAB/2022a" for "MATLAB installation folders for workers." Click "Next" to continue.
+
 ![matlab_profile7](img/GenericProfile7.png)
-9. In the "License" screen make sure to select "Network license manager" and click "Next" to continue.
+
+In the "License" screen make sure to select "Network license manager" and click "Next" to continue.
+
 ![matlab_profile8](img/GenericProfile8.png)
-10. In the "Profile Details" screen enter either "Lochness" or "Stheno" depending on which cluster you are making a profile for. The "Cluster description" is optional and may be left blank. Click "Next" to continue.
+
+In the "Profile Details" screen enter either "Lochness" or "Stheno" depending on which cluster you are making a profile for. The "Cluster description" is optional and may be left blank. Click "Next"to continue.
+
 ![](https://wiki.hpc.arcs.njit.edu/images/4/4d/GenericProfile9.png)
-11. In the "Summary" screen make sure everything is correct and click "Create."
+
+In the "Summary" screen make sure everything is correct and click "Create."
+
 ![matlab_profile10](img/GenericProfile10.png)
-12. In the "Profile Created Successfully" screen, check the "Set the new profile as default" box and click on "Finish."![](https://wiki.hpc.arcs.njit.edu/images/b/b8/GenericProfile11.png)
+
+In the "Profile Created Successfully" screen, check the "Set the new profile as default" box and click on "Finish."
+
+![](https://wiki.hpc.arcs.njit.edu/images/b/b8/GenericProfile11.png)
 
 ## Submitting a Serial Job
 This section will demonstrate how to create a cluster object and submit a simple job to the cluster. The job will run the 'hostname' command on the node assigned to the job. The output will indicate clearly that the job ran on the cluster and not on the local computer.
