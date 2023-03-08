@@ -12,35 +12,28 @@ nav:
       - 'Lochness User Policies': 'Policies/lochness_policies.md'
       - 'Wulver Usage and Condo Policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
-    - Softwares:
+    - Software:
       - 'Matlab': 'Softwares/matlab.md'
 theme: 
   name: material
-  logo: img/njit_logo.png
+  logo: img/njit_logo.jpeg
   favicon: favicon.ico
   palette:
     # Palette toggle for light mode
-    - scheme: default
+    - scheme: red
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-features:
+  features:
     - navigation.instant
     - navigation.tracking
-    - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.expand
     - navigation.path
     - toc.follow
 extra_css:
     - stylesheets/extra.css
-highlightjs: true
-hljs_languages:
-    - yaml
-    - django
