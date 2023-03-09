@@ -1,7 +1,8 @@
 :root {
-  --md-primary-fg-color:        #c44831;
-  --md-primary-fg-color--light: #90030C;
-  --md-primary-fg-color--dark:  #90030C;
+  --md-primary-fg-color:        #cc0000;
+  --md-primary-fg-color--light: #cc0000;
+  --md-primary-fg-color--dark:  #cc0000;
+  --md-footer-bg-color: #cc0000;
 }
 
 .md-grid {
