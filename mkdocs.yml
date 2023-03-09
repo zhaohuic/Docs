@@ -1,7 +1,7 @@
 site_name: NJIT HPC
-site_url: https://zingy-torte-84f203.netlify.app/
-repo_url: https://github.com/absrocks/mkdocs
-repo_name: arcs-njit-edu/Docs
+site_url: https://absrocks.github.io/Docs/
+repo_url: https://github.com/absrocks/Docs
+repo_name: absrocks/Docs
 nav:
     - Home: index.md
     - Clusters:
