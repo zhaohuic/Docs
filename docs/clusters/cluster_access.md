@@ -2,7 +2,7 @@
 The following instructions are provided to access NJIT HPC clusters from a local computer.
 ## Getting a Login
 Faculty can obtain a login to NJIT's HPC & BD systems by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu). Students can obtain a login either by taking a class that uses one of the systems or by asking their faculty adviser to [contact](mailto:hpc@njit.edu) on their behalf. Your login and password are the same as for any NJIT AFS system.
-## Access to clusters
+## Access to Clusters
 Make sure the user is connected to `NJITsecure` if the user is on campus. If working off campus, NJIT VPN is required. Please find the details [here](https://ist.njit.edu/vpn).
 Here we will provide instructions on getting started with NJIT HPC for the user who uses Windows OS.
 
@@ -61,7 +61,7 @@ The authenticity of host 'user@lochness.njit.edu' cannot be established.
   
 Answering `yes` to the prompt will cause the session to continue. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without the need for any approvals. 
 
-## Transfer the data from the local machine to clusters or vice versa 
+## Transfer the Data from the Local Machine to Clusters or vice versa 
 ### Windows Users
 User needs to select the `follow terminal folder` of the left pane of the MobaXterm terminal. 
 
@@ -79,7 +79,7 @@ User can also use the command in the terminal to transfer in and out the data
 ```
 rsync -avzP /path/to/local/machine ucid@HPC_HOST.njit.edu:/path/to/destination
 ```
-Replace `HPC_HOST` with `lochness` or `Stheno`. This will transfer the data from the local machine to HPC cluster. 
+Replace `HPC_HOST` with `lochness` or `Stheno`. This will transfer the data from the ocal machine to HPC cluster. 
 To transfer the data from HPC cluster to local machine use
   
 ```
