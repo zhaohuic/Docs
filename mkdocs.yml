@@ -1,5 +1,5 @@
 site_name: NJIT HPC
-site_url: https://example.com/
+site_url: https://zingy-torte-84f203.netlify.app/
 repo_url: https://github.com/absrocks/mkdocs
 repo_name: arcs-njit-edu/Docs
 nav:
@@ -28,7 +28,7 @@ theme:
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
-      accent: red
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode

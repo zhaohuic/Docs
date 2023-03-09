@@ -5,13 +5,12 @@
 * Select the **R2022a** version to download. 
 * User needs to select the correct installer based on the OS (Mac or Windows). 
 * Run the installer.
-
-   ![matlab_install_1](img/matlab_installation_1.png)
-   ![matlab_install_2](img/matlab_installation_2.png)
-
+   <img src="../img/matlab_installation_1.png" width=80% height=80%>
+   <img src="../img/matlab_installation_2.png" width=80% height=80%>
+    
 * Make sure to check **Parallel Computing Toolbox** option.
    
-    ![matlab_install_3](img/matlab_installation_3.png)
+    <img src="../img/matlab_installation_3.png" width=80% height=80%>
 
 * Continue by selecting **Next** and MATLAB will be installed on your computer.
 
@@ -21,8 +20,8 @@ Following this procedure a user will be able to submit jobs to lochness or sthen
 ### Installing the Add-On
 
 From the Matlab window, click on "Add-ons" and select "Get Add-Ons."
- 
-   ![matlab_addons](img/ClickOnAddons.png)
+
+   <img src="../img/ClickOnAddons.png" width=80% height=80%>
 
 In the search box enter "slurm" and click on the magnifying glass icon. Select "Parallel Computing Toolbox plugin for MATLAB Parallel Server with Slurm". Alternatively, this Add-On can be downloaded directly from the [Mathworks](https://www.mathworks.com/matlabcentral/fileexchange/52807-parallel-computing-toolbox-plugin-for-matlab-parallel-server-with-slurm) site.
    

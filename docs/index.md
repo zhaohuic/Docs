@@ -1,6 +1,6 @@
 # HPC
 
-Welcome to HPC at NJIT. NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include cpu nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
+Welcome to HPC at NJIT.
 
 NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include cpu nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
 
