@@ -1,0 +1,11 @@
+mkdocs
+mkdocs-material
+mkdocs-redirects
+mkdocs-git-revision-date-localized-plugin
+mkdocs-autorefs
+
+mkdocstrings[python]
+mkdocs-gen-files
+mkdocs-literate-nav
+mkdocs-macros-plugin
+mkdocs-section-index
