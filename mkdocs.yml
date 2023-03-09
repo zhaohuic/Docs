@@ -1,0 +1,42 @@
+site_name: NJIT HPC
+site_url: https://absrocks.github.io/Docs/
+repo_url: https://github.com/absrocks/Docs
+repo_name: absrocks/Docs
+nav:
+    - Home: index.md
+    - Clusters:
+      - 'Wulver': 'clusters/wulver.md'
+      - 'Lochness': 'clusters/lochness.md'
+      - 'Stheno': 'clusters/stheno.md'
+      - 'User Access to Clusters': 'clusters/cluster_access.md'
+    - 'Policies': 
+      - 'Lochness User Policies': 'Policies/lochness_policies.md'
+      - 'Wulver Usage and Condo Policies': 'Policies/wulver_policies.md'
+    - 'Facilities': 'facilities/facilities.md'
+    - Software:
+      - 'Matlab': 'Softwares/matlab.md'
+theme: 
+  name: material
+  logo: img/njit_logo.jpeg
+  favicon: favicon.ico
+  palette:
+    # Palette toggle for light mode
+    - scheme: red
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs.sticky
+    - navigation.path
+    - toc.follow
+extra_css:
+    - stylesheets/extra.css
