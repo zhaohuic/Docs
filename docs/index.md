@@ -14,4 +14,4 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 * Wulver
 
-Please direct all HPC related issues to hpc@njit.edu.
+Please direct all HPC related issues to [hpc@njit.edu](mailto:hpc@njit.edu).
