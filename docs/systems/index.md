@@ -1,5 +1,0 @@
-# Systems
-
-* Wulver
-* Lochness
-* Stheno

@@ -1,17 +1,17 @@
-# Welcome to MkDocs
+# HPC
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to HPC at NJIT.
 
-## Commands
+NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include cpu nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Current clusters
 
-## Project layout
+* Lochness
+* Stheno
+ 
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Incoming cluster
+
+* Wulver
+
+Please direct all HPC related issues to [hpc@njit.edu](mailto:hpc@njit.edu).
