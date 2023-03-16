@@ -4,7 +4,6 @@ on:
     branches:
       - master
       - main
-      - abhi_patch
 permissions:
   contents: write
 jobs:
