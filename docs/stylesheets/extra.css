@@ -7,8 +7,10 @@
   --md-primary-fg-color:               #d8272d;
   --md-primary-fg-color--light:        #d8272d;
   --md-primary-fg-color--dark:         rgb(255,255,0);
-  --md-footer-fg-color:                #d8272d;
+  --md-footer-fg-color:                #ffffff;
   --md-footer-bg-color:                #d8272d;
+# Not sure why this works in light mode when it specifies dark
+  --md-footer-bg-color--dark:                #d8272d;
   --md-footer--fg-color--transparent:  rgb(0,0,29,0.25);
   --md-footer--fg-color--dark:         indigo;
 
@@ -23,5 +25,4 @@
 }
 
 .md-grid {
-  max-width: initial;
-}
+  max-width: initial
