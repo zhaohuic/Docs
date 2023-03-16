@@ -11,13 +11,13 @@
   --md-footer-bg-color:                #d8272d;
   --md-footer-bg-color--dark:                #d8272d;
   --md-footer--fg-color--transparent:  rgb(0,0,29,0.25);
-  --md-footer--fg-color--dark:         indigo;
+  --md-footer--fg-color--dark:         #d8272d;
 
     /* Accent color shades */
 
   --md-accent-fg-color:                #d8272d;
   --md-accent-fg-color--transparent:   rgb(0,0,29,0.25);
-  --md-accent-fg-color--dark:          indigo;
+  --md-accent-fg-color--dark:          #d8272d;
 
   --md-accent-bg-color:                #d8272d;
   --md-accent-bg-color--light:         rgb(0,0,235,0.5);
