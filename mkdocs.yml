@@ -15,6 +15,7 @@ nav:
     - 'Facilities': 'facilities/facilities.md'
     - Software:
       - 'Matlab': 'Softwares/matlab.md'
+      - 'LAMMPS': 'Softwares/lammps.md'
 theme: 
   name: material
   logo: img/njit_logo.jpeg
