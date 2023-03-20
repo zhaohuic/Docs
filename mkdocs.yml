@@ -18,7 +18,7 @@ nav:
       - 'Conda': 'Softwares/conda.md'
 theme: 
   name: material
-  logo: img/njit_logo.jpeg
+  logo: img/Logo_NJIT.png
   favicon: favicon.ico
   palette:
     # Palette toggle for light mode
@@ -29,6 +29,7 @@ theme:
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
