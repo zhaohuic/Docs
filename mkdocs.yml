@@ -15,7 +15,9 @@ nav:
     - 'Facilities': 'facilities/facilities.md'
     - Software:
       - 'Matlab': 'Softwares/matlab.md'
+      - 'LAMMPS': 'Softwares/lammps.md'
       - 'Conda': 'Softwares/conda.md'
+
 theme: 
   name: material
   logo: img/Logo_NJIT.png
@@ -50,3 +52,32 @@ extra:
       link: https://github.com/arcs-njit-edu/Docs
     - icon: fontawesome/solid/paper-plane
       link: mailto:hpc@njit.edu
+# Extensions
+markdown_extensions:
+  - meta
+  - attr_list
+  - footnotes
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols:
+      fractions: false
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets
+
