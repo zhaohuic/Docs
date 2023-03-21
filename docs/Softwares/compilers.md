@@ -2,15 +2,12 @@
 We offer both GNU and Intel compilers. Here is the list of compilers you can find on our cluster. 
 ## Availability
 
-| Compilers   | Versions   |                modules                 |
-|-------------|------------|:--------------------------------------:|
-| GNU         | 8.3.0      |        `module load GCC/8.3.0`         |
-| GNU         | 9.3.0      |        `module load GCC/9.3.0`         |
-| GNU         | 10.2.0     |        `module load GCC/10.2.0`        |
-| GNU         | 10.3.0     |        `module load GCC/10.3.0`        |
-| GNU         | 11.2.0     |        `module load GCC/11.2.0`        |
-| Intel       | 2021.2.0   | `module load intel-compilers/2021.2.0` |
-| Intel       | 2021.4.0   | `module load intel-compilers/2021.4.0` |
+| Compilers | Versions |          modules           |
+|-----------|----------|:--------------------------:|
+| GNU       | 9.3.0    |        `GCC/9.3.0`         |
+| GNU       | 10.2.0   |        `GCC/10.2.0`        |
+| GNU       | 11.2.0   |        `GCC/11.2.0`        |
+| Intel     | 2021.4.0 | `intel-compilers/2021.4.0` |
 
 !!! Update
     
