@@ -14,6 +14,8 @@ nav:
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
     - Software:
+      - 'Softwares/index.md'
+      - 'Compilers': 'Softwares/compilers.md'
       - 'Matlab': 'Softwares/matlab.md'
       - 'LAMMPS': 'Softwares/lammps.md'
       - 'Conda': 'Softwares/conda.md'
