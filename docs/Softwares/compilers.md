@@ -4,9 +4,8 @@ We offer both GNU and Intel compilers. Here is the list of compilers you can fin
 
 | Compilers | Versions |          modules           |
 |-----------|----------|:--------------------------:|
-| GNU       | 9.3.0    |        `GCC/9.3.0`         |
-| GNU       | 10.2.0   |        `GCC/10.2.0`        |
-| GNU       | 11.2.0   |        `GCC/11.2.0`        |
+| GNU       | 11.2.0   |        `GCC/10.2.0`        |
+| GNU       | 12.2.0   |        `GCC/12.2.0`        |
 | Intel     | 2021.4.0 | `intel-compilers/2021.4.0` |
 
 !!! Update
