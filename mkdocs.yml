@@ -16,9 +16,12 @@ nav:
     - Software:
       - 'Softwares/index.md'
       - 'Compilers': 'Softwares/compilers.md'
+      - 'Python':
+          - 'Softwares/python/index.md'
+          - 'Building your own': 'Softwares/python/conda.md'
       - 'Matlab': 'Softwares/matlab.md'
       - 'LAMMPS': 'Softwares/lammps.md'
-      - 'Conda': 'Softwares/conda.md'
+
 
 theme: 
   name: material
