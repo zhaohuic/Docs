@@ -8,8 +8,4 @@ We offer both GNU and Intel compilers. Here is the list of compilers you can fin
 | GNU       | 12.2.0   |        `GCC/12.2.0`        |
 | Intel     | 2021.4.0 | `intel-compilers/2021.4.0` |
 
-!!! Update
-    
-    The latest of version of GNU compiler (`gcc 12.2.0`) amd Intel compiler (2022) will be available soon!
-
 # MPI Libraries

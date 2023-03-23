@@ -18,6 +18,7 @@ nav:
       - 'Compilers': 'Softwares/compilers.md'
       - 'Python':
           - 'Softwares/python/index.md'
+          - 'Jupyter Notebook': 'Softwares/python/jupyter.md'
           - 'Building your own': 'Softwares/python/conda.md'
       - 'Matlab': 'Softwares/matlab.md'
       - 'LAMMPS': 'Softwares/lammps.md'
