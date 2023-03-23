@@ -1,5 +1,19 @@
-# Use Conda on clusters
-Conda is installed on cluster as a `Anaconda3` module. Users can use `Anaconda3` to create virtual python environments to manage python modules.
+Since Python supports a wide a range additional libraries in machine learning or datas science research, it is not always possible to install every package on HPC. Also, users sometimes need to use a specific version of Python or its libraries to conduct their research. Therefore, in that case users can build their own Python version along with specific library. One of the way to accomplish this is to use Conda.
+
+# Conda
+Conda as a package manager helps you find and install packages. If you need a package that requires a different version of Python, you do not need to switch to different environment manager, because conda is also an environment manager. 
+
+## Availability
+Conda can be accessed on cluster as `Anaconda3` or `Miniconda3` module.
+
+|    Conda     |  Module name  | 
+|:------------:|:-------------:|
+|   Anaconda   |   Anaconda3   | 
+|  Miniconda   |  Miniconda3   |
+
+User can use conda after using any of the module mentioned above
+
+module a `Anaconda3` module. Users can use `Anaconda3` to create virtual python environments to manage python modules.
 
 ## Create and Activate a Conda Virtual Environment
 
@@ -37,7 +51,7 @@ Proceed ([y]/n)?y
 #     $ conda deactivate
 ```
 Before activating the environment user first needs to create the following 
-```
+```bash
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -56,13 +70,13 @@ unset __conda_setup
 and save this script`conda.sh` in `$HOME` directory.
 
 Activate the new 'tf' environment
-```
+```bash
 login1-41 ~ >: source $HOME/conda.sh
 login1-41 ~ >: conda activate tf
 (tf) login-41 ~ >:
 ```
 Install tensorflow-gpu
-```
+```bash
 (tf) node430-41 ~ >: conda install -c anaconda tensorflow-gpu
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
@@ -106,36 +120,37 @@ Python 3.9.13 (main, Oct 13 2022, 21:15:33)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-Simple tensorflow test program to make sure the virtual env can access a gpu. Program is called `tf.gpu.test.py`
-```
-import tensorflow as tf
-
-if tf.test.gpu_device_name():
-
-    print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
-
-else:
-
-   print("Please install GPU version of TF")
-```
-Slurm script to submit the job
-```
-#!/bin/bash -l
-#SBATCH --job-name=tf_test
-#SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-#SBATCH --nodes=1
-#SBATCH --tasks-per-node=1
-#SBATCH --partition=datasci
-#SBATCH --gres=gpu:1
-#SBATCH --mem=4G
-
-# Purge any module loaded by default
-module purge > /dev/null 2>&1
-module load Anaconda3
-source $HOME/conda.sh
-conda activate tf
-srun python tf.gpu.test.py
-```
+Simple tensorflow test program to make sure the virtual env can access a gpu. Program is called 
+??? Example "tf.gpu.test.py"
+    ```python
+    import tensorflow as tf
+    
+    if tf.test.gpu_device_name():
+    
+        print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
+    
+    else:
+    
+       print("Please install GPU version of TF")
+    ```
+??? Example "Slurm script to submit the job"
+    ```slurm
+    #!/bin/bash -l
+    #SBATCH --job-name=tf_test
+    #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --partition=datasci
+    #SBATCH --gres=gpu:1
+    #SBATCH --mem=4G
+    
+    # Purge any module loaded by default
+    module purge > /dev/null 2>&1
+    module load Anaconda3
+    source $HOME/conda.sh
+    conda activate tf
+    srun python tf.gpu.test.py
+    ```
 Result:
 ```
 Starting /home/g/guest24/.bash_profile ... standard AFS bash profile
@@ -177,69 +192,71 @@ conda activate torch-cuda
 conda install -c "nvidia/label/cuda-11.7.0" cuda-toolkit
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 ```
-A simple PyTorch test program is given below to check whether PyTorch has been installed properly. Program is called `torch_tensor.py`
-```
-# -*- coding: utf-8 -*-
-
-import torch
-import math
-
-
-dtype = torch.float
-#device = torch.device("cpu")   # Uncomment this to run on CPU
-device = torch.device("cuda:0") # Uncomment this to run on GPU
-
-# Create random input and output data
-x = torch.linspace(-math.pi, math.pi, 2000, device=device, dtype=dtype)
-y = torch.sin(x)
-
-# Randomly initialize weights
-a = torch.randn((), device=device, dtype=dtype)
-b = torch.randn((), device=device, dtype=dtype)
-c = torch.randn((), device=device, dtype=dtype)
-d = torch.randn((), device=device, dtype=dtype)
-
-learning_rate = 1e-6
-for t in range(2000):
-    # Forward pass: compute predicted y
-    y_pred = a + b * x + c * x ** 2 + d * x ** 3
-
-    # Compute and print loss
-    loss = (y_pred - y).pow(2).sum().item()
-    if t % 100 == 99:
-        print(t, loss)
-
-    # Backprop to compute gradients of a, b, c, d with respect to loss
-    grad_y_pred = 2.0 * (y_pred - y)
-    grad_a = grad_y_pred.sum()
-    grad_b = (grad_y_pred * x).sum()
-    grad_c = (grad_y_pred * x ** 2).sum()
-    grad_d = (grad_y_pred * x ** 3).sum()
-
-    # Update weights using gradient descent
-    a -= learning_rate * grad_a
-    b -= learning_rate * grad_b
-    c -= learning_rate * grad_c
-    d -= learning_rate * grad_d
-
-
-print(f'Result: y = {a.item()} + {b.item()} x + {c.item()} x^2 + {d.item()} x^3')
-```
-User can use the following job script to prun the script.
-```
-#!/bin/bash -l
-#SBATCH --job-name=tf_test
-#SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-#SBATCH --nodes=1
-#SBATCH --tasks-per-node=1
-#SBATCH --partition=datasci
-#SBATCH --gres=gpu:1
-#SBATCH --mem=4G
-
-# Purge any module loaded by default
-module purge > /dev/null 2>&1
-module load Anaconda3
-source $HOME/conda.sh
-conda activate tf
-srun python touch_tensor.py
-```
+A simple PyTorch test program is given below to check whether PyTorch has been installed properly. Program is called
+??? program "torch_tensor.py"
+    ```python
+    # -*- coding: utf-8 -*-
+    
+    import torch
+    import math
+    
+    
+    dtype = torch.float
+    #device = torch.device("cpu")   # Uncomment this to run on CPU
+    device = torch.device("cuda:0") # Uncomment this to run on GPU
+    
+    # Create random input and output data
+    x = torch.linspace(-math.pi, math.pi, 2000, device=device, dtype=dtype)
+    y = torch.sin(x)
+    
+    # Randomly initialize weights
+    a = torch.randn((), device=device, dtype=dtype)
+    b = torch.randn((), device=device, dtype=dtype)
+    c = torch.randn((), device=device, dtype=dtype)
+    d = torch.randn((), device=device, dtype=dtype)
+    
+    learning_rate = 1e-6
+    for t in range(2000):
+        # Forward pass: compute predicted y
+        y_pred = a + b * x + c * x ** 2 + d * x ** 3
+    
+        # Compute and print loss
+        loss = (y_pred - y).pow(2).sum().item()
+        if t % 100 == 99:
+            print(t, loss)
+    
+        # Backprop to compute gradients of a, b, c, d with respect to loss
+        grad_y_pred = 2.0 * (y_pred - y)
+        grad_a = grad_y_pred.sum()
+        grad_b = (grad_y_pred * x).sum()
+        grad_c = (grad_y_pred * x ** 2).sum()
+        grad_d = (grad_y_pred * x ** 3).sum()
+    
+        # Update weights using gradient descent
+        a -= learning_rate * grad_a
+        b -= learning_rate * grad_b
+        c -= learning_rate * grad_c
+        d -= learning_rate * grad_d
+    
+    
+    print(f'Result: y = {a.item()} + {b.item()} x + {c.item()} x^2 + {d.item()} x^3')
+    ```
+User can use the following job script to run the script.
+??? Example "torch-cuda.submit.sh"
+    ```slurm
+    #!/bin/bash -l
+    #SBATCH --job-name=torch_test
+    #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --partition=datasci
+    #SBATCH --gres=gpu:1
+    #SBATCH --mem=4G
+    
+    # Purge any module loaded by default
+    module purge > /dev/null 2>&1
+    module load Anaconda3
+    source $HOME/conda.sh
+    conda activate torch-cuda
+    srun python touch_tensor.py
+    ```

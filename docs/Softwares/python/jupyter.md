@@ -1,11 +1,6 @@
 # Jupyter Notebooks
 The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations. In our cluster, we have JupyterLab which is the next-generation user interface for Project Jupyter offering all the familiar building blocks of the classic Jupyter Notebook (notebook, terminal, text editor, file browser, rich outputs, etc.) in a flexible and powerful user interface. 
 
-```
-function test() {
-  console.log("This code will have a copy button to the right of it");
-}
-```
 ## Availability
 
 | JupyterLab version | Dependent Toolchain | Module load command                     |
@@ -62,3 +57,4 @@ function test() {
     jupyter notebook --no-browser --port $port --notebook-dir=$(pwd)
                  
     ```
+Once you submit this job script, you will see an output file indicating port number which you need to use to connect to the HPC cluster in a new terminal window. Please follow further instructions from the output file.
