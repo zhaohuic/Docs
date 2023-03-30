@@ -17,10 +17,42 @@ module a `Anaconda3` module. Users can use `Anaconda3` to create virtual python 
 
 ## Create and Activate a Conda Virtual Environment
 
-### Install TensorFlow with GPU 
-The following example will create a new conda environment based on python 3.7 and install tensorflow in the environment.
+Load the miniconda Module
 
 ```
+module load Anaconda3
+```
+
+### Create Environment with `conda`
+To create an environment use the `conda create` command. Once the environment is created you need to create a file on `$HOME` directory and add the following 
+ 
+??? Example "conda3.sh"
+    
+    ```bash
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "$EBROOTANACONDA3/etc/profile.d/conda.sh" ]; then
+            . "$EBROOTANACONDA3/etc/profile.d/conda.sh"
+        else
+            export PATH="$EBROOTANACONDA3/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
+    ```
+Before activating the environment You need to use `source ~/conda3.sh` to activate the path.
+
+### Examples
+Here, we provide instructions on how to use `conda` to install application 
+
+#### Install TensorFlow with GPU 
+The following example will create a new conda environment based on python 3.9 and install tensorflow in the environment.
+
+```bash
 login1-41 ~ >: module load Anaconda3
 login1-41 ~ >: conda create --name tf python=3.9
 Collecting package metadata (current_repodata.json): done
@@ -50,28 +82,12 @@ Proceed ([y]/n)?y
 #
 #     $ conda deactivate
 ```
-Before activating the environment user first needs to create the following 
-```bash
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$EBROOTANACONDA3/etc/profile.d/conda.sh" ]; then
-        . "$EBROOTANACONDA3/etc/profile.d/conda.sh"
-    else
-        export PATH="$EBROOTANACONDA3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-```
-and save this script`conda.sh` in `$HOME` directory.
+
+and save this script`conda3.sh` in `$HOME` directory.
 
 Activate the new 'tf' environment
 ```bash
-login1-41 ~ >: source $HOME/conda.sh
+login1-41 ~ >: source $HOME/conda3.sh
 login1-41 ~ >: conda activate tf
 (tf) login-41 ~ >:
 ```
@@ -183,7 +199,7 @@ No modules loaded
 2020-07-29 17:14:19.819082: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/device:GPU:0 with 15064 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:02:00.0, compute capability: 6.0)
 Default GPU Device: /device:GPU:0
 ```
-### Install PyTorch with GPU
+#### Install PyTorch with GPU
 To install PyTorch with GPU load the `Anaconda3` module as described above and then use the following
 
 ```
@@ -260,3 +276,16 @@ User can use the following job script to run the script.
     conda activate torch-cuda
     srun python touch_tensor.py
     ```
+### Mamba: The Conda Alternative
+Mamba is a fast, robust, and cross-platform package manager and particularly useful for building complicated environments, where `conda` is unable to 'solve' the required set of packages within a reasonable amount of time.
+User can install packages with `mamba` in the same way as with `conda`.
+```bash
+module load Mamba Anaconda3
+
+# create new environment
+mamba create --name env_name python numpy pandas 
+
+# install new pacakge into existing environment
+conda activate env_name
+mamba install scipy
+```
