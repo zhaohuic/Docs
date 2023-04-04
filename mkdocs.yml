@@ -4,6 +4,9 @@ repo_url: https://github.com/arcs-njit-edu/Docs
 repo_name: arcs-njit-edu/Docs
 nav:
     - Home: index.md
+    - 'About Us':
+      - 'about/index.md'
+      - 'Contact Us': 'about/contact.md'
     - Clusters:
       - 'Wulver': 'clusters/wulver.md'
       - 'Lochness': 'clusters/lochness.md'
@@ -74,6 +77,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
@@ -86,4 +90,3 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.snippets
-
