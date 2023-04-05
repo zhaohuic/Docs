@@ -277,6 +277,7 @@ User can use the following job script to run the script.
     conda activate torch-cuda
     srun python touch_tensor.py
     ```
+Submit the job using `sbatch torch-cuda.submit.sh`.
 ### Mamba: The Conda Alternative
 Mamba is a fast, robust, and cross-platform package manager and particularly useful for building complicated environments, where `conda` is unable to 'solve' the required set of packages within a reasonable amount of time.
 User can install packages with `mamba` in the same way as with `conda`.
