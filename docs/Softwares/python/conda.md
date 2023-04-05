@@ -149,7 +149,7 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
     
        print("Please install GPU version of TF")
     ```
-??? Example "Slurm script to submit the job"
+??? Example "Slurm script to submit the job: tf_submit.sh"
     ```slurm
     #!/bin/bash -l
     #SBATCH --job-name=tf_test
@@ -163,10 +163,11 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
     # Purge any module loaded by default
     module purge > /dev/null 2>&1
     module load Anaconda3
-    source $HOME/conda.sh
+    source $HOME/conda3.sh
     conda activate tf
     srun python tf.gpu.test.py
     ```
+Submit the job using `sbatch tf_submit.sh`.
 Result:
 ```
 Starting /home/g/guest24/.bash_profile ... standard AFS bash profile
