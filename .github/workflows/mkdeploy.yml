@@ -2,9 +2,8 @@ name: ci
 on:
   push:
     branches:
+      - master 
       - main
-      - alex_patch 
-      - abhi_patch
 permissions:
   contents: write
 jobs:
