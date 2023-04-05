@@ -3,9 +3,9 @@ The Jupyter Notebook is a web-based interactive computing platform. The notebook
 
 ## Availability
 
-| JupyterLab version | Dependent Toolchain | Module load command                     |
-|--------------------|---------------------|-----------------------------------------|
-| 3.1.6              | GCC 11.2.0          | `module load GCCcore/11.2.0 JupyterLab` |
+|  JupyterLab version  |  Dependent Toolchain  |            Module load command            |
+|:--------------------:|:---------------------:|:-----------------------------------------:|
+|        3.1.6         |      GCC 11.2.0       |  `module load GCCcore/11.2.0 JupyterLab`  |
 
 
 ## Using JupyterLab

@@ -9,9 +9,9 @@ parallel particle simulator at the atomic, meso, or continuum scale.
 
 ## Availability
 
-| Version | Module name   | Toolchain |
-|---------|---------------|-----------|
-| 102025  | lammps/102025 | foss      |
+|  Version  |   Module name   |  Toolchain  |
+|:---------:|:---------------:|:-----------:|
+|  102025   |  lammps/102025  |    foss     |
 
 !!! note
 
