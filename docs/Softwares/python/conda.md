@@ -149,7 +149,7 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
     
        print("Please install GPU version of TF")
     ```
-??? Example "Slurm script to submit the job"
+??? Example "Slurm script to submit the job: tf_submit.sh"
     ```slurm
     #!/bin/bash -l
     #SBATCH --job-name=tf_test
@@ -163,10 +163,11 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
     # Purge any module loaded by default
     module purge > /dev/null 2>&1
     module load Anaconda3
-    source $HOME/conda.sh
+    source $HOME/conda3.sh
     conda activate tf
     srun python tf.gpu.test.py
     ```
+Submit the job using `sbatch tf_submit.sh`.
 Result:
 ```
 Starting /home/g/guest24/.bash_profile ... standard AFS bash profile
@@ -276,6 +277,7 @@ User can use the following job script to run the script.
     conda activate torch-cuda
     srun python touch_tensor.py
     ```
+Submit the job using `sbatch torch-cuda.submit.sh`.
 ### Mamba: The Conda Alternative
 Mamba is a fast, robust, and cross-platform package manager and particularly useful for building complicated environments, where `conda` is unable to 'solve' the required set of packages within a reasonable amount of time.
 User can install packages with `mamba` in the same way as with `conda`.
