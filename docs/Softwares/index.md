@@ -144,3 +144,17 @@ You can check the documentation of `module` on the cluster using the following c
 ```
 man module
 ```
+
+
+## Software List
+
+The following applications are installed on Lochness.
+
+```python exec="on"
+import pandas as pd
+df = pd.read_csv('docs/assets/tables/module.csv')
+print(df.to_markdown(index=False))
+```
+
+
+

@@ -90,3 +90,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.snippets
+plugins:
+  - search
+  - markdown-exec
+  - table-reader
+  - mkdocstrings
