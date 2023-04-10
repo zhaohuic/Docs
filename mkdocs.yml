@@ -61,6 +61,7 @@ extra:
       link: https://github.com/arcs-njit-edu/Docs
     - icon: fontawesome/solid/paper-plane
       link: mailto:hpc@njit.edu
+
 # Extensions
 markdown_extensions:
   - meta
