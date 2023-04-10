@@ -3,10 +3,22 @@
 
 ## Availability
 
-|  Version  |  Module name   |   Toolchain   |
-|:---------:|:--------------:|:-------------:|
-|   3.9.6   |  Python/3.9.6  |  foss/2021b   |
-|   3.9.6   |  Python/3.9.6  |  Intel/2021b  |
+
+```python exec="on"
+import pandas as pd
+
+df = pd.read_csv('docs/assets/tables/module.csv')
+soft = df.query('Software == "Python"')
+print(soft.to_markdown(index=False))
+```
+
+
+
+| Version | Module name  | Toolchain   |
+|---------|--------------|-------------|
+| 3.9.6   | Python/3.9.6 | foss/2021b  |
+| 3.9.6   | Python/3.9.6 | Intel/2021b |
+
 
 To load Python on Wulver user needs to use
 ```

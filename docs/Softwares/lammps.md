@@ -9,9 +9,18 @@ parallel particle simulator at the atomic, meso, or continuum scale.
 
 ## Availability
 
-|  Version  |   Module name   |  Toolchain  |
-|:---------:|:---------------:|:-----------:|
-|  102025   |  lammps/102025  |    foss     |
+```python exec="on"
+import pandas as pd
+
+df = pd.read_csv('docs/assets/tables/module.csv')
+soft = df.query('Software == "LAMMPS"')
+print(soft.to_markdown(index=False))
+```
+
+
+| Version | Module name   | Toolchain |
+|---------|---------------|-----------|
+| 102025  | lammps/102025 | foss      |
 
 !!! note
 

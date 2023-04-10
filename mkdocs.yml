@@ -61,6 +61,7 @@ extra:
       link: https://github.com/arcs-njit-edu/Docs
     - icon: fontawesome/solid/paper-plane
       link: mailto:hpc@njit.edu
+
 # Extensions
 markdown_extensions:
   - meta
@@ -90,3 +91,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.snippets
+plugins:
+  - search
+  - markdown-exec
+  - table-reader
+  - mkdocstrings
