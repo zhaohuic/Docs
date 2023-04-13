@@ -13,10 +13,8 @@ parallel particle simulator at the atomic, meso, or continuum scale.
 import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
-# Header values to be added
-column_names=["Courses","Fee"]
 soft = df.query('Software == "LAMMPS"')
-soft.columns = column_names
+
 print(soft.to_markdown(index=False))
 ```
 

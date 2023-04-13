@@ -67,107 +67,107 @@ PETSc,3.15.1,foss/2021a,`module load foss/2021a PETSc/3.15.1`
 VTK,9.0.1,foss/2021a,`module load foss/2021a VTK/9.0.1`
 h5py,3.2.1,foss/2021a,`module load foss/2021a h5py/3.2.1`
 HDF5,1.10.7,foss/2021a,`module load foss/2021a HDF5/1.10.7`
-libGridXC,0.9.6,intel/2021b,module load intel/2021b libGridXC/0.9.6
-imkl-FFTW,2021.4.0,intel/2021b,module load intel/2021b imkl-FFTW/2021.4.0
-ELPA,2021.11.001,intel/2021b,module load intel/2021b ELPA/2021.11.001
-HDF5,1.12.1,intel/2021b,module load intel/2021b HDF5/1.12.1
-netCDF,4.8.1,intel/2021b,module load intel/2021b netCDF/4.8.1
-netCDF-Fortran,4.5.3,intel/2021b,module load intel/2021b netCDF-Fortran/4.5.3
-Siesta,master-4.1.5,intel/2021b,module load intel/2021b Siesta/master-4.1.5
-SciPy-bundle,2021.10,intel/2021b,module load intel/2021b SciPy-bundle/2021.10
-FFTW,3.3.10,intel/2021b,module load intel/2021b FFTW/3.3.10
-matplotlib,3.4.3,intel/2021b,module load intel/2021b matplotlib/3.4.3
-AmberTools,21,intel/2021b,module load intel/2021b AmberTools/21
-blaze,3.8.1,intel/2021b,module load intel/2021b blaze/3.8.1
-M4,1.4.19,intel/2021b,module load intel/2021b M4/1.4.19
-QuantumESPRESSO,7.1,intel/2021b,module load intel/2021b QuantumESPRESSO/7.1
-GCC,system,-,module load GCC/system
-GCC,10.3.0,-,module load GCC/10.3.0
-GCC,11.2.0,-,module load GCC/11.2.0
-GCC,11.3.0,-,module load GCC/11.3.0
-GCC,12.2.0,-,module load GCC/12.2.0
-EasyBuild,4.5.5,-,module load EasyBuild/4.5.5
-EasyBuild,4.7.0,-,module load EasyBuild/4.7.0
-GCCcore,12.2.0,-,module load GCCcore/12.2.0
-GCCcore,8.3.0,-,module load GCCcore/8.3.0
-GCCcore,10.3.0,-,module load GCCcore/10.3.0
-GCCcore,11.3.0,-,module load GCCcore/11.3.0
-GCCcore,11.2.0,-,module load GCCcore/11.2.0
-M4,1.4.19,-,module load M4/1.4.19
-M4,1.4.18,-,module load M4/1.4.18
-M4,1.4.17,-,module load M4/1.4.17
-Bison,3.8.2,-,module load Bison/3.8.2
-Bison,3.3.2,-,module load Bison/3.3.2
-flex,2.6.4,-,module load flex/2.6.4
-zlib,1.2.12,-,module load zlib/1.2.12
-zlib,1.2.11,-,module load zlib/1.2.11
-binutils,2.38,-,module load binutils/2.38
-binutils,2.32,-,module load binutils/2.32
-binutils,2.36.1,-,module load binutils/2.36.1
-binutils,2.37,-,module load binutils/2.37
-binutils,2.39,-,module load binutils/2.39
-pkgconf,1.8.0,-,module load pkgconf/1.8.0
-OpenSSL,1.1,-,module load OpenSSL/1.1
-intel-compilers,2022.1.0,-,module load intel-compilers/2022.1.0
-intel-compilers,2022.0.1,-,module load intel-compilers/2022.0.1
-intel-compilers,2021.4.0,-,module load intel-compilers/2021.4.0
-ncurses,6.2,-,module load ncurses/6.2
-ncurses,5.9,-,module load ncurses/5.9
-ncurses,6.3,-,module load ncurses/6.3
-gettext,0.21,-,module load gettext/0.21
-gettext,0.21.1,-,module load gettext/0.21.1
-iimpi,2022.00,-,module load iimpi/2022.00
-iimpi,2021b,-,module load iimpi/2021b
-imkl,2022.0.1,-,module load imkl/2022.0.1
-imkl,2021.4.0,-,module load imkl/2021.4.0
-intel,2022.00,-,module load intel/2022.00
-intel,2021b,-,module load intel/2021b
-CMake,3.9.6,-,module load CMake/3.9.6
-CMake,3.18.4,-,module load CMake/3.18.4
-CUDA,11.5.1,-,module load CUDA/11.5.1
-CUDA,11.4.1,-,module load CUDA/11.4.1
-CUDA,11.7.0~,-,module load CUDA/11.7.0~
-MATLAB,Parallel-Server-R2022a,-,module load MATLAB/Parallel-Server-R2022a
-MATLAB,R2022a.bak_20220809183307_5355,-,module load MATLAB/R2022a.bak_20220809183307_5355
-MATLAB,R2022a.bak_20220809221930_20985,-,module load MATLAB/R2022a.bak_20220809221930_20985
-FLUENT,2022R1,-,module load FLUENT/2022R1
-gompi,2021c,-,module load gompi/2021c
-gompi,2021a,-,module load gompi/2021a
-gompi,2022b,-,module load gompi/2022b
-gompi,2021b,-,module load gompi/2021b
-foss,2021a,-,module load foss/2021a
-foss,2022b,-,module load foss/2022b
-foss,2021b,-,module load foss/2021b
-Java,17.0.2,-,module load Java/17.0.2
-Java,.modulerc,-,module load Java/.modulerc
-Java,13.0.2,-,module load Java/13.0.2
-Java,.modulerc.bak_20220916224927_25916,-,module load Java/.modulerc.bak_20220916224927_25916
-Java,11.0.2,-,module load Java/11.0.2
-Java,.modulerc.bak_20220917012146_9304,-,module load Java/.modulerc.bak_20220917012146_9304
-CUDAcore,11.5.1,-,module load CUDAcore/11.5.1
-CUDAcore,11.7.0,-,module load CUDAcore/11.7.0
-CUDAcore,11.4.1,-,module load CUDAcore/11.4.1
-ANSYS,2022,-,module load ANSYS/2022
-cuDNN,8.2.2.26-CUDA-11.4.1,-,module load cuDNN/8.2.2.26-CUDA-11.4.1
-DMTCP,2.6.0,-,module load DMTCP/2.6.0
-Autoconf,2.69,-,module load Autoconf/2.69
-Automake,1.15,-,module load Automake/1.15
-libtool,2.4.6,-,module load libtool/2.4.6
-Autotools,20150215,-,module load Autotools/20150215
-Anaconda3,2022.05,-,module load Anaconda3/2022.05
-PyCharm,2021.1.1,-,module load PyCharm/2021.1.1
-ant,1.10.11-Java-17.0.2,-,module load ant/1.10.11-Java-17.0.2
-ant,1.10.11-Java-11,-,module load ant/1.10.11-Java-11
-Julia,1.7.3-linux-x86_64,-,module load Julia/1.7.3-linux-x86_64
-COMSOL,5.6,-,module load COMSOL/5.6
-tecplot360ex,2022r2_linux64,-,module load tecplot360ex/2022r2_linux64
-tecplot360ex,2022R2,-,module load tecplot360ex/2022R2
-Spack,0.19.1,-,module load Spack/0.19.1
-Go,1.14.1,-,module load Go/1.14.1
-git-lfs,2.11.0,-,module load git-lfs/2.11.0
-bbcp,12.01.30.00.0-amd64_linux26,-,module load bbcp/12.01.30.00.0-amd64_linux26
-Mamba,4.14.0-0,-,module load Mamba/4.14.0-0
-gfbf,2022b,-,module load gfbf/2022b
+libGridXC,0.9.6,intel/2021b,`module load intel/2021b libGridXC/0.9.6`
+imkl-FFTW,2021.4.0,intel/2021b,`module load intel/2021b imkl-FFTW/2021.4.0`
+ELPA,2021.11.001,intel/2021b,`module load intel/2021b ELPA/2021.11.001`
+HDF5,1.12.1,intel/2021b,`module load intel/2021b HDF5/1.12.1`
+netCDF,4.8.1,intel/2021b,`module load intel/2021b netCDF/4.8.1`
+netCDF-Fortran,4.5.3,intel/2021b,`module load intel/2021b netCDF-Fortran/4.5.3`
+Siesta,master-4.1.5,intel/2021b,`module load intel/2021b Siesta/master-4.1.5`
+SciPy-bundle,2021.10,intel/2021b,`module load intel/2021b SciPy-bundle/2021.10`
+FFTW,3.3.10,intel/2021b,`module load intel/2021b FFTW/3.3.10`
+matplotlib,3.4.3,intel/2021b,`module load intel/2021b matplotlib/3.4.3`
+AmberTools,21,intel/2021b,`module load intel/2021b AmberTools/21`
+blaze,3.8.1,intel/2021b,`module load intel/2021b blaze/3.8.1`
+M4,1.4.19,intel/2021b,`module load intel/2021b M4/1.4.19`
+QuantumESPRESSO,7.1,intel/2021b,`module load intel/2021b QuantumESPRESSO/7.1`
+GCC,system,-,`module load GCC/system`
+GCC,10.3.0,-,`module load GCC/10.3.0`
+GCC,11.2.0,-,`module load GCC/11.2.0`
+GCC,11.3.0,-,`module load GCC/11.3.0`
+GCC,12.2.0,-,`module load GCC/12.2.0`
+EasyBuild,4.5.5,-,`module load EasyBuild/4.5.5`
+EasyBuild,4.7.0,-,`module load EasyBuild/4.7.0`
+GCCcore,12.2.0,-,`module load GCCcore/12.2.0`
+GCCcore,8.3.0,-,`module load GCCcore/8.3.0`
+GCCcore,10.3.0,-,`module load GCCcore/10.3.0`
+GCCcore,11.3.0,-,`module load GCCcore/11.3.0`
+GCCcore,11.2.0,-,`module load GCCcore/11.2.0`
+M4,1.4.19,-,`module load M4/1.4.19`
+M4,1.4.18,-,`module load M4/1.4.18`
+M4,1.4.17,-,`module load M4/1.4.17`
+Bison,3.8.2,-,`module load Bison/3.8.2`
+Bison,3.3.2,-,`module load Bison/3.3.2`
+flex,2.6.4,-,`module load flex/2.6.4`
+zlib,1.2.12,-,`module load zlib/1.2.12`
+zlib,1.2.11,-,`module load zlib/1.2.11`
+binutils,2.38,-,`module load binutils/2.38`
+binutils,2.32,-,`module load binutils/2.32`
+binutils,2.36.1,-,`module load binutils/2.36.1`
+binutils,2.37,-,`module load binutils/2.37`
+binutils,2.39,-,`module load binutils/2.39`
+pkgconf,1.8.0,-,`module load pkgconf/1.8.0`
+OpenSSL,1.1,-,`module load OpenSSL/1.1`
+intel-compilers,2022.1.0,-,`module load intel-compilers/2022.1.0`
+intel-compilers,2022.0.1,-,`module load intel-compilers/2022.0.1`
+intel-compilers,2021.4.0,-,`module load intel-compilers/2021.4.0`
+ncurses,6.2,-,`module load ncurses/6.2`
+ncurses,5.9,-,`module load ncurses/5.9`
+ncurses,6.3,-,`module load ncurses/6.3`
+gettext,0.21,-,`module load gettext/0.21`
+gettext,0.21.1,-,`module load gettext/0.21.1`
+iimpi,2022.00,-,`module load iimpi/2022.00`
+iimpi,2021b,-,`module load iimpi/2021b`
+imkl,2022.0.1,-,`module load imkl/2022.0.1`
+imkl,2021.4.0,-,`module load imkl/2021.4.0`
+intel,2022.00,-,`module load intel/2022.00`
+intel,2021b,-,`module load intel/2021b`
+CMake,3.9.6,-,`module load CMake/3.9.6`
+CMake,3.18.4,-,`module load CMake/3.18.4`
+CUDA,11.5.1,-,`module load CUDA/11.5.1`
+CUDA,11.4.1,-,`module load CUDA/11.4.1`
+CUDA,11.7.0~,-,`module load CUDA/11.7.0~`
+MATLAB,Parallel-Server-R2022a,-,`module load MATLAB/Parallel-Server-R2022a`
+MATLAB,R2022a.bak_20220809183307_5355,-,`module load MATLAB/R2022a.bak_20220809183307_5355`
+MATLAB,R2022a.bak_20220809221930_20985,-,`module load MATLAB/R2022a.bak_20220809221930_20985`
+FLUENT,2022R1,-,`module load FLUENT/2022R1`
+gompi,2021c,-,`module load gompi/2021c`
+gompi,2021a,-,`module load gompi/2021a`
+gompi,2022b,-,`module load gompi/2022b`
+gompi,2021b,-,`module load gompi/2021b`
+foss,2021a,-,`module load foss/2021a`
+foss,2022b,-,`module load foss/2022b`
+foss,2021b,-,`module load foss/2021b`
+Java,17.0.2,-,`module load Java/17.0.2`
+Java,.modulerc,-,`module load Java/.modulerc`
+Java,13.0.2,-,`module load Java/13.0.2`
+Java,.modulerc.bak_20220916224927_25916,-,`module load Java/.modulerc.bak_20220916224927_25916`
+Java,11.0.2,-,`module load Java/11.0.2`
+Java,.modulerc.bak_20220917012146_9304,-,`module load Java/.modulerc.bak_20220917012146_9304`
+CUDAcore,11.5.1,-,`module load CUDAcore/11.5.1`
+CUDAcore,11.7.0,-,`module load CUDAcore/11.7.0`
+CUDAcore,11.4.1,-,`module load CUDAcore/11.4.1`
+ANSYS,2022,-,`module load ANSYS/2022`
+cuDNN,8.2.2.26-CUDA-11.4.1,-,`module load cuDNN/8.2.2.26-CUDA-11.4.1`
+DMTCP,2.6.0,-,`module load DMTCP/2.6.0`
+Autoconf,2.69,-,`module load Autoconf/2.69`
+Automake,1.15,-,`module load Automake/1.15`
+libtool,2.4.6,-,`module load libtool/2.4.6`
+Autotools,20150215,-,`module load Autotools/20150215`
+Anaconda3,2022.05,-,`module load Anaconda3/2022.05`
+PyCharm,2021.1.1,-,`module load PyCharm/2021.1.1`
+ant,1.10.11-Java-17.0.2,-,`module load ant/1.10.11-Java-17.0.2`
+ant,1.10.11-Java-11,-,`module load ant/1.10.11-Java-11`
+Julia,1.7.3-linux-x86_64,-,`module load Julia/1.7.3-linux-x86_64`
+COMSOL,5.6,-,`module load COMSOL/5.6`
+tecplot360ex,2022r2_linux64,-,`module load tecplot360ex/2022r2_linux64`
+tecplot360ex,2022R2,-,`module load tecplot360ex/2022R2`
+Spack,0.19.1,-,`module load Spack/0.19.1`
+Go,1.14.1,-,`module load Go/1.14.1`
+git-lfs,2.11.0,-,`module load git-lfs/2.11.0`
+bbcp,12.01.30.00.0-amd64_linux26,-,`module load bbcp/12.01.30.00.0-amd64_linux26`
+Mamba,4.14.0-0,-,`module load Mamba/4.14.0-0`
+gfbf,2022b,-,`module load gfbf/2022b`
 Boost,1.76.0,foss/2021a,`module load foss/2021a Boost/1.76.0`
 BLIS,0.8.1,foss/2021a,`module load foss/2021a BLIS/0.8.1`
 OpenBLAS,0.3.15,foss/2021a,`module load foss/2021a OpenBLAS/0.3.15`
@@ -504,8 +504,8 @@ libwebp,1.2.0,foss/2021b,`module load foss/2021b libwebp/1.2.0`
 OpenEXR,3.1.1,foss/2021b,`module load foss/2021b OpenEXR/3.1.1`
 dill,0.3.4,foss/2021b,`module load foss/2021b dill/0.3.4`
 OpenJPEG,2.4.0,foss/2021b,`module load foss/2021b OpenJPEG/2.4.0`
-impi,2021.4.0,intel/2021b,module load intel/2021b impi/2021.4.0
-xmlf90,1.5.4,intel/2021b,module load intel/2021b xmlf90/1.5.4
-libpsml,1.1.10,intel/2021b,module load intel/2021b libpsml/1.1.10
-libxc,4.3.4,intel/2021b,module load intel/2021b libxc/4.3.4
-libxc,5.1.6,intel/2021b,module load intel/2021b libxc/5.1.6
+impi,2021.4.0,intel/2021b,`module load intel/2021b impi/2021.4.0`
+xmlf90,1.5.4,intel/2021b,`module load intel/2021b xmlf90/1.5.4`
+libpsml,1.1.10,intel/2021b,`module load intel/2021b libpsml/1.1.10`
+libxc,4.3.4,intel/2021b,`module load intel/2021b libxc/4.3.4`
+libxc,5.1.6,intel/2021b,`module load intel/2021b libxc/5.1.6`

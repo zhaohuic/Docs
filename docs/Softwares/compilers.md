@@ -5,15 +5,15 @@ import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
 # Header values to be added
-column_names=["Compilers","modules"]
+#column_names=["Compilers","modules"]
 soft = df.query('Software == "GCC" | Software == "intel-compilers"')
-soft.columns = column_names
+#soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
 
 |  Compilers  |  Versions  |          modules           |
 |:-----------:|:----------:|:--------------------------:|
-|     GNU     |   11.2.0   |        `GCC/10.2.0`        |
+|     GNU     |   11.2.0   |        `GCC/11.2.0`        |
 |     GNU     |   12.2.0   |        `GCC/12.2.0`        |
 |    Intel    |  2021.4.0  | `intel-compilers/2021.4.0` |
 
@@ -25,17 +25,11 @@ import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
 # Header values to be added
-column_names=["MPI","modules"]
+#column_names=["MPI","modules"]
 soft = df.query('Software == "OpenMPI" | Software == "impi"')
-soft.columns = column_names
+#soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
-
-|  Compilers  |  Versions  | Compiler Dependency |       module load command          |
-|:-----------:|:----------:|:-------------------:|:----------------------------------:|
-|   OpenMPI   |   4.1.1    |    `GCC 11.2.0`     |  `module load GCC/11.2.0 OpenMPI`  |
-|   OpenMPI   |   4.1.4    |    `GCC 12.2.0`     |  `module load GCC/12.2.0 OpenMPI`  |
-|    IMPI     |  2021.4.0  |  `intel 2021.4.0`   | `module load intel-compilers impi` |
 
 ## Toolchains
 
@@ -46,9 +40,9 @@ import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
 # Header values to be added
-column_names=["Toolchains","modules"]
+#column_names=["Toolchains","modules"]
 soft = df.query('Software == "foss"')
-soft.columns = column_names
+#soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
 ### Intel
@@ -58,8 +52,8 @@ import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
 # Header values to be added
-column_names=["Toolchains","modules"]
+#column_names=["Toolchains","modules"]
 soft = df.query('Software == "intel"')
-soft.columns = column_names
+#soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
