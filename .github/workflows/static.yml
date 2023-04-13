@@ -5,6 +5,10 @@ on:
       - main
       - alex_patch 
       - abhi_patch
+    workflow_dispatch:
+      - main
+      - alex_patch
+      - abhi_patch
 permissions:
   contents: write
 jobs:
@@ -19,5 +23,5 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material pandas tabulate markdown-exec mkdocstrings mkdocs-table-reader-plugin
+      - run: pip install mkdocs-material pandas tabulate markdown-exec mkdocstrings mkdocs-table-reader-plugin mkdocs-awesome-pages-plugin
       - run: mkdocs gh-deploy --force

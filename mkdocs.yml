@@ -16,16 +16,7 @@ nav:
       - 'Lochness user policies': 'Policies/lochness_policies.md'
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
-    - Software:
-      - 'Softwares/index.md'
-      - 'Compilers': 'Softwares/compilers.md'
-      - 'Python':
-          - 'Softwares/python/index.md'
-          - 'Jupyter Notebook': 'Softwares/python/jupyter.md'
-          - 'Building your own': 'Softwares/python/conda.md'
-      - 'Matlab': 'Softwares/matlab.md'
-      - 'LAMMPS': 'Softwares/lammps.md'
-
+    - ...
 
 theme: 
   name: material
@@ -97,3 +88,4 @@ plugins:
   - markdown-exec
   - table-reader
   - mkdocstrings
+  - awesome-pages

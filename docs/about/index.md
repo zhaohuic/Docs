@@ -25,6 +25,17 @@ hide:
 | Vacant - [Click here to apply](https://njit.csod.com/ux/ats/careersite/1/home/requisition/4896?c=njit) | Associate Director, High Performance Research Computing | |
 | [Abhishek Mukherjee](#abhishek-mukherjee) | Research Computing Facilitator | (973) 642-4132 | abhishek.mukherjee@njit.edu | GITC 2316B |
 
+
+# Research and Academic Technologies
+
+| Name | Title | Phone | Email | Office |
+|:----:|:-----:|:-----:|:-----:|:------:|
+| [David Perel](#david-perel) | Director, Research and Academic Technologies | (973) 596-3356 | davidp@njit.edu | GITC 2201 |
+| Rick Gaine | Research Technology System Administrator | (973) 596-5441 | rgaine@njit.edu | GITC 2316B |
+| Charles Yan | Research Technology Support Specialist | (973) 596-2907 | cyan@njit.edu | GITC 2301 |
+
+
+
 ## Alex Pacheco
 
 ![Alex Pacheco](../assets/images/pacheco.jpg){ align=left, width="300" }
