@@ -1,444 +1,511 @@
-Software, Module Name
-AFNI,AFNI/23.0.04-Python-3.9.6
-ASE,ASE/3.21.1-Python-3.8.2
-ATK,ATK/2.36.0
-Anaconda3,Anaconda3/2022.05
-Arrow,Arrow/0.17.1-Python-3.8.2
-AutoDock-GPU,AutoDock-GPU/1.5.3-CUDA-11.4.1
-Automake,Automake/1.16.3
-BLIS,BLIS/0.8.1
-Biopython,Biopython/1.79
-Boost,Boost/1.71.0
-Boost,Boost/1.72.0
-Boost,Boost/1.74.0
-Boost,Boost/1.76.0
-Boost,Boost/1.77.0
-Boost,Boost/1.79.0
-Boost.MPI,Boost.MPI/1.77.0
-Boost.Python,Boost.Python/1.77.0
-Brotli,Brotli/1.0.9
-CASTEP,CASTEP/21.1.1
-CGAL,CGAL/4.14.3-Python-3.8.2
-CGAL,CGAL/4.14.3
-CMake,CMake/3.15.3
-CMake,CMake/3.16.4
-CMake,CMake/3.18.4
-CMake,CMake/3.20.1
-CMake,CMake/3.21.1
-CMake,CMake/3.22.1
-CP2K,CP2K/7.1
-CP2K,CP2K/8.2
-CUDA,CUDA/11.4.1
-CUDA,CUDA/11.7.0
-DB,DB/18.1.32
-DB,DB/18.1.40
-DBus,DBus/1.13.12
-DBus,DBus/1.13.18
-DCMTK,DCMTK/3.6.6
-DMTCP,DMTCP/2.6.0
-ELPA,ELPA/2019.11.001
-ELPA,ELPA/2021.05.001
-ELPA,ELPA/2021.11.001
-EasyBuild,EasyBuild/4.4.2
-EasyBuild,EasyBuild/4.5.0
-EasyBuild,EasyBuild/4.5.2
-EasyBuild,EasyBuild/4.5.3
-EasyBuild,EasyBuild/4.5.5
-EasyBuild,EasyBuild/4.6.0
-EasyBuild,EasyBuild/4.7.0
-Eigen,Eigen/3.3.7
-Eigen,Eigen/3.3.8
-Eigen,Eigen/3.3.9
-Eigen,Eigen/3.4.0
-Emacs,Emacs/27.2
-FFTW,FFTW/3.3.8
-FFTW,FFTW/3.3.9
-FFTW,FFTW/3.3.10
-FFmpeg,FFmpeg/4.2.2
-FFmpeg,FFmpeg/4.3.2
-FLAC,FLAC/1.3.3
-FSL,FSL/6.0.4-Python-3.7.4
-Flask,Flask/1.1.2-Python-3.8.2
-FlexiBLAS,FlexiBLAS/3.0.4
-FoX,FoX/4.1.2
-FreeSurfer,FreeSurfer/7.2.0-centos7_x86_64
-FriBidi,FriBidi/1.0.9
-FriBidi,FriBidi/1.0.10
-GCC,GCC/8.3.0
-GCC,GCC/9.3.0
-GCC,GCC/10.2.0
-GCC,GCC/10.3.0
-GCC,GCC/11.2.0
-GDRCopy,GDRCopy/2.3
-GEOS,GEOS/3.9.1
-GL2PS,GL2PS/1.4.2
-GLFW,GLFW/3.3.4
-GLM,GLM/0.9.9.8
-GLPK,GLPK/5.0
-GLib,GLib/2.69.1
-GLibmm,GLibmm/2.49.7
-GMP,GMP/6.2.1
-GObject-Introspection,GObject-Introspection/1.64.0-Python-3.8.2
-GObject-Introspection,GObject-Introspection/1.68.0
-GROMACS,GROMACS/2020.4-Python-3.8.2
-GROMACS,GROMACS/2021.5-CUDA-11.4.1
-GROMACS,GROMACS/2021.5
-GSL,GSL/2.6
-GSL,GSL/2.7
-GTK3,GTK3/3.24.31
-GULP,GULP/6.0
-Gdk-Pixbuf,Gdk-Pixbuf/2.42.6
-Ghostscript,Ghostscript/9.54.0
-Guile,Guile/1.8.8
-HDF,HDF/4.2.15
-HDF5,HDF5/1.10.5
-HDF5,HDF5/1.10.6
-HDF5,HDF5/1.10.7
-HDF5,HDF5/1.10.8
-HDF5,HDF5/1.12.1
-HPL,HPL/2.3
-HarfBuzz,HarfBuzz/2.6.4
-HarfBuzz,HarfBuzz/2.8.2
-Horovod,Horovod/0.26.1-CUDA-11.4.1-PyTorch-1.11.0
-ICU,ICU/66.1
-ICU,ICU/69.1
-IPython,IPython/7.26.0
-ImageMagick,ImageMagick/7.0.11-14
-ImageMagick,ImageMagick/7.1.0-4
-JasPer,JasPer/2.0.14
-JasPer,JasPer/2.0.28
-JasPer,JasPer/2.0.33
-Java,Java/1.8.0_281
-Java,Java/11.0.2
-Java,Java/17.0.2
-Julia,Julia/1.7.3-linux-x86_64
-JupyterLab,JupyterLab/3.1.6
-LAME,LAME/3.100
-LAMMPS,LAMMPS/3Mar2020-Python-3.8.2-kokkos
-LLVM,LLVM/9.0.0
-LLVM,LLVM/9.0.1
-LLVM,LLVM/11.1.0
-LLVM,LLVM/12.0.1
-Libint,Libint/2.6.0-lmax-6-cp2k
-LittleCMS,LittleCMS/2.12
-Lua,Lua/5.3.5
-Lua,Lua/5.4.3
-MDAnalysis,MDAnalysis/2.0.0
-METIS,METIS/5.1.0
-MPFR,MPFR/4.0.2
-MPFR,MPFR/4.1.0
-Mako,Mako/1.1.0
-Mako,Mako/1.1.2
-Mako,Mako/1.1.4
-Mamba,Mamba/4.14.0-0
-Maven,Maven/3.6.3
-Mesa,Mesa/19.1.7
-Mesa,Mesa/20.0.2
-Mesa,Mesa/21.1.1
-Mesa,Mesa/21.1.7
-Meson,Meson/0.51.2-Python-3.7.4
-Meson,Meson/0.55.1-Python-3.8.2
-Meson,Meson/0.58.0
-Meson,Meson/0.58.2
-Meson,Meson/0.59.1-Python-3.7.4
-Miniconda3,Miniconda3/4.9.2
-NCCL,NCCL/2.10.3-CUDA-11.4.1
-NLopt,NLopt/2.6.1
-NLopt,NLopt/2.7.0
-NSPR,NSPR/4.21
-NSPR,NSPR/4.25
-NSPR,NSPR/4.32
-NSS,NSS/3.45
-NSS,NSS/3.51
-NSS,NSS/3.69
-Ninja,Ninja/1.9.0
-Ninja,Ninja/1.10.0
-Ninja,Ninja/1.10.2
-ORCA,ORCA/4.2.1
-ORCA,ORCA/5.0.3
-OVITO,OVITO/3.7.11-basic
-OpenBLAS,OpenBLAS/0.3.7
-OpenBLAS,OpenBLAS/0.3.9
-OpenBLAS,OpenBLAS/0.3.12
-OpenBLAS,OpenBLAS/0.3.15
-OpenBLAS,OpenBLAS/0.3.18
-OpenBabel,OpenBabel/3.1.1-Python-3.7.4
-OpenCV,OpenCV/4.5.5-contrib
-OpenEXR,OpenEXR/3.1.1
-OpenFOAM,OpenFOAM/v2112
-OpenFOAM,OpenFOAM/8
-OpenJPEG,OpenJPEG/2.4.0
-OpenMPI,OpenMPI/3.1.4
-OpenMPI,OpenMPI/4.0.3
-OpenMPI,OpenMPI/4.0.5
-OpenMPI,OpenMPI/4.1.1
-OpenPGM,OpenPGM/5.2.122
-OpenSceneGraph,OpenSceneGraph/3.6.5
-PCRE2,PCRE2/10.33
-PCRE2,PCRE2/10.34
-PCRE2,PCRE2/10.36
-PCRE2,PCRE2/10.37
-PLUMED,PLUMED/2.6.0-Python-3.8.2
-PLUMED,PLUMED/2.6.2
-PLUMED,PLUMED/2.7.2
-PMIx,PMIx/3.1.5
-PMIx,PMIx/3.2.3
-PMIx,PMIx/4.1.0
-PROJ,PROJ/8.1.0
-Pango,Pango/1.44.7
-Pango,Pango/1.48.8
-ParaView,ParaView/5.8.0-Python-3.8.2-mpi
-ParaView,ParaView/5.9.1-mpi
-Perl,Perl/5.30.0
-Perl,Perl/5.30.2
-Perl,Perl/5.32.0-minimal
-Perl,Perl/5.32.0
-Perl,Perl/5.32.1-minimal
-Perl,Perl/5.32.1
-Perl,Perl/5.34.0
-Pillow,Pillow/8.2.0
-Pillow,Pillow/8.3.2
-PyCharm,PyCharm/2021.1.1
-PyQt5,PyQt5/5.15.4
-PyTorch,PyTorch/1.11.0-CUDA-11.4.1
-PyYAML,PyYAML/5.4.1
-Python,Python/2.7.16
-Python,Python/2.7.18-bare
-Python,Python/2.7.18
-Python,Python/3.7.4
-Python,Python/3.8.2
-Python,Python/3.8.6
-Python,Python/3.9.5-bare
-Python,Python/3.9.5
-Python,Python/3.9.6-bare
-Python,Python/3.9.6
-Qhull,Qhull/2020.2
-Qt5,Qt5/5.13.1
-Qt5,Qt5/5.14.1
-Qt5,Qt5/5.15.2
-QuantumESPRESSO,QuantumESPRESSO/6.8
-QuantumESPRESSO,QuantumESPRESSO/7.1
-Qwt,Qwt/6.1.4
-Qwt,Qwt/6.2.0
-R,R/4.1.0
-R,R/4.2.0
-RIP-MD,RIP-MD/master
-RapidJSON,RapidJSON/1.1.0
-Rosetta,Rosetta/3.13
-Rust,Rust/1.52.1
-Rust,Rust/1.54.0
-SCOTCH,SCOTCH/6.0.9
-SCOTCH,SCOTCH/6.1.2
-SDL2,SDL2/2.0.20
-SQLite,SQLite/3.29.0
-SQLite,SQLite/3.31.1
-SQLite,SQLite/3.33.0
-SQLite,SQLite/3.35.4
-SQLite,SQLite/3.36
-SWIG,SWIG/4.0.1
-SWIG,SWIG/4.0.2
-ScaFaCoS,ScaFaCoS/1.0.1
-ScaLAPACK,ScaLAPACK/2.0.2
-ScaLAPACK,ScaLAPACK/2.1.0-fb
-ScaLAPACK,ScaLAPACK/2.1.0
-SciPy-bundle,SciPy-bundle/2019.10-Python-3.7.4
-SciPy-bundle,SciPy-bundle/2020.03-Python-3.8.2
-SciPy-bundle,SciPy-bundle/2020.11
-SciPy-bundle,SciPy-bundle/2021.05
-SciPy-bundle,SciPy-bundle/2021.10
-Seaborn,Seaborn/0.11.2
-Siesta,Siesta/master-4.1.5
-Siesta,Siesta/4.1.5
-Spark,Spark/3.1.2-Python-3.8.2
-Tcl,Tcl/8.6.9
-Tcl,Tcl/8.6.10
-Tcl,Tcl/8.6.11
-Tecplot360,Tecplot360/2022
-Tkinter,Tkinter/3.8.2
-Tkinter,Tkinter/3.9.6
-UCX,UCX/1.8.0
-UCX,UCX/1.9.0
-UCX,UCX/1.10.0
-UCX,UCX/1.11.2
-UCX-CUDA,UCX-CUDA/1.11.2-CUDA-11.4.1
-UDUNITS,UDUNITS/2.2.28
-UnZip,UnZip/6.0
-VTK,VTK/8.2.0-Python-3.7.4
-VTK,VTK/8.2.0-Python-3.8.2
-Voro++,Voro++/0.4.6
-X11,X11/20210802
-Xerces-C++,Xerces-C++/3.2.3
-Xvfb,Xvfb/1.20.11
-Xvfb,Xvfb/1.20.13
-Yambo,Yambo/5.0.4
-Yasm,Yasm/1.3.0
-ZeroMQ,ZeroMQ/4.3.4
-ant,ant/1.10.11-Java-11
-archspec,archspec/0.1.0-Python-3.8.2
-at-spi2-atk,at-spi2-atk/2.38.0
-at-spi2-core,at-spi2-core/2.40.3
-blaze,blaze/3.8.1
-cppy,cppy/1.1.0
-cuDNN,cuDNN/8.2.2.26-CUDA-11.4.1
-double-conversion,double-conversion/3.1.4
-double-conversion,double-conversion/3.1.5
-espresso,espresso/3.0.0
-expat,expat/2.4.1
-expecttest,expecttest/0.1.3
-flatbuffers,flatbuffers/2.0.0
-fluent,fluent/19.4.0
-fluent,fluent/20.1.0
-foss,foss/2019b
-foss,foss/2020a
-foss,foss/2020b
-foss,foss/2021a
-foss,foss/2021b
-freeglut,freeglut/3.2.1
-gc,gc/7.6.12
-giflib,giflib/5.2.1
-git,git/2.28.0-nodocs
-git,git/2.33.1-nodocs
-glew,glew/2.2.0-glx
-gnuplot,gnuplot/5.2.8
-gnuplot,gnuplot/5.4.2
-gompi,gompi/2019b
-gompi,gompi/2020a
-gompi,gompi/2020b
-gompi,gompi/2021a
-gompi,gompi/2021b
-gperf,gperf/3.1
-graphite2,graphite2/1.3.14
-gzip,gzip/1.10
-h5py,h5py/2.10.0-Python-3.7.4
-h5py,h5py/2.10.0-Python-3.8.2
-h5py,h5py/3.6.0
-hypothesis,hypothesis/5.41.2
-hypothesis,hypothesis/6.13.1
-hypothesis,hypothesis/6.14.6
-imkl,imkl/2019.5.281
-imkl,imkl/2020.1.217
-imkl,imkl/2021.2.0
-imkl,imkl/2021.4.0
-imkl-FFTW,imkl-FFTW/2021.4.0
-impi,impi/2021.2.0
-impi,impi/2021.4.0
-intel,intel/2021a
-intel,intel/2021b
-intel-compilers,intel-compilers/2021.2.0
-intel-compilers,intel-compilers/2021.4.0
-intltool,intltool/0.51.0
-irrlicht,irrlicht/1.8.5
-jbigkit,jbigkit/2.1
-kim-api,kim-api/2.1.3
-libGLU,libGLU/9.0.1
-libGLU,libGLU/9.0.2
-libGridXC,libGridXC/0.9.6
-libcerf,libcerf/1.13
-libcerf,libcerf/1.17
-libdrm,libdrm/2.4.99
-libdrm,libdrm/2.4.100
-libdrm,libdrm/2.4.106
-libdrm,libdrm/2.4.107
-libepoxy,libepoxy/1.5.8
-libevent,libevent/2.1.11
-libevent,libevent/2.1.12
-libgd,libgd/2.2.5
-libgd,libgd/2.3.0
-libgd,libgd/2.3.3
-libgeotiff,libgeotiff/1.6.0
-libgeotiff,libgeotiff/1.7.0
-libgit2,libgit2/1.1.0
-libgit2,libgit2/1.1.1
-libglvnd,libglvnd/1.2.0
-libglvnd,libglvnd/1.3.3
-libiconv,libiconv/1.16
-libjpeg-turbo,libjpeg-turbo/2.0.6
-libmatheval,libmatheval/1.1.11
-libogg,libogg/1.3.4
-libogg,libogg/1.3.5
-libpng,libpng/1.6.37
-libpsml,libpsml/1.1.10
-librsvg,librsvg/2.52.8
-libsigc++,libsigc++/2.10.2
-libsndfile,libsndfile/1.0.31
-libsodium,libsodium/1.0.18
-libtirpc,libtirpc/1.3.2
-libunistring,libunistring/0.9.10
-libunwind,libunwind/1.3.1
-libunwind,libunwind/1.4.0
-libunwind,libunwind/1.5.0
-libvorbis,libvorbis/1.3.7
-libwebp,libwebp/1.2.0
-libxc,libxc/4.3.4
-libxc,libxc/5.1.5
-libxc,libxc/5.1.6
-libxml++,libxml++/2.40.1
-libxsmm,libxsmm/1.16.1
-libxsmm,libxsmm/1.16.2
-libyaml,libyaml/0.2.5
-lz4,lz4/1.9.2
-lz4,lz4/1.9.3
-magma,magma/2.6.2-CUDA-11.4.1
-matplotlib,matplotlib/3.2.1-Python-3.8.2
-matplotlib,matplotlib/3.4.3
-mm-common,mm-common/1.0.5
-mmcv-full,mmcv-full/1.7.1-CUDA-11.4.1
-molmod,molmod/1.4.5-Python-3.8.2
-motif,motif/2.3.8
-netCDF,netCDF/4.8.1
-netCDF-Fortran,netCDF-Fortran/4.5.2
-netCDF-Fortran,netCDF-Fortran/4.5.3
-nettle,nettle/3.5.1
-nettle,nettle/3.7.2
-nettle,nettle/3.7.3
-networkx,networkx/2.4-Python-3.8.2
-networkx,networkx/2.6.3
-nodejs,nodejs/14.17.0
-nodejs,nodejs/14.17.6
-numactl,numactl/2.0.14
-parallel,parallel/20200422
-perm-md-count,perm-md-count/main
-pkgconf,pkgconf/1.8.0
-pkgconfig,pkgconfig/1.5.1-Python-3.7.4
-pkgconfig,pkgconfig/1.5.1-Python-3.8.2
-pkgconfig,pkgconfig/1.5.5-python
-poppler,poppler/22.01.0
-protobuf,protobuf/3.17.3
-protobuf-python,protobuf-python/3.17.3
-psutil,psutil/5.9.3-Python-3.9.6
-pybind11,pybind11/2.4.3-Python-3.8.2
-pybind11,pybind11/2.6.0
-pybind11,pybind11/2.6.2
-pybind11,pybind11/2.7.1
-pyh5md,pyh5md/1.0.0
-re2c,re2c/1.2.1
-re2c,re2c/1.3
-re2c,re2c/2.2
-sbt,sbt/1.3.13-Java-1.8
-scikit-build,scikit-build/0.10.0-Python-3.8.2
-scikit-build,scikit-build/0.11.1
-scikit-learn,scikit-learn/1.0.1
-snappy,snappy/1.1.7
-snappy,snappy/1.1.8
-snappy,snappy/1.1.9
-spglib-python,spglib-python/1.16.0-Python-3.8.2
-tbb,tbb/2020.1
-tcsh,tcsh/6.24.01
-texlive,texlive/20220321
-tqdm,tqdm/4.62.3
-typing-extensions,typing-extensions/3.10.0.2
-typing-extensions,typing-extensions/4.3.0
-util-linux,util-linux/2.34
-util-linux,util-linux/2.35
-util-linux,util-linux/2.36
-util-linux,util-linux/2.37
-x264,x264/20191217
-x264,x264/20210613
-x265,x265/3.3
-x265,x265/3.5
-xmlf90,xmlf90/1.5.4
-xtb,xtb/6.2.3
-yaff,yaff/1.6.0-Python-3.8.2
-zstd,zstd/1.4.4
-zstd,zstd/1.4.9
-zstd,zstd/1.5.0
+Software,Version,Dependent Toolchain,Module Load Command
+networkx,2.6.3,foss/2021a,`module load foss/2021a networkx/2.6.3`
+FFTW,3.3.10,foss/2021a,`module load foss/2021a FFTW/3.3.10`
+ScaLAPACK,2.1.0-fb,foss/2021a,`module load foss/2021a ScaLAPACK/2.1.0-fb`
+SciPy-bundle,2021.10,foss/2021a,`module load foss/2021a SciPy-bundle/2021.10`
+GROMACS,2021.5,foss/2021a,`module load foss/2021a GROMACS/2021.5`
+GROMACS,2021.5-CUDA-11.7.0,foss/2021a,`module load foss/2021a GROMACS/2021.5-CUDA-11.7.0`
+GROMACS,2021.5-CUDA-11.4.1,foss/2021a,`module load foss/2021a GROMACS/2021.5-CUDA-11.4.1`
+HDF5,1.12.1,foss/2021a,`module load foss/2021a HDF5/1.12.1`
+h5py,3.6.0,foss/2021a,`module load foss/2021a h5py/3.6.0`
+ELPA,2021.05.001,foss/2021a,`module load foss/2021a ELPA/2021.05.001`
+netCDF,4.8.1,foss/2021a,`module load foss/2021a netCDF/4.8.1`
+netCDF-Fortran,4.5.3,foss/2021a,`module load foss/2021a netCDF-Fortran/4.5.3`
+Siesta,4.1.5,foss/2021a,`module load foss/2021a Siesta/4.1.5`
+libGridXC,0.9.6,foss/2021a,`module load foss/2021a libGridXC/0.9.6`
+SCOTCH,6.1.2,foss/2021a,`module load foss/2021a SCOTCH/6.1.2`
+PnetCDF,1.12.3,foss/2021a,`module load foss/2021a PnetCDF/1.12.3`
+matplotlib,3.4.3,foss/2021a,`module load foss/2021a matplotlib/3.4.3`
+VTK,9.1.0,foss/2021a,`module load foss/2021a VTK/9.1.0`
+VTK,8.2.0,foss/2021a,`module load foss/2021a VTK/8.2.0`
+OpenCASCADE,7.6.0,foss/2021a,`module load foss/2021a OpenCASCADE/7.6.0`
+OpenCASCADE,7.4.0,foss/2021a,`module load foss/2021a OpenCASCADE/7.4.0`
+blaze,3.8.1,foss/2021a,`module load foss/2021a blaze/3.8.1`
+irrlicht,1.8.5,foss/2021a,`module load foss/2021a irrlicht/1.8.5`
+Chrono,7.0.3,foss/2021a,`module load foss/2021a Chrono/7.0.3`
+MUMPS,5.4.1-metis,foss/2021a,`module load foss/2021a MUMPS/5.4.1-metis`
+magma,2.6.2-CUDA-11.4.1,foss/2021a,`module load foss/2021a magma/2.6.2-CUDA-11.4.1`
+PyTorch,1.11.0-CUDA-11.4.1,foss/2021a,`module load foss/2021a PyTorch/1.11.0-CUDA-11.4.1`
+torchvision,0.12.0-CUDA-11.4.1,foss/2021a,`module load foss/2021a torchvision/0.12.0-CUDA-11.4.1`
+Horovod,0.26.1-CUDA-11.4.1-PyTorch-1.11.0,foss/2021a,`module load foss/2021a Horovod/0.26.1-CUDA-11.4.1-PyTorch-1.11.0`
+tensorboard,2.11.0,foss/2021a,`module load foss/2021a tensorboard/2.11.0`
+PyTorch-Lightning,1.7.7-CUDA-11.4.1,foss/2021a,`module load foss/2021a PyTorch-Lightning/1.7.7-CUDA-11.4.1`
+Arrow,6.0.0,foss/2021a,`module load foss/2021a Arrow/6.0.0`
+Spark,3.2.1,foss/2021a,`module load foss/2021a Spark/3.2.1`
+Bio-SamTools,1.43-Perl-5.34.0,foss/2021a,`module load foss/2021a Bio-SamTools/1.43-Perl-5.34.0`
+Trinity,2.14.0,foss/2021a,`module load foss/2021a Trinity/2.14.0`
+bitarray,2.6.0-Python-3.9.6,foss/2021a,`module load foss/2021a bitarray/2.6.0-Python-3.9.6`
+QuantumESPRESSO,7.1,foss/2021a,`module load foss/2021a QuantumESPRESSO/7.1`
+GDAL,3.3.2,foss/2021a,`module load foss/2021a GDAL/3.3.2`
+R,4.2.0,foss/2021a,`module load foss/2021a R/4.2.0`
+AFNI,23.0.04-Python-3.9.6,foss/2021a,`module load foss/2021a AFNI/23.0.04-Python-3.9.6`
+Biopython,1.79,foss/2021a,`module load foss/2021a Biopython/1.79`
+Biopython,1.75,foss/2021a,`module load foss/2021a Biopython/1.75`
+MDAnalysis,2.0.0,foss/2021a,`module load foss/2021a MDAnalysis/2.0.0`
+MDAnalysis,0.20.1,foss/2021a,`module load foss/2021a MDAnalysis/0.20.1`
+psutil,5.9.3-Python-3.9.6,foss/2021a,`module load foss/2021a psutil/5.9.3-Python-3.9.6`
+perm-md-count,main,foss/2021a,`module load foss/2021a perm-md-count/main`
+RIP-MD,master,foss/2021a,`module load foss/2021a RIP-MD/master`
+OpenCV,4.5.5-contrib,foss/2021a,`module load foss/2021a OpenCV/4.5.5-contrib`
+MMCV,1.7.1-CUDA-11.4.1,foss/2021a,`module load foss/2021a MMCV/1.7.1-CUDA-11.4.1`
+Seaborn,0.11.2,foss/2021a,`module load foss/2021a Seaborn/0.11.2`
+OVITO,3.7.11-basic,foss/2021a,`module load foss/2021a OVITO/3.7.11-basic`
+redis-py,4.3.3,foss/2021a,`module load foss/2021a redis-py/4.3.3`
+Boost,1.79.0,foss/2021a,`module load foss/2021a Boost/1.79.0`
+Boost.Python,1.77.0,foss/2021a,`module load foss/2021a Boost.Python/1.77.0`
+Boost.MPI,1.77.0,foss/2021a,`module load foss/2021a Boost.MPI/1.77.0`
+pyh5md,1.0.0,foss/2021a,`module load foss/2021a pyh5md/1.0.0`
+espresso,3.0.0,foss/2021a,`module load foss/2021a espresso/3.0.0`
+FFTW,3.3.9,foss/2021a,`module load foss/2021a FFTW/3.3.9`
+ScaLAPACK,2.1.0-fb,foss/2021a,`module load foss/2021a ScaLAPACK/2.1.0-fb`
+SCOTCH,6.1.0,foss/2021a,`module load foss/2021a SCOTCH/6.1.0`
+SuiteSparse,5.10.1-METIS-5.1.0,foss/2021a,`module load foss/2021a SuiteSparse/5.10.1-METIS-5.1.0`
+Hypre,2.21.0,foss/2021a,`module load foss/2021a Hypre/2.21.0`
+SciPy-bundle,2021.05,foss/2021a,`module load foss/2021a SciPy-bundle/2021.05`
+MUMPS,5.4.0-metis,foss/2021a,`module load foss/2021a MUMPS/5.4.0-metis`
+PETSc,3.15.1,foss/2021a,`module load foss/2021a PETSc/3.15.1`
+VTK,9.0.1,foss/2021a,`module load foss/2021a VTK/9.0.1`
+h5py,3.2.1,foss/2021a,`module load foss/2021a h5py/3.2.1`
+HDF5,1.10.7,foss/2021a,`module load foss/2021a HDF5/1.10.7`
+libGridXC,0.9.6,intel/2021b,module load intel/2021b libGridXC/0.9.6
+imkl-FFTW,2021.4.0,intel/2021b,module load intel/2021b imkl-FFTW/2021.4.0
+ELPA,2021.11.001,intel/2021b,module load intel/2021b ELPA/2021.11.001
+HDF5,1.12.1,intel/2021b,module load intel/2021b HDF5/1.12.1
+netCDF,4.8.1,intel/2021b,module load intel/2021b netCDF/4.8.1
+netCDF-Fortran,4.5.3,intel/2021b,module load intel/2021b netCDF-Fortran/4.5.3
+Siesta,master-4.1.5,intel/2021b,module load intel/2021b Siesta/master-4.1.5
+SciPy-bundle,2021.10,intel/2021b,module load intel/2021b SciPy-bundle/2021.10
+FFTW,3.3.10,intel/2021b,module load intel/2021b FFTW/3.3.10
+matplotlib,3.4.3,intel/2021b,module load intel/2021b matplotlib/3.4.3
+AmberTools,21,intel/2021b,module load intel/2021b AmberTools/21
+blaze,3.8.1,intel/2021b,module load intel/2021b blaze/3.8.1
+M4,1.4.19,intel/2021b,module load intel/2021b M4/1.4.19
+QuantumESPRESSO,7.1,intel/2021b,module load intel/2021b QuantumESPRESSO/7.1
+GCC,system,-,module load GCC/system
+GCC,10.3.0,-,module load GCC/10.3.0
+GCC,11.2.0,-,module load GCC/11.2.0
+GCC,11.3.0,-,module load GCC/11.3.0
+GCC,12.2.0,-,module load GCC/12.2.0
+EasyBuild,4.5.5,-,module load EasyBuild/4.5.5
+EasyBuild,4.7.0,-,module load EasyBuild/4.7.0
+GCCcore,12.2.0,-,module load GCCcore/12.2.0
+GCCcore,8.3.0,-,module load GCCcore/8.3.0
+GCCcore,10.3.0,-,module load GCCcore/10.3.0
+GCCcore,11.3.0,-,module load GCCcore/11.3.0
+GCCcore,11.2.0,-,module load GCCcore/11.2.0
+M4,1.4.19,-,module load M4/1.4.19
+M4,1.4.18,-,module load M4/1.4.18
+M4,1.4.17,-,module load M4/1.4.17
+Bison,3.8.2,-,module load Bison/3.8.2
+Bison,3.3.2,-,module load Bison/3.3.2
+flex,2.6.4,-,module load flex/2.6.4
+zlib,1.2.12,-,module load zlib/1.2.12
+zlib,1.2.11,-,module load zlib/1.2.11
+binutils,2.38,-,module load binutils/2.38
+binutils,2.32,-,module load binutils/2.32
+binutils,2.36.1,-,module load binutils/2.36.1
+binutils,2.37,-,module load binutils/2.37
+binutils,2.39,-,module load binutils/2.39
+pkgconf,1.8.0,-,module load pkgconf/1.8.0
+OpenSSL,1.1,-,module load OpenSSL/1.1
+intel-compilers,2022.1.0,-,module load intel-compilers/2022.1.0
+intel-compilers,2022.0.1,-,module load intel-compilers/2022.0.1
+intel-compilers,2021.4.0,-,module load intel-compilers/2021.4.0
+ncurses,6.2,-,module load ncurses/6.2
+ncurses,5.9,-,module load ncurses/5.9
+ncurses,6.3,-,module load ncurses/6.3
+gettext,0.21,-,module load gettext/0.21
+gettext,0.21.1,-,module load gettext/0.21.1
+iimpi,2022.00,-,module load iimpi/2022.00
+iimpi,2021b,-,module load iimpi/2021b
+imkl,2022.0.1,-,module load imkl/2022.0.1
+imkl,2021.4.0,-,module load imkl/2021.4.0
+intel,2022.00,-,module load intel/2022.00
+intel,2021b,-,module load intel/2021b
+CMake,3.9.6,-,module load CMake/3.9.6
+CMake,3.18.4,-,module load CMake/3.18.4
+CUDA,11.5.1,-,module load CUDA/11.5.1
+CUDA,11.4.1,-,module load CUDA/11.4.1
+CUDA,11.7.0~,-,module load CUDA/11.7.0~
+MATLAB,Parallel-Server-R2022a,-,module load MATLAB/Parallel-Server-R2022a
+MATLAB,R2022a.bak_20220809183307_5355,-,module load MATLAB/R2022a.bak_20220809183307_5355
+MATLAB,R2022a.bak_20220809221930_20985,-,module load MATLAB/R2022a.bak_20220809221930_20985
+FLUENT,2022R1,-,module load FLUENT/2022R1
+gompi,2021c,-,module load gompi/2021c
+gompi,2021a,-,module load gompi/2021a
+gompi,2022b,-,module load gompi/2022b
+gompi,2021b,-,module load gompi/2021b
+foss,2021a,-,module load foss/2021a
+foss,2022b,-,module load foss/2022b
+foss,2021b,-,module load foss/2021b
+Java,17.0.2,-,module load Java/17.0.2
+Java,.modulerc,-,module load Java/.modulerc
+Java,13.0.2,-,module load Java/13.0.2
+Java,.modulerc.bak_20220916224927_25916,-,module load Java/.modulerc.bak_20220916224927_25916
+Java,11.0.2,-,module load Java/11.0.2
+Java,.modulerc.bak_20220917012146_9304,-,module load Java/.modulerc.bak_20220917012146_9304
+CUDAcore,11.5.1,-,module load CUDAcore/11.5.1
+CUDAcore,11.7.0,-,module load CUDAcore/11.7.0
+CUDAcore,11.4.1,-,module load CUDAcore/11.4.1
+ANSYS,2022,-,module load ANSYS/2022
+cuDNN,8.2.2.26-CUDA-11.4.1,-,module load cuDNN/8.2.2.26-CUDA-11.4.1
+DMTCP,2.6.0,-,module load DMTCP/2.6.0
+Autoconf,2.69,-,module load Autoconf/2.69
+Automake,1.15,-,module load Automake/1.15
+libtool,2.4.6,-,module load libtool/2.4.6
+Autotools,20150215,-,module load Autotools/20150215
+Anaconda3,2022.05,-,module load Anaconda3/2022.05
+PyCharm,2021.1.1,-,module load PyCharm/2021.1.1
+ant,1.10.11-Java-17.0.2,-,module load ant/1.10.11-Java-17.0.2
+ant,1.10.11-Java-11,-,module load ant/1.10.11-Java-11
+Julia,1.7.3-linux-x86_64,-,module load Julia/1.7.3-linux-x86_64
+COMSOL,5.6,-,module load COMSOL/5.6
+tecplot360ex,2022r2_linux64,-,module load tecplot360ex/2022r2_linux64
+tecplot360ex,2022R2,-,module load tecplot360ex/2022R2
+Spack,0.19.1,-,module load Spack/0.19.1
+Go,1.14.1,-,module load Go/1.14.1
+git-lfs,2.11.0,-,module load git-lfs/2.11.0
+bbcp,12.01.30.00.0-amd64_linux26,-,module load bbcp/12.01.30.00.0-amd64_linux26
+Mamba,4.14.0-0,-,module load Mamba/4.14.0-0
+gfbf,2022b,-,module load gfbf/2022b
+Boost,1.76.0,foss/2021a,`module load foss/2021a Boost/1.76.0`
+BLIS,0.8.1,foss/2021a,`module load foss/2021a BLIS/0.8.1`
+OpenBLAS,0.3.15,foss/2021a,`module load foss/2021a OpenBLAS/0.3.15`
+FlexiBLAS,3.0.4,foss/2021a,`module load foss/2021a FlexiBLAS/3.0.4`
+OpenMPI,4.1.1,foss/2021a,`module load foss/2021a OpenMPI/4.1.1`
+OpenMPI,4.1.2,foss/2021b,`module load foss/2021b OpenMPI/4.1.2`
+OpenMPI,4.1.1,foss/2021b,`module load foss/2021b OpenMPI/4.1.1`
+BLIS,0.8.1,foss/2021b,`module load foss/2021b BLIS/0.8.1`
+OpenBLAS,0.3.18,foss/2021b,`module load foss/2021b OpenBLAS/0.3.18`
+FlexiBLAS,3.0.4,foss/2021b,`module load foss/2021b FlexiBLAS/3.0.4`
+xmlf90,1.5.4,foss/2021b,`module load foss/2021b xmlf90/1.5.4`
+libpsml,1.1.10,foss/2021b,`module load foss/2021b libpsml/1.1.10`
+libxc,5.1.6,foss/2021b,`module load foss/2021b libxc/5.1.6`
+libxc,4.3.4,foss/2021b,`module load foss/2021b libxc/4.3.4`
+flook,0.8.1,foss/2021b,`module load foss/2021b flook/0.8.1`
+LAPACK,3.10.1,foss/2021b,`module load foss/2021b LAPACK/3.10.1`
+AutoDock-GPU,1.5.3-CUDA-11.4.1,foss/2021b,`module load foss/2021b AutoDock-GPU/1.5.3-CUDA-11.4.1`
+AutoDock-GPU,1.5.3-CUDA-11.7.0,foss/2021b,`module load foss/2021b AutoDock-GPU/1.5.3-CUDA-11.7.0`
+Boost,1.77.0,foss/2021b,`module load foss/2021b Boost/1.77.0`
+Bowtie2,2.4.4,foss/2021b,`module load foss/2021b Bowtie2/2.4.4`
+SAMtools,1.15.1,foss/2021b,`module load foss/2021b SAMtools/1.15.1`
+SAMtools,0.1.17,foss/2021b,`module load foss/2021b SAMtools/0.1.17`
+Bowtie,1.3.1,foss/2021b,`module load foss/2021b Bowtie/1.3.1`
+Salmon,1.4.0,foss/2021b,`module load foss/2021b Salmon/1.4.0`
+Jellyfish,2.3.0,foss/2021b,`module load foss/2021b Jellyfish/2.3.0`
+libxml++,5.0.2,foss/2021b,`module load foss/2021b libxml++/5.0.2`
+GSL,2.7,foss/2021b,`module load foss/2021b GSL/2.7`
+GEOS,3.9.1,foss/2021b,`module load foss/2021b GEOS/3.9.1`
+texlive,20220321,foss/2021b,`module load foss/2021b texlive/20220321`
+poppler,22.01.0,foss/2021b,`module load foss/2021b poppler/22.01.0`
+Redis,6.2.6,foss/2021b,`module load foss/2021b Redis/6.2.6`
+zlib,1.2.11,foss/2021a,`module load foss/2021a zlib/1.2.11`
+help2man,1.48.3,foss/2021a,`module load foss/2021a help2man/1.48.3`
+M4,1.4.18,foss/2021a,`module load foss/2021a M4/1.4.18`
+Bison,3.7.6,foss/2021a,`module load foss/2021a Bison/3.7.6`
+flex,2.6.4,foss/2021a,`module load foss/2021a flex/2.6.4`
+binutils,2.36.1,foss/2021a,`module load foss/2021a binutils/2.36.1`
+pkg-config,0.29.2,foss/2021a,`module load foss/2021a pkg-config/0.29.2`
+libtool,2.4.6,foss/2021a,`module load foss/2021a libtool/2.4.6`
+expat,2.2.9,foss/2021a,`module load foss/2021a expat/2.2.9`
+ncurses,6.2,foss/2021a,`module load foss/2021a ncurses/6.2`
+Perl,5.32.1-minimal,foss/2021a,`module load foss/2021a Perl/5.32.1-minimal`
+Perl,5.32.1,foss/2021a,`module load foss/2021a Perl/5.32.1`
+makeinfo,6.7-minimal,foss/2021a,`module load foss/2021a makeinfo/6.7-minimal`
+bzip2,1.0.8,foss/2021a,`module load foss/2021a bzip2/1.0.8`
+cURL,7.76.0,foss/2021a,`module load foss/2021a cURL/7.76.0`
+UnZip,6.0,foss/2021a,`module load foss/2021a UnZip/6.0`
+XZ,5.2.5,foss/2021a,`module load foss/2021a XZ/5.2.5`
+libarchive,3.5.1,foss/2021a,`module load foss/2021a libarchive/3.5.1`
+CMake,3.20.1,foss/2021a,`module load foss/2021a CMake/3.20.1`
+METIS,5.1.0,foss/2021a,`module load foss/2021a METIS/5.1.0`
+libreadline,8.1,foss/2021a,`module load foss/2021a libreadline/8.1`
+Eigen,3.3.9,foss/2021a,`module load foss/2021a Eigen/3.3.9`
+libffi,3.3,foss/2021a,`module load foss/2021a libffi/3.3`
+Tcl,8.6.11,foss/2021a,`module load foss/2021a Tcl/8.6.11`
+libxml2,2.9.10,foss/2021a,`module load foss/2021a libxml2/2.9.10`
+SQLite,3.35.4,foss/2021a,`module load foss/2021a SQLite/3.35.4`
+gettext,0.21,foss/2021a,`module load foss/2021a gettext/0.21`
+Python,3.9.5-bare,foss/2021a,`module load foss/2021a Python/3.9.5-bare`
+Python,3.9.5,foss/2021a,`module load foss/2021a Python/3.9.5`
+Python,2.7.18-bare,foss/2021a,`module load foss/2021a Python/2.7.18-bare`
+Rust,1.52.1,foss/2021a,`module load foss/2021a Rust/1.52.1`
+DB,18.1.40,foss/2021a,`module load foss/2021a DB/18.1.40`
+groff,1.22.4,foss/2021a,`module load foss/2021a groff/1.22.4`
+Autoconf,2.71,foss/2021a,`module load foss/2021a Autoconf/2.71`
+Automake,1.16.3,foss/2021a,`module load foss/2021a Automake/1.16.3`
+Autotools,20210128,foss/2021a,`module load foss/2021a Autotools/20210128`
+git,2.32.0-nodocs,foss/2021a,`module load foss/2021a git/2.32.0-nodocs`
+GMP,6.2.1,foss/2021a,`module load foss/2021a GMP/6.2.1`
+hypothesis,6.13.1,foss/2021a,`module load foss/2021a hypothesis/6.13.1`
+pybind11,2.6.2,foss/2021a,`module load foss/2021a pybind11/2.6.2`
+ICU,69.1,foss/2021a,`module load foss/2021a ICU/69.1`
+MPFR,4.1.0,foss/2021a,`module load foss/2021a MPFR/4.1.0`
+libevent,2.1.12,foss/2021a,`module load foss/2021a libevent/2.1.12`
+numactl,2.0.14,foss/2021a,`module load foss/2021a numactl/2.0.14`
+UCX,1.10.0,foss/2021a,`module load foss/2021a UCX/1.10.0`
+libfabric,1.12.1,foss/2021a,`module load foss/2021a libfabric/1.12.1`
+xorg-macros,1.19.3,foss/2021a,`module load foss/2021a xorg-macros/1.19.3`
+libpciaccess,0.16,foss/2021a,`module load foss/2021a libpciaccess/0.16`
+hwloc,2.4.1,foss/2021a,`module load foss/2021a hwloc/2.4.1`
+PMIx,3.2.3,foss/2021a,`module load foss/2021a PMIx/3.2.3`
+libpng,1.6.37,foss/2021a,`module load foss/2021a libpng/1.6.37`
+Brotli,1.0.9,foss/2021a,`module load foss/2021a Brotli/1.0.9`
+mm-common,1.0.4,foss/2021a,`module load foss/2021a mm-common/1.0.4`
+Meson,0.58.0,foss/2021a,`module load foss/2021a Meson/0.58.0`
+Ninja,1.10.2,foss/2021a,`module load foss/2021a Ninja/1.10.2`
+NASM,2.15.05,foss/2021a,`module load foss/2021a NASM/2.15.05`
+libjpeg-turbo,2.0.6,foss/2021a,`module load foss/2021a libjpeg-turbo/2.0.6`
+freetype,2.10.4,foss/2021a,`module load foss/2021a freetype/2.10.4`
+fontconfig,2.13.93,foss/2021a,`module load foss/2021a fontconfig/2.13.93`
+gperf,3.1,foss/2021a,`module load foss/2021a gperf/3.1`
+util-linux,2.36,foss/2021a,`module load foss/2021a util-linux/2.36`
+libgd,2.3.1,foss/2021a,`module load foss/2021a libgd/2.3.1`
+X11,20210518,foss/2021a,`module load foss/2021a X11/20210518`
+intltool,0.51.0,foss/2021a,`module load foss/2021a intltool/0.51.0`
+GLib,2.68.2,foss/2021a,`module load foss/2021a GLib/2.68.2`
+Tk,8.6.11,foss/2021a,`module load foss/2021a Tk/8.6.11`
+freeglut,3.2.1,foss/2021a,`module load foss/2021a freeglut/3.2.1`
+Mesa,21.1.1,foss/2021a,`module load foss/2021a Mesa/21.1.1`
+Mako,1.1.4,foss/2021a,`module load foss/2021a Mako/1.1.4`
+zstd,1.4.9,foss/2021a,`module load foss/2021a zstd/1.4.9`
+gzip,1.10,foss/2021a,`module load foss/2021a gzip/1.10`
+lz4,1.9.3,foss/2021a,`module load foss/2021a lz4/1.9.3`
+libdrm,2.4.106,foss/2021a,`module load foss/2021a libdrm/2.4.106`
+libglvnd,1.3.3,foss/2021a,`module load foss/2021a libglvnd/1.3.3`
+libunwind,1.4.0,foss/2021a,`module load foss/2021a libunwind/1.4.0`
+LLVM,11.1.0,foss/2021a,`module load foss/2021a LLVM/11.1.0`
+libGLU,9.0.1,foss/2021a,`module load foss/2021a libGLU/9.0.1`
+PCRE2,10.36,foss/2021a,`module load foss/2021a PCRE2/10.36`
+pkgconfig,1.5.4-python,foss/2021a,`module load foss/2021a pkgconfig/1.5.4-python`
+re2c,2.1.1,foss/2021a,`module load foss/2021a re2c/2.1.1`
+Szip,2.1.1,foss/2021a,`module load foss/2021a Szip/2.1.1`
+double-conversion,3.1.5,foss/2021a,`module load foss/2021a double-conversion/3.1.5`
+Doxygen,1.9.1,foss/2021a,`module load foss/2021a Doxygen/1.9.1`
+libiconv,1.16,foss/2021a,`module load foss/2021a libiconv/1.16`
+DBus,1.13.18,foss/2021a,`module load foss/2021a DBus/1.13.18`
+snappy,1.1.8,foss/2021a,`module load foss/2021a snappy/1.1.8`
+libxslt,1.1.34,foss/2021a,`module load foss/2021a libxslt/1.1.34`
+NSPR,4.30,foss/2021a,`module load foss/2021a NSPR/4.30`
+NSS,3.65,foss/2021a,`module load foss/2021a NSS/3.65`
+FriBidi,1.0.10,foss/2021a,`module load foss/2021a FriBidi/1.0.10`
+PCRE,8.44,foss/2021a,`module load foss/2021a PCRE/8.44`
+SWIG,4.0.2,foss/2021a,`module load foss/2021a SWIG/4.0.2`
+GTS,0.7.6,foss/2021a,`module load foss/2021a GTS/0.7.6`
+jbigkit,2.1,foss/2021a,`module load foss/2021a jbigkit/2.1`
+pixman,0.40.0,foss/2021a,`module load foss/2021a pixman/0.40.0`
+LibTIFF,4.2.0,foss/2021a,`module load foss/2021a LibTIFF/4.2.0`
+cairo,1.16.0,foss/2021a,`module load foss/2021a cairo/1.16.0`
+GObject-Introspection,1.68.0,foss/2021a,`module load foss/2021a GObject-Introspection/1.68.0`
+HarfBuzz,2.8.1,foss/2021a,`module load foss/2021a HarfBuzz/2.8.1`
+Gdk-Pixbuf,2.42.6,foss/2021a,`module load foss/2021a Gdk-Pixbuf/2.42.6`
+Pango,1.48.5,foss/2021a,`module load foss/2021a Pango/1.48.5`
+Qt5,5.15.2,foss/2021a,`module load foss/2021a Qt5/5.15.2`
+JasPer,2.0.28,foss/2021a,`module load foss/2021a JasPer/2.0.28`
+help2man,1.48.3,foss/2021b,`module load foss/2021b help2man/1.48.3`
+M4,1.4.19,foss/2021b,`module load foss/2021b M4/1.4.19`
+zlib,1.2.11,foss/2021b,`module load foss/2021b zlib/1.2.11`
+Bison,3.7.6,foss/2021b,`module load foss/2021b Bison/3.7.6`
+flex,2.6.4,foss/2021b,`module load foss/2021b flex/2.6.4`
+binutils,2.37,foss/2021b,`module load foss/2021b binutils/2.37`
+groff,1.22.4,foss/2021b,`module load foss/2021b groff/1.22.4`
+expat,2.4.1,foss/2021b,`module load foss/2021b expat/2.4.1`
+ncurses,6.2,foss/2021b,`module load foss/2021b ncurses/6.2`
+libreadline,8.1,foss/2021b,`module load foss/2021b libreadline/8.1`
+DB,18.1.40,foss/2021b,`module load foss/2021b DB/18.1.40`
+Perl,5.34.0,foss/2021b,`module load foss/2021b Perl/5.34.0`
+pkgconf,1.8.0,foss/2021b,`module load foss/2021b pkgconf/1.8.0`
+pkg-config,0.29.2,foss/2021b,`module load foss/2021b pkg-config/0.29.2`
+libevent,2.1.12,foss/2021b,`module load foss/2021b libevent/2.1.12`
+Autoconf,2.71,foss/2021b,`module load foss/2021b Autoconf/2.71`
+Automake,1.16.4,foss/2021b,`module load foss/2021b Automake/1.16.4`
+libtool,2.4.6,foss/2021b,`module load foss/2021b libtool/2.4.6`
+Autotools,20210726,foss/2021b,`module load foss/2021b Autotools/20210726`
+xorg-macros,1.19.3,foss/2021b,`module load foss/2021b xorg-macros/1.19.3`
+numactl,2.0.14,foss/2021b,`module load foss/2021b numactl/2.0.14`
+UCX,1.11.2,foss/2021b,`module load foss/2021b UCX/1.11.2`
+libfabric,1.13.2,foss/2021b,`module load foss/2021b libfabric/1.13.2`
+libpciaccess,0.16,foss/2021b,`module load foss/2021b libpciaccess/0.16`
+XZ,5.2.5,foss/2021b,`module load foss/2021b XZ/5.2.5`
+libxml2,2.9.10,foss/2021b,`module load foss/2021b libxml2/2.9.10`
+hwloc,2.5.0,foss/2021b,`module load foss/2021b hwloc/2.5.0`
+PMIx,4.1.0,foss/2021b,`module load foss/2021b PMIx/4.1.0`
+bzip2,1.0.8,foss/2021b,`module load foss/2021b bzip2/1.0.8`
+cURL,7.78.0,foss/2021b,`module load foss/2021b cURL/7.78.0`
+libarchive,3.5.1,foss/2021b,`module load foss/2021b libarchive/3.5.1`
+CMake,3.22.1,foss/2021b,`module load foss/2021b CMake/3.22.1`
+CMake,3.21.1,foss/2021b,`module load foss/2021b CMake/3.21.1`
+libpng,1.6.37,foss/2021b,`module load foss/2021b libpng/1.6.37`
+pixman,0.40.0,foss/2021b,`module load foss/2021b pixman/0.40.0`
+NASM,2.15.05,foss/2021b,`module load foss/2021b NASM/2.15.05`
+Brotli,1.0.9,foss/2021b,`module load foss/2021b Brotli/1.0.9`
+libjpeg-turbo,2.0.6,foss/2021b,`module load foss/2021b libjpeg-turbo/2.0.6`
+freetype,2.11.0,foss/2021b,`module load foss/2021b freetype/2.11.0`
+libcerf,1.17,foss/2021b,`module load foss/2021b libcerf/1.17`
+gettext,0.21,foss/2021b,`module load foss/2021b gettext/0.21`
+gperf,3.1,foss/2021b,`module load foss/2021b gperf/3.1`
+UnZip,6.0,foss/2021b,`module load foss/2021b UnZip/6.0`
+intltool,0.51.0,foss/2021b,`module load foss/2021b intltool/0.51.0`
+Lua,5.4.3,foss/2021b,`module load foss/2021b Lua/5.4.3`
+libffi,3.4.2,foss/2021b,`module load foss/2021b libffi/3.4.2`
+util-linux,2.37,foss/2021b,`module load foss/2021b util-linux/2.37`
+git,2.33.1-nodocs,foss/2021b,`module load foss/2021b git/2.33.1-nodocs`
+PCRE,8.45,foss/2021b,`module load foss/2021b PCRE/8.45`
+GMP,6.2.1,foss/2021b,`module load foss/2021b GMP/6.2.1`
+re2c,2.2,foss/2021b,`module load foss/2021b re2c/2.2`
+Tcl,8.6.11,foss/2021b,`module load foss/2021b Tcl/8.6.11`
+SQLite,3.36,foss/2021b,`module load foss/2021b SQLite/3.36`
+Python,3.9.6-bare,foss/2021b,`module load foss/2021b Python/3.9.6-bare`
+Python,2.7.18-bare,foss/2021b,`module load foss/2021b Python/2.7.18-bare`
+Python,3.9.6,foss/2021b,`module load foss/2021b Python/3.9.6`
+Python,3.11.0-bare,foss/2021b,`module load foss/2021b Python/3.11.0-bare`
+Rust,1.54.0,foss/2021b,`module load foss/2021b Rust/1.54.0`
+fontconfig,2.13.94,foss/2021b,`module load foss/2021b fontconfig/2.13.94`
+libgd,2.3.3,foss/2021b,`module load foss/2021b libgd/2.3.3`
+Ninja,1.10.2,foss/2021b,`module load foss/2021b Ninja/1.10.2`
+Meson,0.58.2,foss/2021b,`module load foss/2021b Meson/0.58.2`
+Meson,0.62.1,foss/2021b,`module load foss/2021b Meson/0.62.1`
+GLib,2.69.1,foss/2021b,`module load foss/2021b GLib/2.69.1`
+X11,20210802,foss/2021b,`module load foss/2021b X11/20210802`
+cairo,1.16.0,foss/2021b,`module load foss/2021b cairo/1.16.0`
+GObject-Introspection,1.68.0,foss/2021b,`module load foss/2021b GObject-Introspection/1.68.0`
+double-conversion,3.1.5,foss/2021b,`module load foss/2021b double-conversion/3.1.5`
+FriBidi,1.0.10,foss/2021b,`module load foss/2021b FriBidi/1.0.10`
+PCRE2,10.37,foss/2021b,`module load foss/2021b PCRE2/10.37`
+ICU,69.1,foss/2021b,`module load foss/2021b ICU/69.1`
+HarfBuzz,2.8.2,foss/2021b,`module load foss/2021b HarfBuzz/2.8.2`
+Pango,1.48.8,foss/2021b,`module load foss/2021b Pango/1.48.8`
+graphite2,1.3.14,foss/2021b,`module load foss/2021b graphite2/1.3.14`
+DBus,1.13.18,foss/2021b,`module load foss/2021b DBus/1.13.18`
+snappy,1.1.9,foss/2021b,`module load foss/2021b snappy/1.1.9`
+NSPR,4.32,foss/2021b,`module load foss/2021b NSPR/4.32`
+Mako,1.1.4,foss/2021b,`module load foss/2021b Mako/1.1.4`
+NSS,3.69,foss/2021b,`module load foss/2021b NSS/3.69`
+JasPer,2.0.33,foss/2021b,`module load foss/2021b JasPer/2.0.33`
+libdrm,2.4.107,foss/2021b,`module load foss/2021b libdrm/2.4.107`
+gzip,1.10,foss/2021b,`module load foss/2021b gzip/1.10`
+libglvnd,1.3.3,foss/2021b,`module load foss/2021b libglvnd/1.3.3`
+lz4,1.9.3,foss/2021b,`module load foss/2021b lz4/1.9.3`
+zstd,1.5.0,foss/2021b,`module load foss/2021b zstd/1.5.0`
+libunwind,1.5.0,foss/2021b,`module load foss/2021b libunwind/1.5.0`
+LLVM,12.0.1,foss/2021b,`module load foss/2021b LLVM/12.0.1`
+Mesa,21.1.7,foss/2021b,`module load foss/2021b Mesa/21.1.7`
+libGLU,9.0.2,foss/2021b,`module load foss/2021b libGLU/9.0.2`
+Qt5,5.15.2,foss/2021b,`module load foss/2021b Qt5/5.15.2`
+p7zip,17.04,foss/2021b,`module load foss/2021b p7zip/17.04`
+gnuplot,5.4.2,foss/2021b,`module load foss/2021b gnuplot/5.4.2`
+scikit-build,0.11.1,foss/2021b,`module load foss/2021b scikit-build/0.11.1`
+hypothesis,6.14.6,foss/2021b,`module load foss/2021b hypothesis/6.14.6`
+Eigen,3.3.9,foss/2021b,`module load foss/2021b Eigen/3.3.9`
+pybind11,2.7.1,foss/2021b,`module load foss/2021b pybind11/2.7.1`
+GDRCopy,2.3,foss/2021b,`module load foss/2021b GDRCopy/2.3`
+UCX-CUDA,1.11.2-CUDA-11.7.0,foss/2021b,`module load foss/2021b UCX-CUDA/1.11.2-CUDA-11.7.0`
+UCX-CUDA,1.11.2-CUDA-11.4.1,foss/2021b,`module load foss/2021b UCX-CUDA/1.11.2-CUDA-11.4.1`
+MPFR,4.1.0,foss/2021b,`module load foss/2021b MPFR/4.1.0`
+protobuf,3.17.3,foss/2021b,`module load foss/2021b protobuf/3.17.3`
+Zip,3.0,foss/2021b,`module load foss/2021b Zip/3.0`
+NCCL,2.10.3-CUDA-11.4.1,foss/2021b,`module load foss/2021b NCCL/2.10.3-CUDA-11.4.1`
+Bazel,3.7.2,foss/2021b,`module load foss/2021b Bazel/3.7.2`
+Bazel,4.2.2,foss/2021b,`module load foss/2021b Bazel/4.2.2`
+flatbuffers,2.0.0,foss/2021b,`module load foss/2021b flatbuffers/2.0.0`
+pkgconfig,1.5.5-python,foss/2021b,`module load foss/2021b pkgconfig/1.5.5-python`
+giflib,5.2.1,foss/2021b,`module load foss/2021b giflib/5.2.1`
+JsonCpp,1.9.4,foss/2021b,`module load foss/2021b JsonCpp/1.9.4`
+Szip,2.1.1,foss/2021b,`module load foss/2021b Szip/2.1.1`
+LMDB,0.9.29,foss/2021b,`module load foss/2021b LMDB/0.9.29`
+nsync,1.24.0,foss/2021b,`module load foss/2021b nsync/1.24.0`
+protobuf-python,3.17.3,foss/2021b,`module load foss/2021b protobuf-python/3.17.3`
+flatbuffers-python,2.0,foss/2021b,`module load foss/2021b flatbuffers-python/2.0`
+METIS,5.1.0,foss/2021b,`module load foss/2021b METIS/5.1.0`
+libiconv,1.16,foss/2021b,`module load foss/2021b libiconv/1.16`
+Doxygen,1.9.1,foss/2021b,`module load foss/2021b Doxygen/1.9.1`
+DMTCP,2.6.0,foss/2021b,`module load foss/2021b DMTCP/2.6.0`
+jbigkit,2.1,foss/2021b,`module load foss/2021b jbigkit/2.1`
+LibTIFF,4.3.0,foss/2021b,`module load foss/2021b LibTIFF/4.3.0`
+ATK,2.36.0,foss/2021b,`module load foss/2021b ATK/2.36.0`
+Gdk-Pixbuf,2.42.6,foss/2021b,`module load foss/2021b Gdk-Pixbuf/2.42.6`
+at-spi2-core,2.40.3,foss/2021b,`module load foss/2021b at-spi2-core/2.40.3`
+at-spi2-atk,2.38.0,foss/2021b,`module load foss/2021b at-spi2-atk/2.38.0`
+libepoxy,1.5.8,foss/2021b,`module load foss/2021b libepoxy/1.5.8`
+GTK3,3.24.31,foss/2021b,`module load foss/2021b GTK3/3.24.31`
+Emacs,27.2,foss/2021b,`module load foss/2021b Emacs/27.2`
+make,4.3,foss/2021b,`module load foss/2021b make/4.3`
+cppy,1.1.0,foss/2021b,`module load foss/2021b cppy/1.1.0`
+Pillow,8.3.2,foss/2021b,`module load foss/2021b Pillow/8.3.2`
+Pillow,8.2.0,foss/2021b,`module load foss/2021b Pillow/8.2.0`
+Tk,8.6.11,foss/2021b,`module load foss/2021b Tk/8.6.11`
+Tkinter,3.9.6,foss/2021b,`module load foss/2021b Tkinter/3.9.6`
+Qhull,2020.2,foss/2021b,`module load foss/2021b Qhull/2020.2`
+tbb,2021.4.0,foss/2021b,`module load foss/2021b tbb/2021.4.0`
+tbb,2021.5.0,foss/2021b,`module load foss/2021b tbb/2021.5.0`
+tbb,2020.3,foss/2021b,`module load foss/2021b tbb/2020.3`
+FFmpeg,4.3.2,foss/2021b,`module load foss/2021b FFmpeg/4.3.2`
+x264,20210613,foss/2021b,`module load foss/2021b x264/20210613`
+LAME,3.100,foss/2021b,`module load foss/2021b LAME/3.100`
+x265,3.5,foss/2021b,`module load foss/2021b x265/3.5`
+Yasm,1.3.0,foss/2021b,`module load foss/2021b Yasm/1.3.0`
+SWIG,4.0.2,foss/2021b,`module load foss/2021b SWIG/4.0.2`
+FreeImage,3.18.0,foss/2021b,`module load foss/2021b FreeImage/3.18.0`
+typing-extensions,3.10.0.2,foss/2021b,`module load foss/2021b typing-extensions/3.10.0.2`
+typing-extensions,4.3.0,foss/2021b,`module load foss/2021b typing-extensions/4.3.0`
+libyaml,0.2.5,foss/2021b,`module load foss/2021b libyaml/0.2.5`
+PyYAML,5.4.1,foss/2021b,`module load foss/2021b PyYAML/5.4.1`
+expecttest,0.1.3,foss/2021b,`module load foss/2021b expecttest/0.1.3`
+Pillow-SIMD,8.3.2,foss/2021b,`module load foss/2021b Pillow-SIMD/8.3.2`
+Pillow-SIMD,8.2.0,foss/2021b,`module load foss/2021b Pillow-SIMD/8.2.0`
+tqdm,4.62.3,foss/2021b,`module load foss/2021b tqdm/4.62.3`
+RapidJSON,1.1.0,foss/2021b,`module load foss/2021b RapidJSON/1.1.0`
+RE2,2022-02-01,foss/2021b,`module load foss/2021b RE2/2022-02-01`
+utf8proc,2.6.1,foss/2021b,`module load foss/2021b utf8proc/2.6.1`
+XML-LibXML,2.0207,foss/2021b,`module load foss/2021b XML-LibXML/2.0207`
+DB_File,1.857,foss/2021b,`module load foss/2021b DB_File/1.857`
+BioPerl,1.7.8,foss/2021b,`module load foss/2021b BioPerl/1.7.8`
+jemalloc,5.2.1,foss/2021b,`module load foss/2021b jemalloc/5.2.1`
+texinfo,6.7,foss/2021b,`module load foss/2021b texinfo/6.7`
+glew,2.2.0-glx,foss/2021b,`module load foss/2021b glew/2.2.0-glx`
+GLFW,3.3.4,foss/2021b,`module load foss/2021b GLFW/3.3.4`
+GLM,0.9.9.8,foss/2021b,`module load foss/2021b GLM/0.9.9.8`
+OpenPGM,5.2.122,foss/2021b,`module load foss/2021b OpenPGM/5.2.122`
+libsodium,1.0.18,foss/2021b,`module load foss/2021b libsodium/1.0.18`
+ZeroMQ,4.3.4,foss/2021b,`module load foss/2021b ZeroMQ/4.3.4`
+IPython,7.26.0,foss/2021b,`module load foss/2021b IPython/7.26.0`
+JupyterLab,3.1.6,foss/2021b,`module load foss/2021b JupyterLab/3.1.6`
+Qwt,6.2.0,foss/2021b,`module load foss/2021b Qwt/6.2.0`
+mm-common,1.0.5,foss/2021b,`module load foss/2021b mm-common/1.0.5`
+mm-common,1.0.4,foss/2021b,`module load foss/2021b mm-common/1.0.4`
+libxslt,1.1.34,foss/2021b,`module load foss/2021b libxslt/1.1.34`
+Ghostscript,9.54.0,foss/2021b,`module load foss/2021b Ghostscript/9.54.0`
+GTS,0.7.6,foss/2021b,`module load foss/2021b GTS/0.7.6`
+Graphviz,2.50.0,foss/2021b,`module load foss/2021b Graphviz/2.50.0`
+libsigc++,3.2.0,foss/2021b,`module load foss/2021b libsigc++/3.2.0`
+GLibmm,2.70.0,foss/2021b,`module load foss/2021b GLibmm/2.70.0`
+NLopt,2.7.0,foss/2021b,`module load foss/2021b NLopt/2.7.0`
+freeglut,3.2.1,foss/2021b,`module load foss/2021b freeglut/3.2.1`
+nettle,3.7.3,foss/2021b,`module load foss/2021b nettle/3.7.3`
+Xvfb,1.20.13,foss/2021b,`module load foss/2021b Xvfb/1.20.13`
+UDUNITS,2.2.28,foss/2021b,`module load foss/2021b UDUNITS/2.2.28`
+libogg,1.3.5,foss/2021b,`module load foss/2021b libogg/1.3.5`
+FLAC,1.3.3,foss/2021b,`module load foss/2021b FLAC/1.3.3`
+libvorbis,1.3.7,foss/2021b,`module load foss/2021b libvorbis/1.3.7`
+libsndfile,1.0.31,foss/2021b,`module load foss/2021b libsndfile/1.0.31`
+GLPK,5.0,foss/2021b,`module load foss/2021b GLPK/5.0`
+LittleCMS,2.12,foss/2021b,`module load foss/2021b LittleCMS/2.12`
+ImageMagick,7.1.0-4,foss/2021b,`module load foss/2021b ImageMagick/7.1.0-4`
+nodejs,14.17.6,foss/2021b,`module load foss/2021b nodejs/14.17.6`
+PyQt5,5.15.4,foss/2021b,`module load foss/2021b PyQt5/5.15.4`
+PROJ,8.1.0,foss/2021b,`module load foss/2021b PROJ/8.1.0`
+libgeotiff,1.7.0,foss/2021b,`module load foss/2021b libgeotiff/1.7.0`
+HDF,4.2.15,foss/2021b,`module load foss/2021b HDF/4.2.15`
+libtirpc,1.3.2,foss/2021b,`module load foss/2021b libtirpc/1.3.2`
+libgit2,1.1.1,foss/2021b,`module load foss/2021b libgit2/1.1.1`
+motif,2.3.8,foss/2021b,`module load foss/2021b motif/2.3.8`
+tcsh,6.24.01,foss/2021b,`module load foss/2021b tcsh/6.24.01`
+libwebp,1.2.0,foss/2021b,`module load foss/2021b libwebp/1.2.0`
+OpenEXR,3.1.1,foss/2021b,`module load foss/2021b OpenEXR/3.1.1`
+dill,0.3.4,foss/2021b,`module load foss/2021b dill/0.3.4`
+OpenJPEG,2.4.0,foss/2021b,`module load foss/2021b OpenJPEG/2.4.0`
+impi,2021.4.0,intel/2021b,module load intel/2021b impi/2021.4.0
+xmlf90,1.5.4,intel/2021b,module load intel/2021b xmlf90/1.5.4
+libpsml,1.1.10,intel/2021b,module load intel/2021b libpsml/1.1.10
+libxc,4.3.4,intel/2021b,module load intel/2021b libxc/4.3.4
+libxc,5.1.6,intel/2021b,module load intel/2021b libxc/5.1.6

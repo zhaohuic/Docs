@@ -6,10 +6,13 @@ Conda as a package manager helps you find and install packages. If you need a pa
 ## Availability
 Conda can be accessed on cluster as `Anaconda3` or `Miniconda3` module.
 
-|    Conda     |  Module name  | 
-|:------------:|:-------------:|
-|   Anaconda   |   Anaconda3   | 
-|  Miniconda   |  Miniconda3   |
+```python exec="on"
+import pandas as pd
+
+df = pd.read_csv('docs/assets/tables/module.csv')
+soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
+print(soft.to_markdown(index=False))
+```
 
 User can use conda after using any of the module mentioned above
 
@@ -23,7 +26,7 @@ Load the miniconda Module
 module load Anaconda3
 ```
 
-### Create Environment with `conda`
+### Create and activate Environment with `conda`
 To create an environment use the `conda create` command. Once the environment is created you need to create a file on `$HOME` directory and add the following 
  
 ??? Example "conda3.sh"

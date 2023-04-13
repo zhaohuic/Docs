@@ -18,7 +18,7 @@ nav:
     - 'Facilities': 'facilities/facilities.md'
     - Software:
       - 'Softwares/index.md'
-      - 'Compilers': 'Softwares/compilers.md'
+      - 'Compilers and MPI Library': 'Softwares/compilers.md'
       - 'Python':
           - 'Softwares/python/index.md'
           - 'Jupyter Notebook': 'Softwares/python/jupyter.md'
