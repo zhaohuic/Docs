@@ -14,7 +14,6 @@ import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
 soft = df.query('Software == "LAMMPS"')
-
 print(soft.to_markdown(index=False))
 ```
 
