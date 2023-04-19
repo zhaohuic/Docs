@@ -6,6 +6,15 @@ Conda as a package manager helps you find and install packages. If you need a pa
 ## Availability
 Conda can be accessed on cluster as `Anaconda3` or `Miniconda3` module.
 
+```python exec="on"
+import pandas as pd
+
+df = pd.read_csv('docs/assets/tables/module.csv')
+# Header values to be added
+soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
+print(soft.to_markdown(index=False))
+```
+
 |    Conda     |  Module name  | 
 |:------------:|:-------------:|
 |   Anaconda   |   Anaconda3   | 
