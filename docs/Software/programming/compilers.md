@@ -27,7 +27,7 @@ print(soft.to_markdown(index=False))
 ```
 
 ## Toolchains
-
+We use [EasyBuild](https://easybuild.io) to install the packages as modules and to avoid too many packages tol load as a module, we use pre-defined build environment modules called toolchains which include a combination of tools such as compilers, libraries etc. We use `foss` and `intel` toolchains in Wulver. The advantage of using toolchains is that user can load either `foss` or `intel` as base package and the additional libraries such as MPI, LAPACK and other math libraries will be automatically loaded. 
 ### Free Open Source Software (foss)
 
 ```python exec="on"

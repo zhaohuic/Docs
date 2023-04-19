@@ -17,14 +17,9 @@ soft = df.query('Software == "LAMMPS"')
 print(soft.to_markdown(index=False))
 ```
 
-
-| Version | Module name   | Toolchain |
-|---------|---------------|-----------|
-| 102025  | lammps/102025 | foss      |
-
 !!! note
 
-     explain what toolchain means here
+     To know the deatils about dependent toolchain please go to [Toolchains](../programming/compilers.md#toolchains)
 
 
 ## Application Information, Documentation and Support

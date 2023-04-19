@@ -9,7 +9,7 @@ title: COMSOL
 import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "comsol"')
+soft = df.query('Software == "COMSOL"')
 print(soft.to_markdown(index=False))
 ```
 
