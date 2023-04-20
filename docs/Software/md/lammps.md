@@ -19,7 +19,7 @@ print(soft.to_markdown(index=False))
 
 !!! note
 
-     To know the deatils about dependent toolchain please go to [Toolchains](../programming/compilers.md#toolchains)
+     To know the deatils about dependent toolchain please go to [Toolchains](compilers.md#toolchains)
 
 
 ## Application Information, Documentation and Support
@@ -102,7 +102,7 @@ or from the [LAMMPS Github repository](https://github.com/lammps/lammps).
 
 ## Related Applications
 
-* [GROMACS](./gromacs.md)
+* [GROMACS](gromacs.md)
 
 ## User Contributed Information
 

@@ -126,11 +126,21 @@ To use ParaView with GPU you need to following job script
 Submit the job script using the sbatch command: `sbatch pvserver_gpu.submit.sh` or `sbatch pvserver_cpu.submit.sh`.
 Once you submit the job you will get the port number from the output file generated and open a new terminal and type
 `ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu`, where `$port` corresponds to the port number.
-Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need select <kbd>Add Server</kbd> option and there you need use the following 
+Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need select <kbd>Add Server</kbd> option and there you need use the following as shown below.
 
+<video src="../../../assets/images/ParaView-add-connection.mp4" controls>
+  Your browser does not support the video tag.
+</video>
+
+Once you add the server, you can need to select <kbd>Connect</kbd> to connect ParaView to the cluster.
+
+!!! note
+
+        The port number may change everytime you submit job. In that case you need to modifiy the port number by sleecting the 
+        the <kbd>Edit Server</kbd> option. The step to modify the server is shown in the above tutorial.
 ## Related Applications
 
-* 
+* Tecplot
 
 ## User Contributed Information
 

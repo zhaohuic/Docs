@@ -19,7 +19,7 @@ print(soft.to_markdown(index=False))
 
 ## Related Applications
 
-* [LAMMPS](./lammps.md)
+* [LAMMPS](lammps.md)
 
 ## User Contributed Information
 
