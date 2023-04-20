@@ -19,5 +19,5 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material pandas tabulate markdown-exec mkdocstrings mkdocs-table-reader-plugin awesome-pages-plugin mkdocs-autolinks-plugin
+      - run: pip install mkdocs-material pandas tabulate markdown-exec mkdocstrings mkdocs-table-reader-plugin mkdocs-awesome-pages-plugin mkdocs-autolinks-plugin
       - run: mkdocs gh-deploy --force
