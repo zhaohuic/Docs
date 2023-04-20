@@ -46,9 +46,17 @@ soft = df.query('Software == "foss"')
 #soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
-To see GCC and OpenMPI versions details in each toolchain, see the list of [compiler versions](./compilers.md#gnu-and-intel-compilers) and [OpenMPI versions](./compilers.md#mpi-libraries)
+To see GCC and OpenMPI versions details in each toolchain, see the list of [compiler versions](./compilers.md#gnu-and-intel-compilers) and [OpenMPI versions](./compilers.md#mpi-libraries).
 ### Intel
+Like `foss`, `intel` toolchains are versioned with yearletter scheme, e.g. `intel/2021b` is the second intel toolchain composed in 2021.
 
+```
+intel: iimpi + Intel Math Kernel Library
+└── iimpi: iccifort + Intel MPI
+    └── iccifort: Intel C/C++/Fortran compilers
+        └── GCCcore: GNU Compiler Collection
+```
+ 
 ```python exec="on"
 import pandas as pd
 
@@ -59,3 +67,6 @@ soft = df.query('Software == "intel"')
 #soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
+
+The `intel-compilers` and `impi` versions in `intel` toolchains are tabulated in [intel versions](./compilers.md#gnu-and-intel-compilers) and [impi versions](./compilers.md#mpi-libraries).
+To see the versions of `GCCcore` and `mkl` libraries of `intel` toolchain, please load the intel toolchain module with yearletter version, e.g. `module load intel/2021b` and then use `module li`.
