@@ -130,7 +130,8 @@ Finally, to get the results:
  >>fetchOutputs(j)
 ```
 As can be seen, this job ran on node720
-![](https://wiki.hpc.arcs.njit.edu/images/e/e5/BatchHostname.png){ width=70% height 70%}
+
+![](https://wiki.hpc.arcs.njit.edu/images/e/e5/BatchHostname.png){ align=left, width=70% height 70%}
 
 ### Submitting a Parallel Function
 The "Job Monitor" is a convenient way to monitor jobs submitted to the cluster. In the Matlab window select "Parallel" and then "Monitor Jobs."
