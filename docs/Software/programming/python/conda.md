@@ -15,11 +15,6 @@ soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
 print(soft.to_markdown(index=False))
 ```
 
-|    Conda     |  Module name  | 
-|:------------:|:-------------:|
-|   Anaconda   |   Anaconda3   | 
-|  Miniconda   |  Miniconda3   |
-
 User can use conda after using any of the module mentioned above
 
 module a `Anaconda3` module. Users can use `Anaconda3` to create virtual python environments to manage python modules.

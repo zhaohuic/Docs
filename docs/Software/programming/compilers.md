@@ -9,6 +9,7 @@ df = pd.read_csv('docs/assets/tables/module.csv')
 #column_names=["Compilers","modules"]
 soft = df.query('Software == "GCC" | Software == "intel-compilers"')
 soft = soft[~soft.apply(lambda row: row.astype(str).str.contains('system').any(), axis=1)]
+
 print(soft.to_markdown(index=False))
 ```
 
@@ -17,10 +18,8 @@ MPI (Message Passing Interface) libraries are a set of software tools that allow
 
 ```python exec="on"
 import pandas as pd
-
 df = pd.read_csv('docs/assets/tables/module.csv')
-# Header values to be added
-#column_names=["MPI","modules"]
+
 soft = df.query('Software == "OpenMPI" | Software == "impi"')
 #soft.columns = column_names
 print(soft.to_markdown(index=False))
@@ -29,6 +28,13 @@ print(soft.to_markdown(index=False))
 ## Toolchains
 We use [EasyBuild](https://easybuild.io) to install the packages as modules and to avoid too many packages tol load as a module, we use pre-defined build environment modules called toolchains which include a combination of tools such as compilers, libraries etc. We use `foss` and `intel` toolchains in Wulver. The advantage of using toolchains is that user can load either `foss` or `intel` as base package and the additional libraries such as MPI, LAPACK and other math libraries will be automatically loaded. 
 ### Free Open Source Software (foss)
+The `foss` toolchains are versioned with a yearletter scheme, e.g. `foss/2021b` is the second foss toolchain composed in 2021. The `foss` toolchain comprises the following 
+```
+foss: gompi + FFTW, OpenBLAS, ScaLAPACK
+└── gompi: GCC + OpenMPI
+    └── GCC: GCCcore + zlib, binutils
+        └── GCCcore: GNU Compiler Collection
+```
 
 ```python exec="on"
 import pandas as pd
@@ -40,6 +46,7 @@ soft = df.query('Software == "foss"')
 #soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
+To see GCC and OpenMPI versions details in each toolchain, see the list of [compiler versions](./compilers.md#gnu-and-intel-compilers) and [OpenMPI versions](./compilers.md#mpi-libraries)
 ### Intel
 
 ```python exec="on"
