@@ -123,6 +123,10 @@ To use ParaView with GPU you need to following job script
 
         mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering --displays=0,1
     ```
+Submit the job script using the sbatch command: `sbatch pvserver_gpu.submit.sh` or `sbatch pvserver_cpu.submit.sh`.
+Once you submit the job you will get the port number from the output file generated and open a new terminal and type
+`ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu`, where `$port` corresponds to the port number.
+Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need select <kbd>Add Server</kbd> option and there you need use the following 
 
 ## Related Applications
 
