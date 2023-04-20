@@ -1,7 +1,13 @@
 ---
 title: OVITO
 ---
+OVITO is a scientific visualization and analysis software tool designed for the analysis of atomistic simulation data. It is used primarily in the field of materials science and computational chemistry, and is particularly well-suited for the analysis of molecular dynamics simulations and other atomistic simulation techniques.
 
+OVITO provides a graphical user interface (GUI) that allows users to interactively visualize and analyze large datasets of atomistic simulation data. It supports a wide range of file formats commonly used in molecular dynamics simulations, including LAMMPS, GROMACS, and DL_POLY.
+
+In addition to its visualization capabilities, OVITO also provides a set of built-in analysis tools that allow users to compute various properties of the simulated systems. These include calculation of radial distribution functions, Voronoi tessellation, and common structural analysis metrics like bond order parameters and coordination numbers.
+
+OVITO is actively developed and maintained by a team of researchers at the Max Planck Institute for Polymer Research in Mainz, Germany. It is available as a free download for Windows, Mac OS, and Linux operating systems.
 
 ## Availability
 
