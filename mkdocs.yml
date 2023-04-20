@@ -89,3 +89,4 @@ plugins:
   - table-reader
   - mkdocstrings
   - awesome-pages
+  - autolinks

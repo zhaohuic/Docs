@@ -107,7 +107,7 @@ or from the [LAMMPS Github repository](https://github.com/lammps/lammps).
 
 ## Related Applications
 
-* [GROMACS](./gromacs.md)
+* [GROMACS](gromacs.md)
 
 ## User Contributed Information
 
