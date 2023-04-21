@@ -1,4 +1,7 @@
-# Compilers and Toolchains
+---
+title: Compilers and Toolchains
+---
+
 ## GNU and Intel Compilers 
 We offer both GNU and Intel compilers. Here is the list of compilers you can find on our cluster.
 ```python exec="on"
@@ -29,11 +32,30 @@ print(soft.to_markdown(index=False))
 We use [EasyBuild](https://easybuild.io) to install the packages as modules and to avoid too many packages tol load as a module, we use pre-defined build environment modules called toolchains which include a combination of tools such as compilers, libraries etc. We use `foss` and `intel` toolchains in Wulver. The advantage of using toolchains is that user can load either `foss` or `intel` as base package and the additional libraries such as MPI, LAPACK and other math libraries will be automatically loaded. 
 ### Free Open Source Software (foss)
 The `foss` toolchains are versioned with a yearletter scheme, e.g. `foss/2021b` is the second foss toolchain composed in 2021. The `foss` toolchain comprises the following 
-```
-foss: gompi + FFTW, OpenBLAS, ScaLAPACK
-└── gompi: GCC + OpenMPI
-    └── GCC: GCCcore + zlib, binutils
-        └── GCCcore: GNU Compiler Collection
+
+```tree
+foss
+    gompi 
+        GCC
+            GCCcore
+            zlib
+            binutils
+        OpenMPI
+        numactl
+        XZ
+        libxml2
+        libpciaccess
+        hwloc
+        OpenSSL
+        libevent
+        UCX
+        libfabric
+        PMIx
+        UCC
+    FFTW
+    OpenBLAS
+    ScaLAPACK
+    FlexiBLAS
 ```
 
 ```python exec="on"
@@ -46,17 +68,24 @@ soft = df.query('Software == "foss"')
 #soft.columns = column_names
 print(soft.to_markdown(index=False))
 ```
-To see GCC and OpenMPI versions details in each toolchain, see the list of [compiler versions](./compilers.md#gnu-and-intel-compilers) and [OpenMPI versions](./compilers.md#mpi-libraries).
+To see GCC and OpenMPI versions details in each toolchain, see the list of [compiler versions](compilers.md#gnu-and-intel-compilers) and [OpenMPI versions](compilers.md#mpi-libraries).
 ### Intel
 Like `foss`, `intel` toolchains are versioned with yearletter scheme, e.g. `intel/2021b` is the second intel toolchain composed in 2021.
 
+```tree
+intel
+    intel-compilers
+        GCCcore   
+        zlib
+        binutils
+    iimpi
+        iccifort
+        Intel MPI
+        numactl
+        UCX
+    Intel Math Kernel Library
 ```
-intel: iimpi + Intel Math Kernel Library
-└── iimpi: iccifort + Intel MPI
-    └── iccifort: Intel C/C++/Fortran compilers
-        └── GCCcore: GNU Compiler Collection
-```
- 
+
 ```python exec="on"
 import pandas as pd
 
@@ -68,5 +97,5 @@ soft = df.query('Software == "intel"')
 print(soft.to_markdown(index=False))
 ```
 
-The `intel-compilers` and `impi` versions in `intel` toolchains are tabulated in [intel versions](./compilers.md#gnu-and-intel-compilers) and [impi versions](./compilers.md#mpi-libraries).
+The `intel-compilers` and `impi` versions in `intel` toolchains are tabulated in [intel versions](compilers.md#gnu-and-intel-compilers) and [impi versions](compilers.md#mpi-libraries).
 To see the versions of `GCCcore` and `mkl` libraries of `intel` toolchain, please load the intel toolchain module with yearletter version, e.g. `module load intel/2021b` and then use `module li`.

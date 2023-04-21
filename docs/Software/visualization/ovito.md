@@ -7,8 +7,6 @@ OVITO provides a graphical user interface (GUI) that allows users to interactive
 
 In addition to its visualization capabilities, OVITO also provides a set of built-in analysis tools that allow users to compute various properties of the simulated systems. These include calculation of radial distribution functions, Voronoi tessellation, and common structural analysis metrics like bond order parameters and coordination numbers.
 
-OVITO is actively developed and maintained by a team of researchers at the Max Planck Institute for Polymer Research in Mainz, Germany. It is available as a free download for Windows, Mac OS, and Linux operating systems.
-
 ## Availability
 
 ```python exec="on"
