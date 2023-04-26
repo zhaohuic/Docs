@@ -93,11 +93,13 @@ To run OpenFOAM in serial, the following job script can be used.
         source $FOAM_BASH
         ################################################
         #
-        # cd into cavity directory and run blockMesh and
+        # copy into cavity directory from /opt/site/examples/openFoam/parallel and run blockMesh and
         # icoFoam. Note: this is running on one node and
         # using all 32 cores on the node
         #
         ################################################
+        cp -r /opt/site/examples/openFoam/parallel/cavity /path/to/destination
+        # /path/to/destination is destination path where user wants to copy the cavity directory
         cd cavity
         blockMesh
         icoFoam
