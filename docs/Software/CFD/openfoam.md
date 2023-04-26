@@ -110,14 +110,18 @@ Submit the job script using the sbatch command: `sbatch openfoam_parallel.submit
 Sometimes, users need to create a new solver or modify the existing solver by adding different functions for their research. In that case, users need t build openFOAM from source since user do not have the permission to add libraries in the root directory whe OpenFOAM is installed. The following instructions are provided on how to build openFOAM from source on cluster. If you have any queries or issues regarding building OpenFOAM please contact us at [hpc@njit.edu](mailto:hpc@njit.edu).
 
 ```bash
-  
 
   # This is to build a completly self contained OpenFOAM using MPICH mpi. Everything from GCC on up will be built.
         
   # purge all loaded modules
   module purge
+  # Download the latest version of OpenFOAM, visit https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md for details
+  # Download the source
+  wget https://dl.openfoam.com/source/v2212/OpenFOAM-v2212.tgz 
+  # Download ThirdParty
+  wget https://dl.openfoam.com/source/v2212/ThirdParty-v2212.tgz
         
-  cd ThirdParty-v2106
+  cd ThirdParty-v2212
         
   #Packages to download :
   wget https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2
@@ -129,13 +133,13 @@ Sometimes, users need to create a new solver or modify the existing solver by ad
         
   # unpack the above packages
         
-  vi ../OpenFOAM-v2106/etc/bashrc
+  vi ../OpenFOAM-v2212/etc/bashrc
   # Change the following in bashrc 
-    projectDir="/opt/site/apps/OpenFOAM/2106/OpenFOAM-$WM_PROJECT_VERSION"
+    projectDir="path/toOpenFOAM/2212/OpenFOAM-$WM_PROJECT_VERSION" 
     export WM_MPLIB=MPICH
     export WM_LABEL_SIZE=64
   
-  vi ../OpenFOAM-v2106/etc/config.sh/compiler
+  vi ../OpenFOAM-v2212/etc/config.sh/compiler
   # Change the following in compiler
     default_gmp_version=gmp-system
     default_mpfr_version=mpfr-system
@@ -144,17 +148,18 @@ Sometimes, users need to create a new solver or modify the existing solver by ad
     gmp_version="gmp-6.2.0"
     mpfr_version="mpfr-4.0.2"
     mpc_version="mpc-1.1.0"
-  Source the RC script
-  source ../OpenFOAM-v2106/etc/bashrc FOAMY_HEX_MESH=yes
+  # Source the RC script
+  source ../OpenFOAM-v2212/etc/bashrc FOAMY_HEX_MESH=yes
+  # You might see the following warning message
   ===============================================================================
-  Warning in /opt/site/apps/OpenFOAM/2106/OpenFOAM-v2106/etc/config.sh/settings:
+  Warning in /opt/site/apps/OpenFOAM/2212/OpenFOAM-v2212/etc/config.sh/settings:
   Cannot find 'Gcc' compiler installation
-    /opt/site/apps/OpenFOAM/2106/ThirdParty-v2106/platforms/linux64/gcc-4.8.5
+    /opt/site/apps/OpenFOAM/2212/ThirdParty-v2212/platforms/linux64/gcc-4.8.5
 
   Either install this compiler version, or use the system compiler by setting
   WM_COMPILER_TYPE to 'system' in $WM_PROJECT_DIR/etc/bashrc.
   ===============================================================================
-  No completions for /opt/site/apps/OpenFOAM/2106/OpenFOAM-v2106/platforms/linux64GccDPInt64Opt/bin
+  No completions for /opt/site/apps/OpenFOAM/2212/OpenFOAM-v2212/platforms/linux64GccDPInt64Opt/bin
   [ignore if OpenFOAM is not yet compiled]
 
   ./makeGcc
@@ -169,7 +174,7 @@ Sometimes, users need to create a new solver or modify the existing solver by ad
   
   /Allwmake -j 8
 
-  cd ../OpenFOAM-v2106
+  cd ../OpenFOAM-v2212
   wmRefresh
   
   ./Allwmake -j 16
