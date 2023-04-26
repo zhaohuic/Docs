@@ -34,15 +34,7 @@ some of the common user issues.
     with the module, please file a ticket with [Service Now](mailto:hpc@njit.edu)
 
 
-## Using LAMMPS 
-
-To use the default version of LAMMPS, type:
-
-```console
-module load lammps
-```
-
-### Using LAMMPS
+## Using LAMMPS
 
 ??? example "Sample Batch Script to Run LAMMPS"
 
