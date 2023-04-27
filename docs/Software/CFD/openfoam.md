@@ -135,7 +135,8 @@ Sometimes, users need to create a new solver or modify the existing solver by ad
         
   vi ../OpenFOAM-v2212/etc/bashrc
   # Change the following in bashrc 
-    projectDir="path/toOpenFOAM/2212/OpenFOAM-$WM_PROJECT_VERSION" 
+  # User needs to specify the full path of the project directory below, it can be either the research directory or $HOME directory.
+    projectDir="path/to/OpenFOAM/2212/OpenFOAM-$WM_PROJECT_VERSION" 
     export WM_MPLIB=MPICH
     export WM_LABEL_SIZE=64
   
@@ -179,6 +180,7 @@ Sometimes, users need to create a new solver or modify the existing solver by ad
   
   ./Allwmake -j 16
 ```
+
 ## Related Applications
 
 * [FLUENT](fluent.md)

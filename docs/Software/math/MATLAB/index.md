@@ -4,20 +4,19 @@ MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment a
 
 ## Availability
 
-| Version | Module name |
-|---------|-------------|
-|  2021a  | matlab/2021a |
-|  2021b  | matlab/2021b |
+```python exec="on"
+import pandas as pd
+
+df = pd.read_csv('docs/assets/tables/module.csv')
+soft = df.query('Software == "MATLAB" | Software == "matlab"')
+print(soft.to_markdown(index=False))
+```
 
 
 ??? note "List of Available Toolchains"
     List to go here
 
 ## Using MATLAB
-
-```console
-module load matlab
-```
 
 ???+ exmaple "Sample Batch Script to run MATLAB"
 
