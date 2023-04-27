@@ -15,3 +15,6 @@
     * 7x Intel(R) Xeon(R) CPU E5649  @ 2.53GHz
 
 Not included are 10 nodes permanently taken out of service due to hardware failures.  All are out of warranty and EOL’d by manufacturers.
+
+
+??? warning "Stheno will be decommisioned after Wulver is in production"

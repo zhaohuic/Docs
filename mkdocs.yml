@@ -16,16 +16,7 @@ nav:
       - 'Lochness user policies': 'Policies/lochness_policies.md'
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
-    - Software:
-      - 'Softwares/index.md'
-      - 'Compilers': 'Softwares/compilers.md'
-      - 'Python':
-          - 'Softwares/python/index.md'
-          - 'Jupyter Notebook': 'Softwares/python/jupyter.md'
-          - 'Building your own': 'Softwares/python/conda.md'
-      - 'Matlab': 'Softwares/matlab.md'
-      - 'LAMMPS': 'Softwares/lammps.md'
-
+    - ...
 
 theme: 
   name: material
@@ -61,10 +52,12 @@ extra:
       link: https://github.com/arcs-njit-edu/Docs
     - icon: fontawesome/solid/paper-plane
       link: mailto:hpc@njit.edu
+
 # Extensions
 markdown_extensions:
   - meta
   - attr_list
+  - md_in_html
   - footnotes
   - admonition
   - codehilite:
@@ -90,3 +83,10 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.snippets
+plugins:
+  - search
+  - markdown-exec
+  - table-reader
+  - mkdocstrings
+  - awesome-pages
+  - autolinks

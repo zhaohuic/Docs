@@ -1,9 +1,21 @@
 # Lochness
 
-This very heterogeneous cluster is a mix of manufacturers, components, and capacities as it was built up in incremental purchases spanning several years. Much of lochness will be incorporated into the new Wulver cluster 3Q 2023.
+This very heterogeneous cluster is a mix of manufacturers, components, and capacities as it was built up in incremental purchases spanning several years. 
+
+??? warning "Much of lochness will be incorporated into the new Wulver cluster 3Q 2023."
 
 ## Specifications:
 
+
+```python exec="on"
+import pandas as pd
+df = pd.read_csv('docs/assets/tables/lochness.csv')
+df.loc['Total'] = df.iloc[:,[1,4,6] ].sum(numeric_only=True)
+df.fillna("", inplace=True)
+print(df.to_markdown(index=False))
+```
+
+<!--
 * Total Nodes: 224 including GPU nodes
 * Total Cores: 28236
 * Total GB RAM: 66738104 (mostly 385GB per node but some with as little as 32GB)
@@ -23,6 +35,7 @@ This very heterogeneous cluster is a mix of manufacturers, components, and capac
 * 15x Intel(R) Xeon(R) Gold 6230 CPU @ 2.10GHz
 * 11x Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
 * 29x nodes with 1x to 4x eleven other CPU models
+-->
 * All nodes have:
     * Ethernet network interface (1GigE or 10GigE)
     * Infiniband network interface (mix of HDR100, EDR, and FDR speeds)

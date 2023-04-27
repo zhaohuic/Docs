@@ -9,6 +9,15 @@ parallel particle simulator at the atomic, meso, or continuum scale.
 
 ## Availability
 
+```python exec="on"
+import pandas as pd
+
+df = pd.read_csv('docs/assets/tables/module.csv')
+soft = df.query('Software == "LAMMPS"')
+print(soft.to_markdown(index=False))
+```
+
+
 | Version | Module name   | Toolchain |
 |---------|---------------|-----------|
 | 102025  | lammps/102025 | foss      |
@@ -98,7 +107,7 @@ or from the [LAMMPS Github repository](https://github.com/lammps/lammps).
 
 ## Related Applications
 
-* [NAMD](../namd/index.md)
+* [GROMACS](gromacs.md)
 
 ## User Contributed Information
 
