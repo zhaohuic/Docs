@@ -5,6 +5,10 @@ on:
       - main
       - alex_patch 
       - abhi_patch
+    workflow_dispatch:
+      - main
+      - alex_patch
+      - abhi_patch
 permissions:
   contents: write
 jobs:
