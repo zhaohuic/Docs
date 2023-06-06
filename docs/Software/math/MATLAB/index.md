@@ -18,16 +18,20 @@ print(soft.to_markdown(index=False))
 
 ## Using MATLAB
 
-???+ exmaple "Sample Batch Script to run MATLAB"
+### Serial Job
+???+ exmaple "Sample Batch Script to run MATLAB: matlab-serial.sh"
 
     ```slurm
     #!/bin/bash
     #SBATCH -J test_matlab
-    #SBATCH -n 1
-    #SBATCH -N 1
+    #SBATCH --partition=regular
+    #SBATCH -nodes=1
+    #SBATCH --ntasks-per-node=1
     #SBATCH - t 30:00
-
-    module load matlab
+    
+    # Load matlab module
+    module purge
+    module load MATLAB/2022a
 
     matlab --nodisplay --nosplash -r test
 
@@ -40,8 +44,45 @@ print(soft.to_markdown(index=False))
     A.**2
     ```
 
+### Parallel Job
 
-## Additional information
+### Single node parallelization
+???+ exmaple "Sample Batch Script to run MATLAB: matlab_parallel.sh"
+    
+    ```slurm
+    #!/bin/bash
+    #SBATCH -J test_matlab
+    #SBATCH --partition=regular
+    #SBATCH -nodes=1
+    #SBATCH --ntasks-per-node=32
+    #SBATCH - t 30:00
+    
+    # Load matlab module
+    module purge
+    module load MATLAB/2022a
+
+    # Run matlab
+    matlab -nodisplay --nosplash -r for_loop.m
+    ```
+
+??? example "Sample Parallel MATLAB script: for_loop.m"
+
+    ```matlab
+    poolobj = parpool('local',32);
+    fprintf('Number of workers: %g\n', poolobj.NumWorkers);
+
+    tic
+    n = 2000;
+    A = 500;
+    a = zeros(n);
+    parfor i = 1:n
+        a(i) = max(abs(eig(rand(A))));
+    end
+    toc
+    ``` thel,
+
+## Multi node parallelization
+If you 
 To learn how to install a version of MATLAB on your local system and use it to run jobs on Wulver, please see [Using Local MATLAB on Wulver](matlab_local.md)
 
 
