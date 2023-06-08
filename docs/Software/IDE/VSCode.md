@@ -4,7 +4,7 @@ title: VS Code
 Visual Studio Code (often abbreviated as VS Code) is an Integrated Development Environment (IDE). It is a lightweight and highly extensible code editor developed by Microsoft. Although referred to as a code editor, VS Code offers many features. One of the important feature of VS Code is an integrated terminal that allows developers to execute commands, run scripts, and interact with the command-line interface without leaving the editor. VS Code also provides Git integration, enabling developers to manage version control operations, such as committing, branching, and merging, without switching to a separate Git client. 
 
 ## Availability
-VS Code is not installed on the cluster. To VS Code you need to install it on your computer and connect remotely to the cluster using NJIT VPN.
+VS Code is not installed on the cluster. To use VS Code, you need to install it on your computer and connect remotely to the cluster using NJIT VPN.
 
 ## Application Information, Documentation
 The documentation of VS Code is available at [VS Code documentation](https://code.visualstudio.com/docs). You can download the VS Code from [VS Code download page](https://code.visualstudio.com/Download)
