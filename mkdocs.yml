@@ -12,6 +12,7 @@ nav:
       - 'Lochness': 'clusters/lochness.md'
       - 'Stheno': 'clusters/stheno.md'
       - 'User access to clusters': 'clusters/cluster_access.md'
+      - 'Getting started on Wulver': 'clusters/get_started_on_Wulver.md'
     - 'Policies': 
       - 'Lochness user policies': 'Policies/lochness_policies.md'
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'

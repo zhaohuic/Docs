@@ -12,9 +12,11 @@ df = pd.read_csv('docs/assets/tables/module.csv')
 soft = df.query('Software == "fluent" | Software == "ANSYS"')
 print(soft.to_markdown(index=False))
 ```
-## Using Fluent
+## Application Information, Documentation
 To use Fluent on cluster, Users need to prepare the case using ANSYS on their local machine first. Please [download](https://njit.instructure.com/courses/8519/assignments/128626) ANSYS and follow the [instructions](https://ist.njit.edu/ansys-installation-instructions) to install ANSYS on your local machine.
-Once you install ANSYS on local machine, prepare the fluent case (meshing, setting boundary conditions) and save the case and data in `.cas` and `.dat` format respectively. 
+
+## Using Fluent
+To use Fluent in cluster, users first need to prepare the fluent case (meshing, setting boundary conditions) on their local machine  and save the case and data in `.cas` and `.dat` format respectively. 
 If you are running transient problem and want to save the data at particular timestep or time interval, please see the steps below.
 
 * Go to `Calculation Activities` option in the left pane and double-click the `Autosave (Every  Flow Time)` option, you will notice a separate dialogue box `Autosave`, where you need to specify how frequently you want to save the data, you can choose eiter `timestep` or `Flow Time` interval. In the `File name` option you need to specify the subdirectory where you want to save the data and the case name. In the example shown below the subdirectory is `data` and the problem name is heatpipe. You need to make sure to create the subdirectoy (`data` in this example) in the cluster where you want to intend to submit the job script.
@@ -79,6 +81,7 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
         fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
     ```
 Submit the job using `sbatch fluent.submit.sh` command. 
+
 ## Related Applications
 
 * [OpenFOAM](openfoam.md)

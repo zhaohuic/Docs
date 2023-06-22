@@ -10,6 +10,12 @@ VS Code is not installed on the cluster. To use VS Code, you need to install it 
 The documentation of VS Code is available at [VS Code documentation](https://code.visualstudio.com/docs). You can download the VS Code from [VS Code download page](https://code.visualstudio.com/Download)
 
 ## Using VS Code
+
+!!! warning
+
+        If you want to use VS Code on NJIT cluster, don't use VS Code installed on your machine to connect to cluster! Please use the method described belelow so that you can use VS Code not only to edit scripts, but also run your script on the cluster.
+
+Use the following slurm script 
 To use VS Code on NJIT cluster, you need to install VS Code extension [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh). You can do so directly within VS Code: Use the top-menu bar and navigate to <kbd>File</kbd>-><kbd>Preferences</kbd>-><kbd>Extensions</kbd>. Then search for Remote-SSH and install.
 The Remote-SSH extension allows you to connect to a NJIT cluster directly from your local machine. Once the extension is installed, the bottom-left of your VS Code application will show a green box (<kbd>Open a Remote Window</kbd>). Clicking on it opens a dropdown menu (see the video below), where you should select <kbd>Configure SSH Hosts</kbd>. You will see a config file where you can specify the address of the cluster (HostName) as well as your username and store them under a convenient name. See the below snippet for the entries in Lochness cluster.
 ```
