@@ -18,7 +18,11 @@ df = pd.read_csv('docs/assets/tables/module.csv')
 soft = df.query('Software == "CP2K"')
 print(soft.to_markdown(index=False))
 ```
+## Application Information, Documentation
+The documentation of CP2K is available at [CP2K Documentation](https://www.cp2k.org/docs). For any issues CP2K simulation, users can contact at [CP2K Forum](https://www.cp2k.org/howto:forum). 
 
+## Using CP2K
+CP2K MPI/OpenMP-hybrid Execution (PSMP), CP2K with Population Analysis capabilities- CP2K-popt
 ## Related Applications
 
 * 
