@@ -79,7 +79,7 @@ To use ParaView with GPU you need to following job script
 	#!/bin/bash -l
 	#SBATCH --job-name=pvserver_test
 	#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-	#SBATCH --partition=gpu
+	#SBATCH --partition=gpu # Modify the partion name to PI's partition, otherwise use datasci
 	#SBATCH --nodes=1
 	#SBATCH --ntasks-per-node=1
 	#SBATCH --gres=gpu:1
