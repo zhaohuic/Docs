@@ -124,7 +124,7 @@ To use ParaView with GPU you need to following job script
 	mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering --displays=0,1
 	```
 Submit the job script using the sbatch command: `sbatch pvserver_gpu.submit.sh` or `sbatch pvserver_cpu.submit.sh`.
-Once you submit the job, please open the output file with `.out` extension, and get the port number from the output file. Once you open the output file (with `.out` extension) you should see the following 
+Once you submit the job, please open the output file with `.out` extension, and get the port number from the output file. Once you open the output file (with `.out` extension) and go to end of the file, you should see the following 
 
 ```bash
 Step 1: Create SSH tunnel
