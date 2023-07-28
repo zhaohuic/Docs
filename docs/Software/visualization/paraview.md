@@ -146,11 +146,13 @@ Once you open ParaView from you local machine go to `File --> Connnect`, and you
   Your browser does not support the video tag.
 </video>
 
-Once you add the server, you can need to select <kbd>Connect</kbd> to connect ParaView to the cluster.
+Make sure to use the same port number in <kbd>Port</kbd> option.
+Once you add the server, you need to select <kbd>Connect</kbd> to connect ParaView to the cluster.
 
 !!! note
 
 		The port number may change everytime you submit job. In that case you need to modifiy the port number by sleecting the <kbd>Edit Server</kbd> option. The step to modify the server is shown in the above tutorial.
+
 ## Related Applications
 
 * Tecplot
