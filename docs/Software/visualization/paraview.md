@@ -29,7 +29,7 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 	#!/bin/bash -l
 	#SBATCH --job-name=pvserver_cpu
     #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-    #SBATCH --partition=regular
+    #SBATCH --partition=public # Modify the partion name to PI's partition
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=32
     #SBATCH --mem-per-cpu=0 # Adjust as necessary
@@ -124,7 +124,21 @@ To use ParaView with GPU you need to following job script
 	mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering --displays=0,1
 	```
 Submit the job script using the sbatch command: `sbatch pvserver_gpu.submit.sh` or `sbatch pvserver_cpu.submit.sh`.
-Once you submit the job, please open the output file with `.out` extension, and get the port number from the output file. Next, open a new terminal and type
+Once you submit the job, please open the output file with `.out` extension, and get the port number from the output file. Once you open the output file (with `.out` extension) you should see the following 
+
+```bash
+Step 1: Create SSH tunnel
+
+Open new terminal window, and run:
+(If you are off campus you will need VPN running)
+
+ssh -L 1234:localhost:1234 user@login-1.tartan.njit.edu
+Waiting for client...
+Connection URL: cs://node801:7680
+Accepting connection(s): node801:7680
+```
+
+Next, open a new terminal and type
 `ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu`, where `$port` corresponds to the port number.
 Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need select <kbd>Add Server</kbd> option and there you need use the following as shown below.
 
