@@ -7,6 +7,12 @@ NJIT’s Information Services and Technology (IST) resources provide members of 
 # Compute Resources
 NJIT’s Advanced Research Computing Services (ARCS) group presently maintains two HPC clusters, a 224 node heterogenous condominium cluster Lochness, and a 32 node cluster for the Department of Mathematical Sciences, Stheno. In addition, multiple IST teams are working on deploying Wulver, a 127 node heterogeneous condominium cluster at the new HPC co-location facility, Databank in Piscataway NJ, expected to be available for general use by the end of 2023.
 
+```python exec="on"
+import pandas as pd
+df = pd.read_csv('docs/assets/tables/facilities.csv')
+print(df.to_markdown(index=False))
+```
+
 # Storage Resources
 Storage on Wulver will be provided by a 1PB arcastream high-performance storage that combines flash, disk, tape, and cloud storage into a unified single namespace architecture. Data moves seamlessly through various tiers of storage - from fast flash to cost-effective, high capacity object storage, all the way out to the cloud.
 
