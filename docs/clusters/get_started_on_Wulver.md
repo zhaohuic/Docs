@@ -13,7 +13,6 @@ In the table below, you can find the basic linux commands required to use the cl
 import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/commands.csv')
-#soft = df.query('Software == "fluent" | Software == "ANSYS"')
 print(df.to_markdown(index=False))
 ```
 
@@ -33,6 +32,7 @@ print(df.to_markdown(index=False))
 ```
 Please note that default and Max Memory per CPU at 4GB/Core
 QOS
+
 * Low is preemptable by Standard, High
 * Low, Standard have maximum 3 Day Walltime
 * High has maximum 14 Day Walltime
