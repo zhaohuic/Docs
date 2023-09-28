@@ -9,7 +9,7 @@ NJIT’s Advanced Research Computing Services (ARCS) group presently maintains t
 
 ```python exec="on"
 import pandas as pd
-df = pd.read_csv('docs/assets/tables/facilities.csv')
+df = pd.read_excel('docs/assets/tables/facilities_alt.xlsx')
 print(df.to_markdown(index=False))
 ```
 
