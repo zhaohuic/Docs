@@ -6,13 +6,13 @@ hide:
 # ARCS Leadership 
 
 
-| Name | Title | Phone | Email | Office |
-|:----:|:-----:|:-----:|:-----:|:------:|
-| [Alex Pacheco](#alex-pacheco) | Associate CIO - Advanced Research Computing | (973) 596-2672 | alex.pacheco@njit.edu | GITC 5401 |
-| [Gedaliah Wolosh](#gedaliah-wolosh) | Director, High Performance Research Computing | (973) 596-5436 | gwolosh@njit.edu | GITC 2203 |
-| [David Perel](#david-perel) | Director, Research and Academic Technologies | (973) 596-3356 | davidp@njit.edu | GITC 2201 |
-| [Kevin Walsh](#kevin-walsh) | Assistant Director, Advanced Computing Infrastructure | (973) 596-5747 | walsh@njit.edu | GITC 2202 |
-| Vacant - [Click here to apply](https://njit.csod.com/ux/ats/careersite/1/home/requisition/4896?c=njit) | Associate Director, High Performance Research Computing | |
+|                                                  Name                                                  |                          Title                          | Phone | Email |  Office   |
+|:------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------:|:-----:|:-----:|:---------:|
+|                                     [Alex Pacheco](#alex-pacheco)                                      |       Associate CIO - Advanced Research Computing       | (973) 596-2672 | alex.pacheco@njit.edu | GITC 5401 |
+|                                  [Gedaliah Wolosh](#gedaliah-wolosh)                                   |      Director, High Performance Research Computing      | (973) 596-5436 | gwolosh@njit.edu | GITC 5203 |
+|                                      [David Perel](#david-perel)                                       |      Director, Research and Academic Technologies       | (973) 596-3356 | davidp@njit.edu | GITC 2201 |
+|                                       [Kate Cahill](#kate-cahil)                                       |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
+|                                      [Kevin Walsh](#kevin-walsh)                                       |  Assistant Director, Advanced Computing Infrastructure  | (973) 596-5747 | walsh@njit.edu | GITC 2202 | |
 
 
 
@@ -22,7 +22,7 @@ hide:
 |:----:|:-----:|:-----:|:-----:|:------:|
 | [Gedaliah Wolosh](#gedaliah-wolosh) | Director, High Performance Research Computing | (973) 596-5436 | gwolosh@njit.edu | GITC 2203 |
 | [Kevin Walsh](#kevin-walsh) | Assistant Director, Advanced Computing Infrastructure | (973) 596-5747 | walsh@njit.edu | GITC 2202 |
-| Vacant - [Click here to apply](https://njit.csod.com/ux/ats/careersite/1/home/requisition/4896?c=njit) | Associate Director, High Performance Research Computing | |
+| [Kate Cahill](#kate-cahil)                                       |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
 | [Abhishek Mukherjee](#abhishek-mukherjee) | Research Computing Facilitator | (973) 642-4132 | abhishek.mukherjee@njit.edu | GITC 2316B |
 
 
@@ -57,6 +57,12 @@ Schedule an appointment with Gedaliah [![Calendar](../assets/images/googlecalend
 
 ## David Perel
 
+## Kate Cahill
+
+![Kate Cahill](../assets/images/kate.png){ align=left, width="300" }
+
+Kate started at NJIT in September 2023. Previously, she was the Education & Training Specialist at the Ohio Supercomputer Center for 8 years, where she led the training programs for OSC as well as external education programs related to HPC and computational science for the XSEDE project as well as other grant-funded efforts.
+
 ## Kevin Walsh
 <a href="https://www.linkedin.com/in/kevin-walsh-computes">![https://www.linkedin.com/in/kevin-walsh-computes](../assets/images/linkedin-color.svg){ width="15" }</a>
 
@@ -70,6 +76,9 @@ Abhishek Mukherjee is a computational scientist and has experience in multidisci
 <a href="https://github.com/absrocks">![https://github.com/absrocks](../assets/images/github-color.svg){ width="15" }</a>
 <a href="https://www.linkedin.com/in/absrocks">![https://www.linkedin.com/in/absrocks](../assets/images/linkedin-color.svg){ width="15" }</a>
 
+You can schedule appointments with Abhishek to consult on problems or questions you are encountering related to their work using the high-performance computing and big data resources at NJIT. Please, before making appointments with [Abhishek Mukherjee](#abhishek-mukherjee), send your query to [hpc@njit.edu](mailto:hpc@njit.edu), so that an incident number will be created which is required to schedule an appointment.
+
+Schedule an appointment directly on Abhishek's calendar from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendar.app.google/Soam2W2K5MaJyAwn9)
 
 
 
