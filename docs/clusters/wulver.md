@@ -1,6 +1,6 @@
 # Wulver
 
-Wulver is a new cluster anticipated to come on line 1Q 2023.
+Wulver is a new cluster anticipated to be available at the end of 2023.
 
 ## Specifications:
 

@@ -15,9 +15,12 @@ soft = df.query('Software == "ANSYS"')
 print(soft.to_markdown(index=False))
 ```
 
-## Related Applications
+## Application Information, Documentation
 
-* 
+## Using ANSYS
+
+## Related Applications
+* [COMSOL](comsol.md)
 
 ## User Contributed Information
 
