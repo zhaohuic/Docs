@@ -7,10 +7,37 @@ Slurm (Simple Linux Utility for Resource Management) is an open-source workload 
 
 ```python exec="on"
 import pandas as pd
-
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "slurm"')
-print(soft.to_markdown(index=False))
+# Create a dictionary with data
+data = {
+    'Software': ['slurm'],
+    'Module Load Command': ['`module load wulver`']
+}
+df = pd.DataFrame(data)
+print(df.to_markdown(index=False))
 ```
 ## Application Information, Documentation
-The documentation of ParaView is available at [SLURM manual](https://slurm.schedmd.com/documentation.html). To use the ParaView on cluster, users need to use the same version of ParaView on their local machine. You can download the ParaView from [ParaView official download page](https://www.paraview.org/download)
+The documentation of SLURM is available at [SLURM manual](https://slurm.schedmd.com/documentation.html). Please note that the module `wulver` is already loaded when user logs in to the cluster. If you use `module purge` command, make sure to use `module load wulver` in the slurm script to load SLURM. 
+
+## Using SLURM on Cluster
+In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group account.
+
+1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter
+2. Wulver has three partitions, differing in GPUs or RAM available:
+
+```python exec="on"
+import pandas as pd 
+import numpy as np
+df = pd.read_csv('docs/assets/tables/partitions.csv')
+# Replace NaN with 'NA'
+df.replace(np.nan, 'NA', inplace=True)
+print(df.to_markdown(index=False))
+```
+3. Wulver has three levels of “priority”, utilized under SLURM as Quality of Service (QoS):
+```python exec="on"
+import pandas as pd 
+import numpy as np
+df = pd.read_csv('docs/assets/tables/slurm_qos.csv')
+# Replace NaN with 'NA'
+df.replace(np.nan, 'NA', inplace=True)
+print(df.to_markdown(index=False))
+```
