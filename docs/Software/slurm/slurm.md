@@ -21,11 +21,23 @@ The documentation of SLURM is available at [SLURM manual](https://slurm.schedmd.
 ## Using SLURM on Cluster
 In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group account.
 
-1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or #SBATCH parameter
+1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter
 2. Wulver has three partitions, differing in GPUs or RAM available:
 
 ```python exec="on"
-import pandas as pd
+import pandas as pd 
+import numpy as np
 df = pd.read_csv('docs/assets/tables/partitions.csv')
+# Replace NaN with 'NA'
+df.replace(np.nan, 'NA', inplace=True)
+print(df.to_markdown(index=False))
+```
+3. Wulver has three levels of “priority”, utilized under SLURM as Quality of Service (QoS):
+```python exec="on"
+import pandas as pd 
+import numpy as np
+df = pd.read_csv('docs/assets/tables/slurm_qos.csv')
+# Replace NaN with 'NA'
+df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
