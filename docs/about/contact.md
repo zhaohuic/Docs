@@ -18,7 +18,7 @@ For prompt response, please consider the following when submitting a ticket.
 
 - Software requests
      - Submit a request for [HPC Software Installation](https://njit.service-now.com/sp?id=sc_cat_item&sys_id=0746c1f31b6691d04c82cddf034bcbe2&sysparm_category=405f99b41b5b1d507241400abc4bcb6b) by visiting the [Service Catalog](https://njit.service-now.com/sp?id=sc_category) 
-     - **Note**: Users should consider installing software in their home directory especially Python and R packages. See [Building your own](../../Software/programming/python) for instructions on using conda or mamba. If you encounter issues, consider asking for help above rather than requesting a software install.
+     - **Note**: Users should consider installing software in their home directory especially Python and R packages. See [Building your own](../../Software/programming/python/conda) for instructions on using conda or mamba. If you encounter issues, consider asking for help above rather than requesting a software install.
      - You will need to enter the following information
            - Name of software and URL to download.
            - If software is behind a paywall or account, please download the software, copy it over to lochness and provide location from where we can copy it for installation.
