@@ -51,8 +51,8 @@ Type the following in the terminal
 ```
 If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder.
 
-Users will be prompted for your password. Enter your AFS password. Users can omit the `-X -Y` if you are not using a graphic interface. Substitute `lochness` or `Stheno` for `HPC_HOST`.
-Once the password is provided the user will see the following
+Users will be prompted for your password. Enter your AFS password. Users can omit the `-X -Y` if you are not using a graphic interface. Substitute `wulver`, `lochness` or `Stheno` for `HPC_HOST`.
+Once the password is provided, the user will see the following
 
 ```
 The authenticity of host 'user@lochness.njit.edu' cannot be established.
@@ -64,7 +64,7 @@ Answering `yes` to the prompt will cause the session to continue. Once the host 
 
 ## Passwordless Authentication to the NJIT Cluster
 ### Mac OS/ Linux Users
-To access to NJIT cluster without the password, you need to have public ssh key on you Mac or Linux system. If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder. The public key is typically `id_rsa.pub` which is located in `~/.ssh/`.
+To access to NJIT cluster without the password, you need to have a public ssh key on your Mac or Linux system. If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder. The public key is typically `id_rsa.pub` which is located in `~/.ssh/`.
 Once you have a public SSH key, copy it to the set of authorized keys on the computing cluster. Since you’ve already connected to the cluster in the previous step, simply navigate to the `/.ssh` folder on the computing cluster and open the file `~/.ssh/authorized_keys` and paste the content of your public key from your local machine. Double-check that the pasted key begins with `ssh-rsa`.
 ### Windows Users
 Windows users can save the public key through MobaXterm settings.
