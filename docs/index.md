@@ -20,12 +20,12 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 ## Current clusters
 
-* Lochness
+* [Lochness](lochness.md)
  
 
 ## Incoming cluster
 
-* Wulver
+* [Wulver](wulver.md)
 
 Please direct all HPC related issues to [hpc@njit.edu](mailto:hpc@njit.edu).
 
