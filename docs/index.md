@@ -20,5 +20,9 @@ Please direct all HPC related issues to [hpc@njit.edu](mailto:hpc@njit.edu).
 !!! important
         
         Please note that due to relocation of the Lochness cluster to the Databank colocation facility in Piscataway, the cluster will be unavailable from October 6th, 2023. We have estimated that the relocation process will require no longer than five days to complete. During this time, the cluster will not be accessible. During this period, you will be unable to access any any files housed on the cluster's filesystems as well. We understand the importance of uninterrupted access to computational resources, and we will make every effort to minimize downtime.
+        Key Details:
+        1. Cluster Shutdown Date: October 6th, 2023
+        2. Anticipated Duration: Up to Seven Days
+        3. Operational Continuity: After the move the cluster will remain operational until the end of the semester.
 
 
