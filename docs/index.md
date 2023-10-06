@@ -19,7 +19,7 @@ Please direct all HPC related issues to [hpc@njit.edu](mailto:hpc@njit.edu).
 
 !!! warning
         
-        Please note that due to relocation of the Lochness cluster to the Databank colocation facility in Piscataway, the cluster will be unavailable from October 6th, 2023. We have estimated that the relocation process will require no longer than seven days to complete. During this time, the cluster will not be accessible. During this period, you will be unable to access any any files housed on the cluster's filesystems as well. We understand the importance of uninterrupted access to computational resources, and we will make every effort to minimize downtime.
+        Please note that due to relocation of the Lochness cluster to the Databank colocation facility in Piscataway, the cluster will be unavailable from October 6th, 2023. We have estimated that the relocation process will require no longer than seven days to complete. During this time, the cluster will not be accessible. During this period, you will be unable to access any files housed on the cluster's filesystems as well. We understand the importance of uninterrupted access to computational resources, and we will make every effort to minimize downtime.
 
         Key Details:
 
