@@ -26,11 +26,11 @@ The Wulver environment is quite a bit like Lochness, but there are some key diff
 2. Users can also store temporary files under the `/scratch` directory, likewise under a PI-group directory. For example, PI’s UCID is `doctorx`, so students need to use the `/scratch/doctorx/` directory.  Please note that the files under `/scratch` will be periodically deleted. To store files for longer than computations, please use the `/project` directory.  Files under `/scratch` are not backed up. For best performance simulations should be performed in the `/scratch` directory. Once the simulation is complete, the results should be copied into the `$HOME` or `/project` directory.  Files are deleted from `/scratch` after they are 10 days old.
 
 ## Software Availability
-The software can be loaded via `module load` command. You see the following modules are loaded once you log in to the Wulver (Use the `module li`) command to see the modules. 
+The software can be loaded via `module load` command. You will see the following modules are loaded once you log in to the Wulver (Use the `module li` command to see the modules). 
 ```bash
    1) easybuild   2) slurm/wulver   3) null
 ```
-Please check [Software](../../Software/) to see how to load specific applications.
+Please check [Software](../../Software/) to see how to load specific applications. If you somehow used `module purge` then to check availbe modules you need to load `module load wulver` command and this will load all default modules. 
 ## Slurm Configuration
 
 Please see [SLURM](slurm.md) for details in the slurm configuration.  
