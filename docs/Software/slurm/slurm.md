@@ -53,22 +53,48 @@ print(df.to_markdown(index=False))
         #SBATCH --error=%x.%j.err
         #SBATCH --partition=general
         #SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
         #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=8
         #SBATCH --time=59:00  # D-HH:MM:SS
         #SBATCH --mem-per-cpu=4000M
     ```
 
-Here, the job requests 1 node with 8 cores, on the `general` partition with `qos=standard`. Please note that the memory relies on the number of cores you are requesting. As per the policy, users can request up to 4GB memory per core, therefore the flag  `--mem-per-cpu` is used for memory requirement. To submit the job, use `sbatch submit.sh` where the `submit.sh` is the job script. Once the job has been submitted, the jobs will be in the queue, which will be executed based on priority-based scheduling. To check the status of the job use `squeue -u UCID` (replace `UCID` with your NJIT UCID) and you should see the following 
+Here, the job requests 1 node with 8 cores, on the `general` partition with `qos=standard`. Please note that the memory relies on the number of cores you are requesting. As per the policy, users can request up to 4GB memory per core, therefore the flag  `--mem-per-cpu` is used for memory requirement. In this above script `--time` indicates the wall time which is used to specify the maximum amount of time that a job is allowed to run. The maximum allowable wall time depend on SLURM QoS, which you can find in [QoS](slurm.md#using-slurm-on-cluster)  To submit the job, use `sbatch submit.sh` where the `submit.sh` is the job script. Once the job has been submitted, the jobs will be in the queue, which will be executed based on priority-based scheduling. To check the status of the job use `squeue -u UCID` (replace `UCID` with your NJIT UCID) and you should see the following 
 ```bash
   JOBID PARTITION     NAME     USER  ST    TIME    NODES  NODELIST(REASON)
    635   general     job_nme   ucid   R   00:02:19    1      n0088
 ```
-Here, the `ST` stands for the status of the job. You may see the status of the job `ST` as `PD` which means the job is pending and waiting and has not been assigned yet. The status change depends upon the number of users using the partition and resources requested in the job. Once the job starts, you will see the output file with an extension of `.out`. If the job causes any errors, you can check the details of the error in the file with `.err` extension.
+Here, the `ST` stands for the status of the job. You may see the status of the job `ST` as `PD` which means the job is pending and has not been assigned yet. The status change depends upon the number of users using the partition and resources requested in the job. Once the job starts, you will see the output file with an extension of `.out`. If the job causes any errors, you can check the details of the error in the file with `.err` extension.
+
+In case of submitting the on GPU, you can use the following the SLURM script 
+
+??? example "Sample Job Script to use: gpu_submit.sh"
+
+    ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=gpu_job
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err
+        #SBATCH --partition=gpu
+        #SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+        #SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=8
+        #SBATCH --gres=gpu:2
+        #SBATCH --time=59:00  # D-HH:MM:SS
+        #SBATCH --mem-per-cpu=4000M
+    ```
+This will request 2 GPUS per node on the `GPU` partition.
 
 ### Interactive session on a compute node
 
  Interactive sessions are useful for tasks that require direct interaction with the compute node's resources and software environment. To start an interactive session on the compute node, use the following after logging into Wulver
  ```bash
-    srun -p general -n 1 --mem=4G  --pty bash
+    srun -p general -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --time=59:00 --pty bash
+ ```
+To start an interactive session on GPU, use the following command
+
+ ```bash
+    srun -p gpu -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --gres=gpu:2 --time=59:00 --pty bash
  ```

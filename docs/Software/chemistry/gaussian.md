@@ -9,7 +9,7 @@ title: Gaussian
 import pandas as pd
 
 df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "gaussian"')
+soft = df.query('Software == "Gaussian"')
 print(soft.to_markdown(index=False))
 ```
 
