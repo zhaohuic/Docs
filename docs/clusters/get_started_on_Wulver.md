@@ -30,7 +30,7 @@ The software can be loaded via `module load` command. You see the following modu
 ```bash
    1) easybuild   2) slurm/wulver   3) null
 ```
-Please check [Software](../../Software/index.md) to see how to load specific applications.
+Please check [Software](../../Software/) to see how to load specific applications.
 ## Slurm Configuration
 
 Please see [SLURM](slurm.md) for details in the slurm configuration.  
