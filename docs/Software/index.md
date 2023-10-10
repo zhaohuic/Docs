@@ -68,7 +68,7 @@ This will show the which prerequisite modules need to loaded prior to loading `P
       ================
        - Homepage: https://python.org/
 ```
-If you are unsure about the version, you can also use `module spider Python` to see the different versions of Python and prerequisite modules oto be loaded. 
+If you are unsure about the version, you can also use `module spider Python` to see the different versions of Python and prerequisite modules to be loaded. 
 
 ### Load Modules 
 To use specific package you need to use `module load` command which modified the environment to load the software package(s).
