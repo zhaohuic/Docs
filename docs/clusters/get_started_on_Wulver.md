@@ -30,7 +30,8 @@ The software can be loaded via `module load` command. You will see the following
 ```bash
    1) easybuild   2) slurm/wulver   3) null
 ```
-Please check [Software](../../Software/) to see how to load specific applications. If you somehow used `module purge` then to check availbe modules you need to load `module load wulver` command and this will load all default modules. 
+Please check [Software](../../Software/) to see how to load specific applications. If you somehow used `module purge` then to check available modules you need to load `module load wulver` command and this will load all the default modules. 
+
 ## Slurm Configuration
 
 Please see [SLURM](slurm.md) for details in the slurm configuration.  
