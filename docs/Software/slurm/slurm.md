@@ -98,3 +98,8 @@ To start an interactive session on GPU, use the following command
  ```bash
     srun -p gpu -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --gres=gpu:2 --time=59:00 --pty bash
  ```
+Replace `PI_ucid` with PI's NJIT UCID. 
+
+!!! note
+       
+        Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not prallelized and oonly depends on GPU, then you don't need to request more cores per node unless you require the memory. In that case use `--ntasks-per-node=1`.

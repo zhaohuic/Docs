@@ -1,8 +1,8 @@
 # Software Environment
-All software and numerical libraries available at the cluster can be found at `/opt/site/easybuild/software/`. We use [EasyBuild](https://docs.easybuild.io/en/latest) to install, build and manage different version of packages. 
+All software and numerical libraries available at the cluster can be found at `/opt/site/easybuild/software/` if you are using Lochness. In case of Wulver the applications are installed at `/apps/easybuild/software/`. We use [EasyBuild](https://docs.easybuild.io/en/latest) to install, build and manage different version of packages. 
 !!! note
 
-    Add the following in `.modules` file located in `$HOME` directory
+    If you are using Lochness, add the following in `.modules` file located in `$HOME` directory
     ```
     module use /opt/site/easybuild/modules/all/MPI
     module use /opt/site/easybuild/modules/all/Core
@@ -32,6 +32,10 @@ The above command gives the following output
    GCCcore/10.3.0/Python/3.9.5-bare         GCCcore/11.2.0/Python/3.9.6           (D)    GCCcore/8.3.0/Python/3.7.4                 (D)    GCCcore/9.3.0/Python/2.7.18
    GCCcore/10.3.0/Python/3.9.5       (D)    GCCcore/11.2.0/protobuf-python/3.17.3        GCCcore/8.3.0/pkgconfig/1.5.1-Python-3.7.4        GCCcore/9.3.0/Python/3.8.2                              (D)
 ```
+!!! note
+
+    The above display message is for Lochness only. In Wulver, most of the appications are built based on the toolchain. For more details see [Toolchain](compilers.md#toolchains). Therefore to see available software, you need to load the toolchain first. 
+
 
 To see how to load the modules (for example `Python/3.9.6`) the following command needs to used.
 ```console
@@ -49,8 +53,8 @@ This will show the which prerequisite modules need to loaded prior to loading `P
 
     You will need to load all module(s) on any one of the lines below before the "Python/3.9.6" module is available to load.
 
-      Core/GCCcore/.11.2.0
-      GCCcore/.11.2.0
+      Core/GCCcore/11.2.0
+      GCCcore/11.2.0
 
     Help:
 
@@ -64,6 +68,8 @@ This will show the which prerequisite modules need to loaded prior to loading `P
       ================
        - Homepage: https://python.org/
 ```
+If you are unsure about the version, you can also use `module spider Python` to see the different versions of Python and prerequisite modules oto be loaded. 
+
 ### Load Modules 
 To use specific package you need to use `module load` command which modified the environment to load the software package(s).
 
@@ -73,7 +79,7 @@ To use specific package you need to use `module load` command which modified the
     * For running jobs via batch script, you need to add module load command(s) to your submission script.
 For example, to load `Python` version `3.9.6` as shown  in the above example, you need to load `GCCcore/.11.2.0` module first before loading the Python module is available to load. To use `Python 3.9.6`, use the following command
 ```console
-module load GCCcore/.11.2.0 Python
+module load GCCcore/11.2.0 Python
 ```
 You can verify whether Python is loaded using,
 
@@ -83,8 +89,8 @@ module li
 and this will result is the following output
 ```console
 Currently Loaded Modules:
-  1) GCCcore/.11.2.0 (H)   3) binutils/.2.37 (H)   5) ncurses/.6.2     (H)   7) Tcl/8.6.11    9) XZ/.5.2.5  (H)  11) libffi/.3.4.2 (H)  13) Python/3.9.6
-  2) zlib/.1.2.11    (H)   4) bzip2/.1.0.8   (H)   6) libreadline/.8.1 (H)   8) SQLite/3.36  10) GMP/.6.2.1 (H)  12) OpenSSL/.1.1  (H)
+  1) GCCcore/11.2.0 (H)   3) binutils/2.37 (H)   5) ncurses/6.2     (H)   7) Tcl/8.6.11    9) XZ/.5.2.5  (H)  11) libffi/3.4.2 (H)  13) Python/3.9.6
+  2) zlib/1.2.11    (H)   4) bzip2/1.0.8   (H)   6) libreadline/8.1 (H)   8) SQLite/3.36  10) GMP/.6.2.1 (H)  12) OpenSSL/1.1  (H)
 
   Where:
    H:  Hidden Module

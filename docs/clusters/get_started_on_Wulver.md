@@ -26,25 +26,11 @@ The Wulver environment is quite a bit like Lochness, but there are some key diff
 2. Users can also store temporary files under the `/scratch` directory, likewise under a PI-group directory. For example, PI’s UCID is `doctorx`, so students need to use the `/scratch/doctorx/` directory.  Please note that the files under `/scratch` will be periodically deleted. To store files for longer than computations, please use the `/project` directory.  Files under `/scratch` are not backed up. For best performance simulations should be performed in the `/scratch` directory. Once the simulation is complete, the results should be copied into the `$HOME` or `/project` directory.  Files are deleted from `/scratch` after they are 10 days old.
 
 ## Software Availability
+The software can be loaded via `module load` command. You see the following modules are loaded once you log in to the Wulver (Use the `module li`) command to see the modules. 
+```bash
+   1) easybuild   2) slurm/wulver   3) null
+```
 
 ## Slurm Configuration
 
-```slurm
-#!/bin/bash -l
-#SBATCH --job-name=job_nme
-#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-#SBATCH --error=%x.%j.err
-#SBATCH --partition=general
-#SBATCH --qos=standard
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
-#SBATCH --time=59:00  # D-HH:MM:SS
-#SBATCH --mem=4G
-```
-Please note that default and Max Memory per CPU at 4GB/Core
-QOS
-
-* Low is preemptable by Standard, High
-* Low, Standard have maximum 3 Day Walltime
-* High has maximum 14 Day Walltime
-* Multifactor Priority Enabled – Low, Standard, High have Priority 10, 30, 50 respectively
+Please see [SLURM](slurm.md) for details in the slurm configuration.  
