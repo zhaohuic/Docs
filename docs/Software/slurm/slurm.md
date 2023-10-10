@@ -41,3 +41,35 @@ df = pd.read_csv('docs/assets/tables/slurm_qos.csv')
 df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
+
+## Managing and Monitoring Jobs
+
+SLURM has numerous tools for monitoring jobs. Below are a few to get started. More documentation is available on the [SLURM website](https://slurm.schedmd.com/man_index.html).
+
+The most common commands are: 
+
+- List all current jobs: `squeue`
+- Job deletion:	`scancel [job_id]`
+- Run a job: `srun` (although some arguments are needed)
+
+
+### SLURM User Commands	
+
+| Task   |      Command      | 
+|----------|:-------------:|
+|Interactive login:|	`srun --pty bash` |
+|Job submission:|	`sbatch [script_file]`|
+|Job deletion:|	`scancel [job_id]`|
+|Job status by job:|	`squeue [job_id]`|
+|Job status by user:|	`squeue -u [user_name]`|
+|||
+|Job hold:|	`scontrol hold [job_id]`|
+|Job release:|	`scontrol release [job_id]`|
+|List enqueued jobs:|	`squeue`|
+|List nodes:|	`sinfo -N OR scontrol show nodes`|
+|Cluster status:|	`sinfo`|
+
+#### Additional Resources
+
+- SLURM Tutorial List: https://slurm.schedmd.com/tutorials.html
+
