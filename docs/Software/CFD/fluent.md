@@ -49,18 +49,43 @@ If you are running transient problem and want to save the data at particular tim
 In the above `Journal` script, the full name of case file (`tube_vof.cas.h5`) is mentioned. You need to modify based on the case file based on the problem.  The `solve/dual-time-iterate` specifies the end flow time and number of iterations. In the above example, `20` is the end flow time while the maximum number of iterations are `50`. The "dual-time" approach allows for a larger time step size by introducing an additional iteration loop within each time step. Users can select different approach based on their problems and need to modify it accordingly. 
 For more details on journal commands, see the Fluent text user interface (TUI) commands from [Fluent documentation](../../assets/Ansys_Fluent_Text_Command_List.pdf).
 
-=== "Latest"
-
-    ```
-    docker pull squidfunk/mkdocs-material
-    ```
-
-=== "9.x"
-
-    ```
-    docker pull squidfunk/mkdocs-material:9
-    ```
 ??? example "Sample Batch Script to Run FLUENT : fluent.submit.sh"
+    
+    === "Wulver"
+
+    ```slurm
+    #!/bin/bash -l
+    #SBATCH --job-name=fluent
+    #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
+    #SBATCH --error=%x.%j.err # prints the error message
+    # Use "sinfo" to see what partitions are available to you
+    #SBATCH --partition=general
+    #SBATCH --ntasks=8
+    #SBATCH --qos=standard
+    #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+    # Memory required; lower amount gets scheduling priority
+    #SBATCH --mem-per-cpu=2G
+    
+    # Time required in d-hh:mm:ss format; lower time gets scheduling priority
+    #SBATCH --time=71:59:00
+    
+    # Purge and load the correct modules
+    module purge > /dev/null 2>&1
+    module load ANSYS
+    
+    # Run the mpi program
+    
+    machines=hosts.$SLURM_JOB_ID
+    touch $machines
+    for node in `scontrol show hostnames`
+        do
+            echo "$node"  >> $machines
+        done
+    
+    fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
+    ```
+
+    === "Lochness"
 
     ```slurm
     #!/bin/bash -l
@@ -93,7 +118,7 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
     ```
 Submit the job using `sbatch fluent.submit.sh` command.
 
-!!!+ warning
+???+ warning
 
         Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on [SLURM](slurm.md).
 
