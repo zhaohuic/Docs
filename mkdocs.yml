@@ -45,6 +45,9 @@ theme:
     - navigation.indexes
     - navigation.top
     - toc.follow
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
 extra_css:
     - stylesheets/extra.css
 extra:
@@ -93,7 +96,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - typeset
   - markdown-exec
   - table-reader
   - mkdocstrings

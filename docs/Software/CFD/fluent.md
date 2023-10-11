@@ -93,7 +93,7 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
     ```
 Submit the job using `sbatch fluent.submit.sh` command. 
 
-!!! warning
+!!!+     warning
         Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on [SLURM](slurm.md).
 [SLURM](slurm.md)
 ## Related Applications
