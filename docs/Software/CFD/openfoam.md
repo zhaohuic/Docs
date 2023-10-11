@@ -28,7 +28,7 @@ OpenFOAM can be used for both serial and parallel jobs. To run OpenFOAM in paral
         #!/bin/bash -l
         #SBATCH --job-name=openfoam_parallel
         #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=regular
+        #SBATCH --partition=public
         #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=16
         #SBATCH --mem-per-cpu=10G # Adjust as necessary
@@ -72,7 +72,7 @@ To run OpenFOAM in serial, the following job script can be used.
         #!/bin/bash -l
         #SBATCH --job-name=openfoam_parallel
         #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=regular
+        #SBATCH --partition=public
         #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=1
         #SBATCH --mem-per-cpu=10G # Adjust as necessary
@@ -106,8 +106,12 @@ To run OpenFOAM in serial, the following job script can be used.
     ```
 Submit the job script using the sbatch command: `sbatch openfoam_parallel.submit.sh` or `sbatch openfoam_serial.submit.sh`.
 
+!!! warning
+        
+        Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on the [SLURM configuration on Wulver](slurm.md#example-of-slurm-script).
+
 ## Building OpenFOAM from source
-Sometimes, users need to create a new solver or modify the existing solver by adding different functions for their research. In that case, users need t build openFOAM from source since user do not have the permission to add libraries in the root directory whe OpenFOAM is installed. The following instructions are provided on how to build openFOAM from source on cluster. If you have any queries or issues regarding building OpenFOAM please contact us at [hpc@njit.edu](mailto:hpc@njit.edu).
+Sometimes, users need to create a new solver or modify the existing solver by adding different functions for their research. In that case, users need to build openFOAM from source since user do not have the permission to add libraries in the root directory where OpenFOAM is installed. The following instructions are provided on how to build openFOAM from source on cluster. If you have any queries or issues regarding building OpenFOAM, please contact us at [hpc@njit.edu](mailto:hpc@njit.edu).
 
 ```bash
 
