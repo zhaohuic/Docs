@@ -85,7 +85,7 @@ Submit the job using `sbatch fluent.submit.sh` command.
 !!! warning
         
         Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on [SLURM](slurm.md).
-
+[SLURM](slurm.md)
 ## Related Applications
 
 * [OpenFOAM](openfoam.md)
