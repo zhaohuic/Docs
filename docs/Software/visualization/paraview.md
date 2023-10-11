@@ -32,7 +32,7 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 		#SBATCH --job-name=pvserver_cpu
 		#SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
 		#SBATCH --error=%x.%j.err # prints the error message
-		#SBATCH --partition=general # Modify the partion name to PI's partition
+		#SBATCH --partition=general
 		#SBATCH --nodes=1
 		#SBATCH --ntasks-per-node=32
 		#SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G

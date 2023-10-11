@@ -20,11 +20,59 @@ print(soft.to_markdown(index=False))
 The documentation of OpenFOAM is available at [OpenFOAM Documentation](https://www.openfoam.com/documentation/overview), where you can find the tutorials in OpenFOAM meshing (blockMesh), postprocessing, setting boundary conditions etc. 
 
 ## Using OpenFOAM
-OpenFOAM can be used for both serial and parallel jobs. To run OpenFOAM in parallel, you need to use following job script.
+OpenFOAM can be used for both serial and parallel jobs. To run OpenFOAM in parallel, you need to use the following job script.
 
 ??? example "Sample Batch Script to Run OpenFOAM in parallel: openfoam_parallel.submit.sh"
 
-    ```slurm
+    === "Wulver"
+        
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=openfoam_parallel
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        #SBATCH --partition=general 
+		#SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=32
+		#SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
+		#SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+		#SBATCH --time=71:59:59  # D-HH:MM:SS
+        ################################################
+        #
+        # Purge and load modules needed for run
+        #
+        ################################################
+        module purge
+        module load wulver # Load slurm, easybuild
+        module load foss/2021b OpenFOAM
+        ################################################
+        #
+        # Source OpenFOAM bashrc
+        # The modulefile doesn't do this
+        #
+        ################################################
+        source $FOAM_BASH
+        ################################################
+        #
+        # copy into cavity directory from /opt/site/examples/openFoam/parallel 
+        # run blockMesh and
+        # icoFoam. Note: this is running on one node and
+        # using all 32 cores on the node
+        #
+        ################################################
+        cp -r /apps/easybuild/examples/openFoam/parallel/cavity /path/to/destination
+        # /path/to/destination is destination path where user wants to copy the cavity directory
+        cd cavity
+        blockMesh
+        decomposePar -force
+        srun icoFoam -parallel
+        reconstructPar
+        ```
+
+    === "Lochness"
+
+        ```slurm
         #!/bin/bash -l
         #SBATCH --job-name=openfoam_parallel
         #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
@@ -59,18 +107,70 @@ OpenFOAM can be used for both serial and parallel jobs. To run OpenFOAM in paral
         decomposePar -force
         srun icoFoam -parallel
         reconstructPar
-    ```
+        ```
 !!! note
         
-        You can copy the tutorial `cavity` mentioned in the above job script from the `/opt/site/examples/openFoam/parallel` directory.   
+        === "Wulver"
+            
+            You can copy the tutorial `cavity` mentioned in the above job script from the `/apps/easybuild/examples/openFoam/parallel` directory.  
+
+        === "Lochness"
+            
+            You can copy the tutorial `cavity` mentioned in the above job script from the `/opt/site/examples/openFoam/parallel` directory.
 
 To run OpenFOAM in serial, the following job script can be used.
 
 ??? example "Sample Batch Script to Run OpenFOAM in serial: openfoam_serial.submit.sh"
 
-    ```slurm
+    === "Wulver"
+        
+        ```slurm
         #!/bin/bash -l
-        #SBATCH --job-name=openfoam_parallel
+        #SBATCH --job-name=openfoam_serial
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        #SBATCH --partition=general 
+		#SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=32
+		#SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
+		#SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+		#SBATCH --time=71:59:59  # D-HH:MM:SS
+        ################################################
+        #
+        # Purge and load modules needed for run
+        #
+        ################################################
+        module purge
+        module load wulver # Load slurm, easybuild
+        module load foss/2021b OpenFOAM
+        ################################################
+        #
+        # Source OpenFOAM bashrc
+        # The modulefile doesn't do this
+        #
+        ################################################
+        source $FOAM_BASH
+        ################################################
+        #
+        # copy into cavity directory from /opt/site/examples/openFoam/serial 
+        # run blockMesh and
+        # icoFoam. Note: this is running on one node and
+        # using all 32 cores on the node
+        #
+        ################################################
+        cp -r /apps/easybuild/examples/openFoam/serial/cavity /path/to/destination
+        # /path/to/destination is destination path where user wants to copy the cavity directory
+        cd cavity
+        blockMesh
+        icoFoam
+        ```
+
+    === "Lochness"
+        
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=openfoam_serial
         #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
         #SBATCH --partition=public
         #SBATCH --nodes=1
@@ -103,12 +203,8 @@ To run OpenFOAM in serial, the following job script can be used.
         cd cavity
         blockMesh
         icoFoam
-    ```
+        ```
 Submit the job script using the sbatch command: `sbatch openfoam_parallel.submit.sh` or `sbatch openfoam_serial.submit.sh`.
-
-!!! warning
-        
-        Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on the [SLURM configuration on Wulver](slurm.md#example-of-slurm-script).
 
 ## Building OpenFOAM from source
 Sometimes, users need to create a new solver or modify the existing solver by adding different functions for their research. In that case, users need to build openFOAM from source since user do not have the permission to add libraries in the root directory where OpenFOAM is installed. The following instructions are provided on how to build openFOAM from source on cluster. If you have any queries or issues regarding building OpenFOAM, please contact us at [hpc@njit.edu](mailto:hpc@njit.edu).
