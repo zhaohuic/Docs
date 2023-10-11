@@ -53,86 +53,96 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
     
     === "Wulver"
 
-    ```slurm
-    #!/bin/bash -l
-    #SBATCH --job-name=fluent
-    #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
-    #SBATCH --error=%x.%j.err # prints the error message
-    # Use "sinfo" to see what partitions are available to you
-    #SBATCH --partition=general
-    #SBATCH --ntasks=8
-    #SBATCH --qos=standard
-    #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
-    # Memory required; lower amount gets scheduling priority
-    #SBATCH --mem-per-cpu=2G
-    
-    # Time required in d-hh:mm:ss format; lower time gets scheduling priority
-    #SBATCH --time=71:59:00
-    
-    # Purge and load the correct modules
-    module purge > /dev/null 2>&1
-    module load ANSYS
-    
-    # Run the mpi program
-    
-    machines=hosts.$SLURM_JOB_ID
-    touch $machines
-    for node in `scontrol show hostnames`
-        do
-            echo "$node"  >> $machines
-        done
-    
-    fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
-    ```
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=fluent
+        #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        # Use "sinfo" to see what partitions are available to you
+        #SBATCH --partition=general
+        #SBATCH --ntasks=8
+        #SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+        # Memory required; lower amount gets scheduling priority
+        #SBATCH --mem-per-cpu=2G
+        
+        # Time required in d-hh:mm:ss format; lower time gets scheduling priority
+        #SBATCH --time=71:59:00
+        
+        # Purge and load the correct modules
+        module purge > /dev/null 2>&1
+        module load ANSYS
+        
+        # Run the mpi program
+        
+        machines=hosts.$SLURM_JOB_ID
+        touch $machines
+        for node in `scontrol show hostnames`
+            do
+                echo "$node"  >> $machines
+            done
+        
+        fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
+        ```
 
     === "Lochness"
 
-    ```slurm
-    #!/bin/bash -l
-    #SBATCH --job-name=fluent
-    #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
-    #SBATCH --ntasks=8
-    # Use "sinfo" to see what partitions are available to you
-    #SBATCH --partition=public
-    
-    # Memory required; lower amount gets scheduling priority
-    #SBATCH --mem-per-cpu=5G
-    
-    # Time required in d-hh:mm:ss format; lower time gets scheduling priority
-    #SBATCH --time=5-24:59:00
-    
-    # Purge and load the correct modules
-    module purge > /dev/null 2>&1
-    module load ANSYS
-    
-    # Run the mpi program
-    
-    machines=hosts.$SLURM_JOB_ID
-    touch $machines
-    for node in `scontrol show hostnames`
-        do
-            echo "$node"  >> $machines
-        done
-    
-    fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
-    ```
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=fluent
+        #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
+        #SBATCH --ntasks=8
+        # Use "sinfo" to see what partitions are available to you
+        #SBATCH --partition=public
+        
+        # Memory required; lower amount gets scheduling priority
+        #SBATCH --mem-per-cpu=5G
+        
+        # Time required in d-hh:mm:ss format; lower time gets scheduling priority
+        #SBATCH --time=5-24:59:00
+        
+        # Purge and load the correct modules
+        module purge > /dev/null 2>&1
+        module load ANSYS
+        
+        # Run the mpi program
+        
+        machines=hosts.$SLURM_JOB_ID
+        touch $machines
+        for node in `scontrol show hostnames`
+            do
+                echo "$node"  >> $machines
+            done
+        
+        fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
+        ```
 Submit the job using `sbatch fluent.submit.sh` command.
 
 ???+ warning
 
         Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on [SLURM](slurm.md).
+        === "C"
+        
+            ``` c
+            #include <stdio.h>
+        
+            int main(void) {
+              printf("Hello world!\n");
+              return 0;
+            }
+            ```
+        
+        === "C++"
+        
+            ``` c++
+            #include <iostream>
+        
+            int main(void) {
+              std::cout << "Hello world!" << std::endl;
+              return 0;
+            }
+            ```
 
-=== "Open me in a new tab ..."
-    
-    Test1
-
-=== "... or me ..."
-    
-    Test2
-
-=== "... or even me"
-    
-    Test3
 
 ## Related Applications
 
