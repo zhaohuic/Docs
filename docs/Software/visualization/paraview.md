@@ -56,7 +56,7 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 		port=$(shuf -i 6000-9999 -n 1)
 		HOST=$(hostname)
 		if [ $(hostname) == $HOST ]; then
-			/usr/bin/ssh -N -f -R $port:localhost:$port login-1.tartan.njit.edu
+			/usr/bin/ssh -N -f -R $port:localhost:$port login01.tartan.njit.edu
 		fi
 		################################################
 		cat<<EOF
@@ -69,7 +69,7 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 		Open new terminal window, and run:
 		(If you are off campus you will need VPN running)
 		
-		ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu
+		ssh -L $port:localhost:$port $USER@login01.tartan.njit.edu
 		EOF
 		################################################
 		# Run MPI pvserver
@@ -162,7 +162,7 @@ To use ParaView with GPU, you need to use the following job script
 		port=$(shuf -i 6000-9999 -n 1)
 		HOST=$(hostname)
 		if [ $(hostname) == $HOST ]; then
-				/usr/bin/ssh -N -f -R $port:localhost:$port login-1.tartan.njit.edu
+				/usr/bin/ssh -N -f -R $port:localhost:$port login01.tartan.njit.edu
 		fi
 		################################################
 		cat<<EOF
@@ -175,7 +175,7 @@ To use ParaView with GPU, you need to use the following job script
 		Open new terminal window, and run:
 		(If you are off campus you will need VPN running)
 		
-		ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu
+		ssh -L $port:localhost:$port $USER@login01.tartan.njit.edu
 		EOF
 		################################################
 		#
@@ -241,17 +241,33 @@ To use ParaView with GPU, you need to use the following job script
 Submit the job script using the sbatch command: `sbatch pvserver_gpu.submit.sh` or `sbatch pvserver_cpu.submit.sh`.
 Once you submit the job, please open the output file with `.out` extension, and get the port number from the output file. Once you open the output file (with `.out` extension) and go to the end of the file, you should see the following 
 
-```bash
-Step 1: Create SSH tunnel
+=== "Wulver" 
+	
+	```bash
+	Step 1: Create SSH tunnel
+	
+	Open new terminal window, and run:
+	(If you are off campus you will need VPN running)
+	
+	ssh -L 1234:localhost:1234 user@login01.tartan.njit.edu
+	Waiting for client...
+	Connection URL: cs://n0003:1234
+	Accepting connection(s): n0003:1234
+	```	
 
-Open new terminal window, and run:
-(If you are off campus you will need VPN running)
+=== "Lochness"
 
-ssh -L 1234:localhost:1234 user@login-1.tartan.njit.edu
-Waiting for client...
-Connection URL: cs://node801:7680
-Accepting connection(s): node801:7680
-```
+	```bash
+	Step 1: Create SSH tunnel
+	
+	Open new terminal window, and run:
+	(If you are off campus you will need VPN running)
+	
+	ssh -L 1234:localhost:1234 user@login-1.tartan.njit.edu
+	Waiting for client...
+	Connection URL: cs://node801:1234
+	Accepting connection(s): node801:1234
+	```
 
 Next, open a new terminal and type
 `ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu`, where `$port` corresponds to the port number.
