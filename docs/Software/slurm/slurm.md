@@ -89,7 +89,11 @@ print(df.to_markdown(index=False))
         #SBATCH --mem-per-cpu=4000M
     ```
 
-Here, the job requests 1 node with 8 cores, on the `general` partition with `qos=standard`. Please note that the memory relies on the number of cores you are requesting. As per the policy, users can request up to 4GB memory per core, therefore the flag  `--mem-per-cpu` is used for memory requirement. In this above script `--time` indicates the wall time which is used to specify the maximum amount of time that a job is allowed to run. The maximum allowable wall time depend on SLURM QoS, which you can find in [QoS](slurm.md#using-slurm-on-cluster). To submit the job, use `sbatch submit.sh` where the `submit.sh` is the job script. Once the job has been submitted, the jobs will be in the queue, which will be executed based on priority-based scheduling. To check the status of the job use `squeue -u UCID` (replace `UCID` with your NJIT UCID) and you should see the following 
+* Here, the job requests 1 node with 8 cores, on the `general` partition with `qos=standard`. Please note that the memory relies on the number of cores you are requesting. 
+* As per the policy, users can request up to 4GB memory per core, therefore the flag  `--mem-per-cpu` is used for memory requirement. 
+* In this above script `--time` indicates the wall time which is used to specify the maximum amount of time that a job is allowed to run. The maximum allowable wall time depends on SLURM QoS, which you can find in [QoS](slurm.md#using-slurm-on-cluster). 
+* To submit the job, use `sbatch submit.sh` where the `submit.sh` is the job script. Once the job has been submitted, the jobs will be in the queue, which will be executed based on priority-based scheduling. 
+* To check the status of the job use `squeue -u UCID` (replace `UCID` with your NJIT UCID) and you should see the following 
 ```bash
   JOBID PARTITION     NAME     USER  ST    TIME    NODES  NODELIST(REASON)
    635   general     job_nme   ucid   R   00:02:19    1      n0088

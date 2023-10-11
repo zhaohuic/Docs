@@ -71,6 +71,7 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
         
         # Purge and load the correct modules
         module purge > /dev/null 2>&1
+        module load wulver # Load the slurm, easybuild 
         module load ANSYS
         
         # Run the mpi program
@@ -91,6 +92,7 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
         #!/bin/bash -l
         #SBATCH --job-name=fluent
         #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
         #SBATCH --ntasks=8
         # Use "sinfo" to see what partitions are available to you
         #SBATCH --partition=public
@@ -117,31 +119,6 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
         fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
         ```
 Submit the job using `sbatch fluent.submit.sh` command.
-
-???+ warning
-
-        Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on [SLURM](slurm.md).
-        === "C"
-        
-            ``` c
-            #include <stdio.h>
-        
-            int main(void) {
-              printf("Hello world!\n");
-              return 0;
-            }
-            ```
-        
-        === "C++"
-        
-            ``` c++
-            #include <iostream>
-        
-            int main(void) {
-              std::cout << "Hello world!" << std::endl;
-              return 0;
-            }
-            ```
 
 
 ## Related Applications
