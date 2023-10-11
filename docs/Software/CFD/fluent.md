@@ -57,7 +57,7 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
     #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
     #SBATCH --ntasks=8
     # Use "sinfo" to see what partitions are available to you
-    #SBATCH --partition=regular
+    #SBATCH --partition=public
     
     # Memory required; lower amount gets scheduling priority
     #SBATCH --mem-per-cpu=5G
@@ -81,6 +81,10 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
     fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
     ```
 Submit the job using `sbatch fluent.submit.sh` command. 
+
+!!! warning
+        
+        Please note that the above SLURM script is for Lochness only. You need to modify slurm script for Wulver based on the [SLURM configuration](slurm.md).
 
 ## Related Applications
 
