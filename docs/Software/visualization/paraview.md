@@ -144,7 +144,7 @@ To use ParaView with GPU, you need to use the following job script
 		#SBATCH --gres=gpu:1
 		#SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
 		#SBATCH --qos=standard
-        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+		q#SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
 		#SBATCH --time=71:59:59  # D-HH:MM:SS
 		################################################
 		#
@@ -237,8 +237,9 @@ To use ParaView with GPU, you need to use the following job script
 	
 		mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering --displays=0,1
 		```
+
 Submit the job script using the sbatch command: `sbatch pvserver_gpu.submit.sh` or `sbatch pvserver_cpu.submit.sh`.
-Once you submit the job, please open the output file with `.out` extension, and get the port number from the output file. Once you open the output file (with `.out` extension) and go to end of the file, you should see the following 
+Once you submit the job, please open the output file with `.out` extension, and get the port number from the output file. Once you open the output file (with `.out` extension) and go to the end of the file, you should see the following 
 
 ```bash
 Step 1: Create SSH tunnel
@@ -254,7 +255,7 @@ Accepting connection(s): node801:7680
 
 Next, open a new terminal and type
 `ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu`, where `$port` corresponds to the port number.
-Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need select <kbd>Add Server</kbd> option and there you need use the following as shown below.
+Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need to select <kbd>Add Server</kbd> option and there you need use the following as shown below.
 
 <video src="../../../assets/images/ParaView-add-connection.mp4" controls>
   Your browser does not support the video tag.
