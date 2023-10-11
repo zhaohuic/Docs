@@ -270,8 +270,17 @@ Once you submit the job, please open the output file with `.out` extension, and 
 	```
 
 Next, open a new terminal and type
-`ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu`, where `$port` corresponds to the port number.
-Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need to select <kbd>Add Server</kbd> option and there you need use the following as shown below.
+
+=== "Wulver"
+	
+	`ssh -L $port:localhost:$port $USER@login01.tartan.njit.edu`
+
+=== "Lochness"
+	
+	`ssh -L $port:localhost:$port $USER@login-1.tartan.njit.edu`
+
+where `$port` corresponds to the port number.
+Once you open ParaView from you local machine go to `File --> Connnect`, and you will see a dialogue box with a name `Choose Server Configuration`. You need to select <kbd>Add Server</kbd> option and there you need to use the following as shown below.
 
 <video src="../../../assets/images/ParaView-add-connection.mp4" controls>
   Your browser does not support the video tag.
