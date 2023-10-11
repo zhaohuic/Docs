@@ -291,9 +291,7 @@ Once you add the server, you need to select <kbd>Connect</kbd> to connect ParaVi
 
 !!! note
 
-		The port number may change everytime you submit job. In that case you need to modifiy
-		the port number by sleecting the <kbd>Edit Server</kbd> option. The step to modify
-		the server is shown in the above tutorial.
+	The port number may change everytime you submit job. In that case you need to modifiy the port number by sleecting the <kbd>Edit Server</kbd> option. The step to modify the server is shown in the above tutorial.
 
 ## Related Applications
 
