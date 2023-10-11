@@ -16,7 +16,36 @@ df = pd.DataFrame(data)
 print(df.to_markdown(index=False))
 ```
 ## Application Information, Documentation
-The documentation of SLURM is available at [SLURM manual](https://slurm.schedmd.com/documentation.html). Please note that the module `wulver` is already loaded when user logs in to the cluster. If you use `module purge` command, make sure to use `module load wulver` in the slurm script to load SLURM. 
+The documentation of SLURM is available at [SLURM manual](https://slurm.schedmd.com/documentation.html). 
+
+### Managing and Monitoring Jobs
+
+SLURM has numerous tools for monitoring jobs. Below are a few to get started. More documentation is available on the [SLURM website](https://slurm.schedmd.com/man_index.html).
+
+The most common commands are: 
+
+- List all current jobs: `squeue`
+- Job deletion:	`scancel [job_id]`
+- Run a job: `srun` (although some arguments are needed)
+
+
+### SLURM User Commands	
+
+| Task   |      Command      | 
+|----------|:-------------:|
+|Interactive login:|	`srun --pty bash` |
+|Job submission:|	`sbatch [script_file]`|
+|Job deletion:|	`scancel [job_id]`|
+|Job status by job:|	`squeue [job_id]`|
+|Job status by user:|	`squeue -u [user_name]`|
+|||
+|Job hold:|	`scontrol hold [job_id]`|
+|Job release:|	`scontrol release [job_id]`|
+|List enqueued jobs:|	`squeue`|
+|List nodes:|	`sinfo -N OR scontrol show nodes`|
+|Cluster status:|	`sinfo`|
+
+Please note that the module `wulver` is already loaded when user logs in to the cluster. If you use `module purge` command, make sure to use `module load wulver` in the slurm script to load SLURM. 
 
 ## Using SLURM on Cluster
 In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group account.
