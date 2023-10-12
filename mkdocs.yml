@@ -32,8 +32,8 @@ theme:
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
-      primary: indigo
-      accent: rgb(204,0,0)
+      #primary: indigo
+      #accent: rgb(204,0,0)
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
