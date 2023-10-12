@@ -2,7 +2,7 @@
 
 Welcome to HPC at NJIT.
 
-NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include cpu nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
+NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include CPU nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
 
 
 !!! warning
@@ -15,7 +15,7 @@ NJIT provides High Performance Computing resources to support scientific computi
     2. Anticipated Duration: Up to Seven Days
     3. Operational Continuity: After the move the cluster will remain operational until the end of the semester.
 
-    Stheno will be decommissioned on  October 6th, 2023. Stheno users can access their data from Lochness when Lochness is returned to service.
+    Stheno was decommissioned on October 6th, 2023. Stheno users can access their data from Lochness when Lochness is returned to service.
 
 
 ## Current clusters
