@@ -63,28 +63,18 @@ The authenticity of host 'user@lochness.njit.edu' cannot be established.
 Answering `yes` to the prompt will cause the session to continue. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without the need for any approvals. 
 
 ## Passwordless Authentication to the NJIT Cluster
-=== Mac OS/ Linux Users
+=== "Mac/Linux"
 
     To access to NJIT cluster without the password, you need to have a public ssh key on your Mac or Linux system. If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder. The public key is typically `id_rsa.pub` which is located in `~/.ssh/`.
     Once you have a public SSH key, copy it to the set of authorized keys on the computing cluster. Since you’ve already connected to the cluster in the previous step, simply navigate to the `/.ssh` folder on the computing cluster and open the file `~/.ssh/authorized_keys` and paste the content of your public key from your local machine. Double-check that the pasted key begins with `ssh-rsa`.
-=== Windows Users
+
+=== "Windows"
 
     Windows users can save the public key through MobaXterm settings.
 
-## Transfer the Data from the Local Machine to Clusters or vice versa 
-=== Windows Users
+## Transfer the Data from the Local Machine to Clusters or vice versa
 
-    User needs to select the `follow terminal folder` of the left pane of the MobaXterm terminal. 
-    
-    ![mobaxterm3](img/Mobaxterm3.png)
-    
-    Next, to transfer the data from the local machine to Lochness user needs to select the `Upload to current folder` option, as shown below. Selecting this option will open a dialogue box where user needs to select the files to upload.
-    
-    ![mobaxterm4](img/Mobaxterm4.png)
-    
-    For transferring the data from Lochness to the local machine user needs to select the directory or the data from the left pane and then select `Download selected files`.
-
-=== Mac OS/Linux Users
+=== "Mac/Linux"
 
     Users need to use the command in the terminal to transfer in and out the data 
      
@@ -98,5 +88,16 @@ Answering `yes` to the prompt will cause the session to continue. Once the host 
     rsync -avzP ucid@HPC_HOST.njit.edu:/path/to/source /path/to/local/machine
     ```
 
+=== "Windows"
+
+    User needs to select the `follow terminal folder` of the left pane of the MobaXterm terminal. 
+    
+    ![mobaxterm3](img/Mobaxterm3.png)
+    
+    Next, to transfer the data from the local machine to Lochness user needs to select the `Upload to current folder` option, as shown below. Selecting this option will open a dialogue box where user needs to select the files to upload.
+    
+    ![mobaxterm4](img/Mobaxterm4.png)
+    
+    For transferring the data from Lochness to the local machine user needs to select the directory or the data from the left pane and then select `Download selected files`.
 
 
