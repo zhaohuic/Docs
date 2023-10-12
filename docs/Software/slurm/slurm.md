@@ -47,7 +47,7 @@ The most common commands are:
 
 Please note that the module `wulver` is already loaded when user logs in to the cluster. If you use `module purge` command, make sure to use `module load wulver` in the slurm script to load SLURM. 
 
-## Using SLURM on Cluster
+## Using SLURM on Wulver
 In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group account.
 
 1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter
