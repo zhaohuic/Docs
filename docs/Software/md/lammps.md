@@ -101,7 +101,7 @@ Some users may be interested in building LAMMPS from source to enable more speci
 The source files for LAMMPS can be [downloaded](https://www.lammps.org/download.html) as either a tar file 
 or from the [LAMMPS Github repository](https://github.com/lammps/lammps). 
 
-??? example "Building on Wulver"
+??? example "Building on Cluster"
 	The following procedure was used to build LAMMPS on Wulver. 
     In the terminal:
     

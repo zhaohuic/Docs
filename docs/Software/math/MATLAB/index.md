@@ -19,7 +19,7 @@ print(soft.to_markdown(index=False))
 ## Using MATLAB
 
 ### Serial Job
-???+ exmaple "Sample Batch Script to run MATLAB: matlab-serial.sh"
+??? exmaple "Sample Batch Script to run MATLAB: matlab-serial.sh"
 
     ```slurm
     #!/bin/bash
@@ -47,7 +47,7 @@ print(soft.to_markdown(index=False))
 ### Parallel Job
 
 ### Single node parallelization
-???+ exmaple "Sample Batch Script to run MATLAB: matlab_parallel.sh"
+??? exmaple "Sample Batch Script to run MATLAB: matlab_parallel.sh"
     
     ```slurm
     #!/bin/bash
@@ -79,10 +79,9 @@ print(soft.to_markdown(index=False))
         a(i) = max(abs(eig(rand(A))));
     end
     toc
-    ``` thel,
+    ```
 
 ## Multi node parallelization
-If you 
-To learn how to install a version of MATLAB on your local system and use it to run jobs on Wulver, please see [Using Local MATLAB on Wulver](matlab_local.md)
+If you want to learn how to install a version of MATLAB on your local system and use it to run jobs on Wulver, please see [Using Local MATLAB on Wulver](matlab_local.md)
 
 
