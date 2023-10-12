@@ -1,5 +1,9 @@
 # Use MATLAB on NJIT HPC
 
+!!! warning
+    
+    Please note that the following instructions are applicatible for Lochness only. We will soon update the instructions for Wulver.
+
 ## Installation steps of MATLAB on local machine
 * Go to [Mathworks Download](https://www.mathworks.com/downloads/) and register with your NJIT email address.
 * Select the **R2022a** version to download. 
