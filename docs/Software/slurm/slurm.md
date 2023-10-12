@@ -136,3 +136,35 @@ Replace `PI_ucid` with PI's NJIT UCID.
 !!! note 
        
     Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not prallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`, as this will request 1 CPU per GPU. It's important to keep in mind that using multi cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
+=======
+## Managing and Monitoring Jobs
+
+SLURM has numerous tools for monitoring jobs. Below are a few to get started. More documentation is available on the [SLURM website](https://slurm.schedmd.com/man_index.html).
+
+The most common commands are: 
+
+- List all current jobs: `squeue`
+- Job deletion:	`scancel [job_id]`
+- Run a job: `srun` (although some arguments are needed)
+
+
+### SLURM User Commands	
+
+| Task   |      Command      | 
+|----------|:-------------:|
+|Interactive login:|	`srun --pty bash` |
+|Job submission:|	`sbatch [script_file]`|
+|Job deletion:|	`scancel [job_id]`|
+|Job status by job:|	`squeue [job_id]`|
+|Job status by user:|	`squeue -u [user_name]`|
+|||
+|Job hold:|	`scontrol hold [job_id]`|
+|Job release:|	`scontrol release [job_id]`|
+|List enqueued jobs:|	`squeue`|
+|List nodes:|	`sinfo -N OR scontrol show nodes`|
+|Cluster status:|	`sinfo`|
+
+#### Additional Resources
+
+- SLURM Tutorial List: https://slurm.schedmd.com/tutorials.html
+
