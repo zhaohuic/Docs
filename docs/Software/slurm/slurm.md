@@ -135,4 +135,4 @@ Replace `PI_ucid` with PI's NJIT UCID.
 
 !!! note 
        
-    Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not prallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`. as this will request 1 CPU per GPU. It's important to keep in mind that using multi cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
+    Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not prallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`, as this will request 1 CPU per GPU. It's important to keep in mind that using multi cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
