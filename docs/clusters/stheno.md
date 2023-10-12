@@ -17,4 +17,4 @@
 Not included are 10 nodes permanently taken out of service due to hardware failures.  All are out of warranty and EOL’d by manufacturers.
 
 
-??? warning "Stheno will be decommissioned on October 6th, 2023. Stheno users can access their data from Lochness when Lochness is returned to service."
+!!! warning "Stheno will be decommissioned on October 6th, 2023. Stheno users can access their data from Lochness when Lochness is returned to service."

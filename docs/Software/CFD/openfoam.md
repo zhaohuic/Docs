@@ -110,13 +110,13 @@ OpenFOAM can be used for both serial and parallel jobs. To run OpenFOAM in paral
         ```
 !!! note
         
-        === "Wulver"
-            
-            You can copy the tutorial `cavity` mentioned in the above job script from the `/apps/easybuild/examples/openFoam/parallel` directory.  
+    === "Wulver"
+        
+        You can copy the tutorial `cavity` mentioned in the above job script from the `/apps/easybuild/examples/openFoam/parallel` directory.  
 
-        === "Lochness"
-            
-            You can copy the tutorial `cavity` mentioned in the above job script from the `/opt/site/examples/openFoam/parallel` directory.
+    === "Lochness"
+        
+        You can copy the tutorial `cavity` mentioned in the above job script from the `/opt/site/examples/openFoam/parallel` directory.
 
 To run OpenFOAM in serial, the following job script can be used.
 

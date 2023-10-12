@@ -13,13 +13,57 @@ The documentation of VS Code is available at [VS Code documentation](https://cod
 
 !!! warning
 
-        If you want to use VS Code on NJIT cluster, don't use VS Code installed on your machine to connect to cluster! Please use the method described belelow so that you can use VS Code not only to edit scripts, but also run your script on the cluster.
+    If you want to use VS Code on NJIT cluster, don't use VS Code installed on your machine to connect to cluster! Please use the method described belelow so that you can use VS Code not only to edit scripts, but also run your script on the cluster.
 
 Use the following slurm script and submit the job script using `sbatch vs-code.submit.sh` command.
 
 ??? example "Batch Script to use VS Code : vs-code.submit.sh"
     
-    ```slurm
+    === "Wulver"
+        
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=vs-code
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        #SBATCH --partition=general 
+		#SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=32
+		#SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
+		#SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+		#SBATCH --time=71:59:59  # D-HH:MM:SS
+        
+        set -e
+        
+        module purge
+        module load wulver # load slurn, easybuild
+        
+        # add any required module loads here, e.g. a specific Python
+        
+        CLI_PATH="${HOME}/vscode_cli"
+        
+        # Install the VS Code CLI command if it doesn't exist
+        if [[ ! -e ${CLI_PATH}/code ]]; then
+            echo "Downloading and installing the VS Code CLI command"
+            mkdir -p "${HOME}/vscode_cli"
+            pushd "${HOME}/vscode_cli"
+            # Process from: https://code.visualstudio.com/docs/remote/tunnels#_using-the-code-cli
+            curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
+            # unpack the code binary file
+            tar -xf vscode_cli.tar.gz
+            # clean-up
+            rm vscode_cli.tar.gz
+            popd
+        fi
+    
+        # run the code tunnel command and accept the licence
+        ${CLI_PATH}/code tunnel --accept-server-license-terms
+    ```
+
+    === "Lochness"
+        
+        ```slurm
         #!/bin/bash -l
         #SBATCH --job-name=vs-code
         #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
@@ -53,7 +97,7 @@ Use the following slurm script and submit the job script using `sbatch vs-code.s
     
         # run the code tunnel command and accept the licence
         ${CLI_PATH}/code tunnel --accept-server-license-terms
-    ```
+        ```
 Once you submit the job, you will see an output file with `.out` extension. Once you open the file , you will see the following
 ```
 *
@@ -89,7 +133,7 @@ Now copy and paste this link in your browser and VS Code is ready to use.
 ## User Contributed Information
 
 !!! info "Please help us improve this page"
-        Users are invited to contribute helpful information and corrections
-        through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
+
+    Users are invited to contribute helpful information and corrections through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
 
 
