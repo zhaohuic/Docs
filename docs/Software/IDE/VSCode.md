@@ -59,7 +59,7 @@ Use the following slurm script and submit the job script using `sbatch vs-code.s
     
         # run the code tunnel command and accept the licence
         ${CLI_PATH}/code tunnel --accept-server-license-terms
-    ```
+        ```
 
     === "Lochness"
         
@@ -98,7 +98,7 @@ Use the following slurm script and submit the job script using `sbatch vs-code.s
         # run the code tunnel command and accept the licence
         ${CLI_PATH}/code tunnel --accept-server-license-terms
         ```
-Once you submit the job, you will see an output file with `.out` extension. Once you open the file , you will see the following
+Once you submit the job, you will see an output file with `.out` extension. Once you open the file, you will see the following
 ```
 *
 
@@ -117,7 +117,7 @@ Once you submit the job, you will see an output file with `.out` extension. Once
 To grant access to the server, please log into https://github.com/login/device and use code XXXX-XXXX
 
 ```
-You need to have the [GitHub](wwww.github.com) account, please open the GitHub profile and use the code printed in the output file. Once you authorize GitHub, you will see the following in the output file
+You need to have the [GitHub](https://wwww.github.com) account, please open the GitHub profile and use the code printed in the output file. Once you authorize GitHub, you will see the following in the output file
 
 ```
 Open this link in your browser https://vscode.dev/tunnel/nodeXXX
