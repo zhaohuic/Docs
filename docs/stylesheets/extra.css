@@ -28,8 +28,8 @@
 [data-md-color-scheme="njit"] {
   --md-primary-fg-color:        #d8272d;
   --md-primary-fg-color--light: #d8272d;
-  --md-code-hl-color:                hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
-  --md-typeset-mark-color:             rgb(0,0,0);
+  /*--md-code-hl-color:                hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
+  --md-typeset-mark-color:             rgb(0,0,0);*/
 
   --md-footer-fg-color:                #d8272d;
   --md-footer-bg-color:                #d8272d;
@@ -40,8 +40,8 @@
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color:            #d8272d;
   --md-primary-fg-color--light:     #d8272d;
-  --md-code-hl-color:                hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
-  --md-typeset-mark-color:             rgb(0,0,0);
+  /*--md-code-hl-color:                hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
+  --md-typeset-mark-color:           rgb(0,0,0);*/
 
   --md-accent-fg-color:             #d8272d;
   --md-hue: 360;
