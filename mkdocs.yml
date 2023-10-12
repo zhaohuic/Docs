@@ -25,7 +25,7 @@ theme:
   favicon: favicon.ico
   palette:
     # Palette toggle for light mode
-    - scheme: rgb(204,0,0)
+    - scheme: custom #njit #rgb(204,0,0)
       accent: rgb(204,0,0)
       toggle:
         icon: material/brightness-7

@@ -25,6 +25,12 @@
   --md-accent-bg-color--light:         rgb(0,0,235,0.5);
 }
 
+#[data-md-color-scheme="njit"] {
+#  --md-primary-fg-color:        #d8272d;
+#  --md-primary-fg-color--light: #d8272d;
+#  --md-primary-fg-color--dark:  rgb(255,255,0);
+#}
+
 .md-grid {
   max-width: initial;
 }
