@@ -22,9 +22,9 @@ jobs:
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v3
         with:
-        key: mkdocs-material-${{ env.cache_id }}
-        path: .cache
-        restore-keys: |
-          mkdocs-material-
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
       - run: pip install mkdocs-material pandas tabulate markdown-exec mkdocstrings mkdocs-table-reader-plugin mkdocs-awesome-pages-plugin mkdocs-autolinks-plugin
       - run: mkdocs gh-deploy --force
