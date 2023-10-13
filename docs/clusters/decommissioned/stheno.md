@@ -1,5 +1,7 @@
-# Stheno Specifications
+# Stheno 
+!!! warning "Stheno was decommissioned on October 6th, 2023. Stheno users can access their data from Lochness when Lochness is returned to service."
 
+## Specifications
 * GPU nodes: 2
 * Total GPUs: 4
 * GPU models:
@@ -14,7 +16,6 @@
     * 15x Intel(R) Xeon(R) CPU E5-2630 0 @ 2.30GHz
     * 7x Intel(R) Xeon(R) CPU E5649  @ 2.53GHz
 
-Not included are 10 nodes permanently taken out of service due to hardware failures.  All are out of warranty and EOL’d by manufacturers.
 
 
-??? warning "Stheno will be decommisioned after Wulver is in production"
+

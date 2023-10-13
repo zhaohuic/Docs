@@ -1,5 +1,9 @@
 # Use MATLAB on NJIT HPC
 
+!!! warning
+    
+    Please note that the following instructions are applicatible for Lochness only. We will soon update the instructions for Wulver.
+
 ## Installation steps of MATLAB on local machine
 * Go to [Mathworks Download](https://www.mathworks.com/downloads/) and register with your NJIT email address.
 * Select the **R2022a** version to download. 
@@ -95,7 +99,7 @@ The hostname.m file used in this demonstration can be downloaded [here](https://
 ```
  ![](https://wiki.hpc.arcs.njit.edu/images/2/22/C%3Dparcluster_1.png){ width=70% height 70%}
 
-Certain arguments need to be passe dto SLURM in order for the job to run properly. Here we will set values for partion, mem-per-cpu and time. In the Matlab window enter:
+Certain arguments need to be passed to SLURM in order for the job to run properly. Here we will set values for partion, mem-per-cpu and time. In the Matlab window enter:
 ```
  >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=public --mem-per-cpu=10G --time=2-00:00:00'] 
 ```
@@ -121,7 +125,7 @@ For more information see the Mathworks page: [batch](https://www.mathworks.com/h
 
 ![](https://wiki.hpc.arcs.njit.edu/images/6/6a/BatchEnterPasswd.png){ width=70% height 70%}
 
-To wait for the job to finish enter in the Matlab window:
+To wait for the job to finish, enter the following in the Matlab window:
 ```
  >>j.wait
 ```

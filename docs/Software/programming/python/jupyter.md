@@ -58,3 +58,10 @@ The Jupyter Notebook is a web-based interactive computing platform. The notebook
                  
     ```
 Once you submit this job script, you will see an output file indicating port number which you need to use to connect to the HPC cluster in a new terminal window. Please follow further instructions from the output file.
+
+## User Contributed Information
+
+!!! info "Please help us improve this page"
+
+    Users are invited to contribute helpful information and corrections through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
+

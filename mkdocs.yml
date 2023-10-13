@@ -10,7 +10,8 @@ nav:
     - Clusters:
       - 'Wulver': 'clusters/wulver.md'
       - 'Lochness': 'clusters/lochness.md'
-      - 'Stheno': 'clusters/stheno.md'
+      - 'Decommissioned':
+        - 'Stheno': 'clusters/decommissioned/stheno.md'
       - 'User access to clusters': 'clusters/cluster_access.md'
       - 'Getting started on Wulver': 'clusters/get_started_on_Wulver.md'
     - 'Policies': 
@@ -24,18 +25,17 @@ theme:
   logo: img/Logo_NJIT.png
   favicon: favicon.ico
   palette:
+
     # Palette toggle for light mode
-    - scheme: rgb(204,0,0)
-      accent: rgb(204,0,0)
+    - scheme: njit #rgb(204,0,0)
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch
         name: Switch to dark mode
+
     # Palette toggle for dark mode
     - scheme: slate
-      primary: indigo
-      accent: indigo
       toggle:
-        icon: material/brightness-4
+        icon: material/toggle-switch-off-outline
         name: Switch to light mode
   features:
     - navigation.instant
@@ -45,6 +45,10 @@ theme:
     - navigation.indexes
     - navigation.top
     - toc.follow
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
 extra_css:
     - stylesheets/extra.css
 extra:
@@ -84,6 +88,13 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
 plugins:
   - search
   - markdown-exec

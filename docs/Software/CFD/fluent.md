@@ -50,37 +50,76 @@ In the above `Journal` script, the full name of case file (`tube_vof.cas.h5`) is
 For more details on journal commands, see the Fluent text user interface (TUI) commands from [Fluent documentation](../../assets/Ansys_Fluent_Text_Command_List.pdf).
 
 ??? example "Sample Batch Script to Run FLUENT : fluent.submit.sh"
+    
+    === "Wulver"
 
-    ```slurm
-    #!/bin/bash -l
-    #SBATCH --job-name=fluent
-    #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
-    #SBATCH --ntasks=8
-    # Use "sinfo" to see what partitions are available to you
-    #SBATCH --partition=regular
-    
-    # Memory required; lower amount gets scheduling priority
-    #SBATCH --mem-per-cpu=5G
-    
-    # Time required in d-hh:mm:ss format; lower time gets scheduling priority
-    #SBATCH --time=5-24:59:00
-    
-    # Purge and load the correct modules
-    module purge > /dev/null 2>&1
-    module load ANSYS
-    
-    # Run the mpi program
-    
-    machines=hosts.$SLURM_JOB_ID
-    touch $machines
-    for node in `scontrol show hostnames`
-        do
-            echo "$node"  >> $machines
-        done
-    
-    fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
-    ```
-Submit the job using `sbatch fluent.submit.sh` command. 
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=fluent
+        #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        # Use "sinfo" to see what partitions are available to you
+        #SBATCH --partition=general
+        #SBATCH --ntasks=8
+        #SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+        # Memory required; lower amount gets scheduling priority
+        #SBATCH --mem-per-cpu=2G
+        
+        # Time required in d-hh:mm:ss format; lower time gets scheduling priority
+        #SBATCH --time=71:59:00
+        
+        # Purge and load the correct modules
+        module purge > /dev/null 2>&1
+        module load wulver # Load the slurm, easybuild 
+        module load ANSYS
+        
+        # Run the mpi program
+        
+        machines=hosts.$SLURM_JOB_ID
+        touch $machines
+        for node in `scontrol show hostnames`
+            do
+                echo "$node"  >> $machines
+            done
+        
+        fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
+        ```
+
+    === "Lochness"
+
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=fluent
+        #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        #SBATCH --ntasks=8
+        # Use "sinfo" to see what partitions are available to you
+        #SBATCH --partition=public
+        
+        # Memory required; lower amount gets scheduling priority
+        #SBATCH --mem-per-cpu=5G
+        
+        # Time required in d-hh:mm:ss format; lower time gets scheduling priority
+        #SBATCH --time=5-24:59:00
+        
+        # Purge and load the correct modules
+        module purge > /dev/null 2>&1
+        module load ANSYS
+        
+        # Run the mpi program
+        
+        machines=hosts.$SLURM_JOB_ID
+        touch $machines
+        for node in `scontrol show hostnames`
+            do
+                echo "$node"  >> $machines
+            done
+        
+        fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
+        ```
+Submit the job using `sbatch fluent.submit.sh` command.
+
 
 ## Related Applications
 
@@ -89,7 +128,7 @@ Submit the job using `sbatch fluent.submit.sh` command.
 ## User Contributed Information
 
 !!! info "Please help us improve this page"
-        Users are invited to contribute helpful information and corrections
-        through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
+
+    Users are invited to contribute helpful information and corrections through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
 
 

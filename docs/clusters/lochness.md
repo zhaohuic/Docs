@@ -2,7 +2,7 @@
 
 This very heterogeneous cluster is a mix of manufacturers, components, and capacities as it was built up in incremental purchases spanning several years. 
 
-??? warning "Much of lochness will be incorporated into the new Wulver cluster 3Q 2023."
+!!! warning "Much of lochness will be incorporated into the new Wulver cluster 3Q 2023."
 
 ## Specifications:
 
@@ -41,9 +41,9 @@ print(df.to_markdown(index=False))
     * Infiniband network interface (mix of HDR100, EDR, and FDR speeds)
     * 1TB local storage (mostly SSD but a few HD)
 * All nodes have network accessible storage:
-    * /home/: 26 TB
-    * /research/: 97 TB
-    * /afs/cad/ 50 TB 
+    * `/home/`: 26 TB
+    * `/research/`: 97 TB
+    * `/afs/cad/`: 50 TB 
 
 The cluster also features
 

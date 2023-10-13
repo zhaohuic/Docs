@@ -30,7 +30,7 @@ CP2K MPI/OpenMP-hybrid Execution (PSMP), CP2K with Population Analysis capabilit
 ## User Contributed Information
 
 !!! info "Please help us improve this page"
-        Users are invited to contribute helpful information and corrections
-        through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
+
+    Users are invited to contribute helpful information and corrections through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
 
 
