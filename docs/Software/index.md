@@ -154,13 +154,15 @@ man module
 
 ## Software List
 
-The following applications are installed on Lochness.
+The following applications are installed on Wulver.
 
-```python exec="on"
-import pandas as pd
-df = pd.read_csv('docs/assets/tables/module.csv')
-print(df.to_markdown(index=False))
-```
+=== "wulver"
+
+    ```python exec="on"
+    import pandas as pd
+    df = pd.read_csv('docs/assets/tables/module.csv')
+    print(df.to_markdown(index=False))
+    ```
 
 
 
