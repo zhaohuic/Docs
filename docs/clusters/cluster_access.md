@@ -2,22 +2,24 @@
 The following instructions are provided to access NJIT HPC clusters from a local computer.
 
 ## Getting a Login
-Faculty can obtain a login to NJIT's HPC & BD systems by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu). Students can obtain a login either by taking a class that uses one of the systems or by asking their faculty adviser to [contact](mailto:hpc@njit.edu) on their behalf. Your login and password are the same as for any NJIT AFS system.
+Faculty can obtain a login to NJIT's HPC by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu). Students can obtain a login either by taking a class that uses one of the systems or by asking their faculty adviser to [contact](mailto:hpc@njit.edu) on their behalf. Your login and password are the same as for any NJIT AFS system.
 
 ## Access to Clusters
 Make sure the user is connected to `NJITsecure` if the user is on campus. If working off campus, NJIT VPN is required. Please find the details [here](https://ist.njit.edu/vpn).
-Here we will provide instructions on getting started with NJIT HPC for the user who uses Windows OS.
+Here we will provide instructions for connecting to NJIT HPC on Mac/Linux and Windows OS.
+
+
 
 === "Mac/Linux"
 
     Open terminal from <kbd>Launchpad</kbd> and select <kbd>terminal</kbd>.
-    Type the following in the terminal  
+    Type the following in the terminal by substituting `wulver` or `lochness` for `HPC_HOST` and `ucid` with your NJIT UCID.
     ```
       localhost> ssh -X -Y ucid@HPC_HOST.njit.edu  
     ```
     If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder.
     
-    Users will be prompted for your password. Enter your AFS password. Users can omit the `-X -Y` if you are not using a graphic interface. Substitute `wulver` or `lochness` for `HPC_HOST`.
+    Users will be prompted for your password. Enter your NJIT UCID password. Users can omit the `-X -Y` if you are not using a graphic interface.
     Once the password is provided, the user will see the following
     
     ```
@@ -36,7 +38,7 @@ Here we will provide instructions on getting started with NJIT HPC for the user 
     
     ![mobaxterm](img/Mobaxterm.png)
     
-    Type `ssh ucid@HPC_HOST.njit.edu`. Replace `ucid` with NJIT UCID. Substitute `lochness` or `Stheno` for `HPC_HOST`.
+    Type `ssh ucid@HPC_HOST.njit.edu`. Replace `ucid` with your NJIT UCID and substitute `wulver` or `lochness` for `HPC_HOST`.
     
     ![mobaxterm2](img/Mobaxterm2.png). 
     
@@ -65,7 +67,9 @@ Here we will provide instructions on getting started with NJIT HPC for the user 
     login-1-41 ~ >:
     ```
 
-## Passwordless Authentication to the NJIT Cluster
+## Key based Authentication to the NJIT Cluster
+
+
 === "Mac/Linux"
 
     To access to NJIT cluster without the password, you need to have a public ssh key on your Mac or Linux system. If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder. The public key is typically `id_rsa.pub` which is located in `~/.ssh/`.
@@ -84,7 +88,7 @@ Here we will provide instructions on getting started with NJIT HPC for the user 
     ```
     rsync -avzP /path/to/local/machine ucid@HPC_HOST.njit.edu:/path/to/destination
     ```
-    Replace `HPC_HOST` with `lochness` or `Stheno`. This will transfer the data from the ocal machine to HPC cluster. 
+    Replace `HPC_HOST` with `lochness` or `wulver`. This will transfer the data from the ocal machine to HPC cluster. 
     To transfer the data from HPC cluster to local machine use
       
     ```
