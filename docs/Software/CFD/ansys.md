@@ -7,17 +7,32 @@ ANSYS is a computer-aided engineering (CAE) software suite used to simulate, ana
 The software suite is known for its high level of accuracy and versatility, and is widely used by engineers and designers to optimize product performance, reduce costs, and improve time to market. ANSYS offers a wide range of modules and add-ons, which can be customized to suit specific engineering needs and requirements.
 ## Availability
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "ANSYS"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    soft = df.query('Software == "ANSYS"')
+    print(soft.to_markdown(index=False))
+    ```
+
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    soft = df.query('Software == "ANSYS"')
+    print(soft.to_markdown(index=False))
+    ```
 
 ## Application Information, Documentation
+Please [download](https://njit.instructure.com/courses/8519/assignments/128626) ANSYS and follow the [instructions](https://ist.njit.edu/ansys-installation-instructions) to install ANSYS on your local machine.
 
 ## Using ANSYS
+
+!!! info "ANSYS workbench will be available on Wulver via [Open OnDemand](https://openondemand.org/). We will provide the instructions soon."
 
 ## Related Applications
 * [COMSOL](comsol.md)

@@ -9,13 +9,26 @@ ParaView is widely used in a variety of scientific and engineering fields, inclu
 
 ## Availability
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "ParaView"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    soft = df.query('Software == "ParaView" | Software == "paraview"')
+    print(soft.to_markdown(index=False))
+    ```
+
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    soft = df.query('Software == "ParaView" | Software.str.contains("paraview")')
+    print(soft.to_markdown(index=False))
+    ```
+
 ## Application Information, Documentation
 The documentation of ParaView is available at [ParaView manual](https://docs.paraview.org/en/latest/index.html). To use the ParaView on cluster, users need to use the same version of ParaView on their local machine. You can download the ParaView from [ParaView official download page](https://www.paraview.org/download)
 

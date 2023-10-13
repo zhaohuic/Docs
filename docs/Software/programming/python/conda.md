@@ -6,16 +6,29 @@ Conda as a package manager helps you find and install packages. If you need a pa
 ## Availability
 Conda can be accessed on cluster as `Anaconda3` or `Miniconda3` module.
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-# Header values to be added
-soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    # Header values to be added
+    soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
+    print(soft.to_markdown(index=False))
+    ```
 
-User can use conda after using any of the module mentioned above
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    # Header values to be added
+    soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
+    print(soft.to_markdown(index=False))
+    ```
+
+Users can use conda after using any of the modules mentioned above
 
 module a `Anaconda3` module. Users can use `Anaconda3` to create virtual python environments to manage python modules.
 
@@ -142,6 +155,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 Simple tensorflow test program to make sure the virtual env can access a gpu. Program is called 
 ??? Example "tf.gpu.test.py"
+
     ```python
     import tensorflow as tf
     
@@ -153,24 +167,52 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
     
        print("Please install GPU version of TF")
     ```
+
 ??? Example "Slurm script to submit the job"
-    ```slurm
-    #!/bin/bash -l
-    #SBATCH --job-name=tf_test
-    #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-    #SBATCH --nodes=1
-    #SBATCH --tasks-per-node=1
-    #SBATCH --partition=datasci
-    #SBATCH --gres=gpu:1
-    #SBATCH --mem=4G
+
+    === "Wulver"
     
-    # Purge any module loaded by default
-    module purge > /dev/null 2>&1
-    module load Anaconda3
-    source $HOME/conda.sh
-    conda activate tf
-    srun python tf.gpu.test.py
-    ```
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        #SBATCH --partition=gpu
+        #SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=1
+        #SBATCH --gres=gpu:1
+        #SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
+        #SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+        #SBATCH --time=71:59:59  # D-HH:MM:SS
+        
+        # Purge any module loaded by default
+        module purge > /dev/null 2>&1
+        module load wulver # Load slurm, easybuild
+        module load Anaconda3
+        source $HOME/conda.sh
+        conda activate tf
+        srun python tf.gpu.test.py
+        ```
+    
+    === "Lochness"
+    
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=tf_test
+        #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
+        #SBATCH --nodes=1
+        #SBATCH --tasks-per-node=1
+        #SBATCH --partition=datasci
+        #SBATCH --gres=gpu:1
+        #SBATCH --mem=4G
+        
+        # Purge any module loaded by default
+        module purge > /dev/null 2>&1
+        module load Anaconda3
+        source $HOME/conda.sh
+        conda activate tf
+        srun python tf.gpu.test.py
+        ```
 Result:
 ```
 Starting /home/g/guest24/.bash_profile ... standard AFS bash profile
@@ -204,7 +246,7 @@ No modules loaded
 Default GPU Device: /device:GPU:0
 ```
 #### Install PyTorch with GPU
-To install PyTorch with GPU load the `Anaconda3` module as described above and then use the following
+To install PyTorch with GPU, load the `Anaconda3` module as described above and then use the following
 
 ```
 conda create --name torch-cuda python=3.7
@@ -213,7 +255,9 @@ conda install -c "nvidia/label/cuda-11.7.0" cuda-toolkit
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 ```
 A simple PyTorch test program is given below to check whether PyTorch has been installed properly. Program is called
+
 ??? program "torch_tensor.py"
+
     ```python
     # -*- coding: utf-8 -*-
     
@@ -261,25 +305,56 @@ A simple PyTorch test program is given below to check whether PyTorch has been i
     
     print(f'Result: y = {a.item()} + {b.item()} x + {c.item()} x^2 + {d.item()} x^3')
     ```
+
 User can use the following job script to run the script.
+
 ??? Example "torch-cuda.submit.sh"
-    ```slurm
-    #!/bin/bash -l
-    #SBATCH --job-name=torch_test
-    #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-    #SBATCH --nodes=1
-    #SBATCH --tasks-per-node=1
-    #SBATCH --partition=datasci
-    #SBATCH --gres=gpu:1
-    #SBATCH --mem=4G
+
+    === "Wulver"
     
-    # Purge any module loaded by default
-    module purge > /dev/null 2>&1
-    module load Anaconda3
-    source $HOME/conda.sh
-    conda activate torch-cuda
-    srun python touch_tensor.py
-    ```
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=torch_test
+        #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
+        #SBATCH --error=%x.%j.err # prints the error message
+        #SBATCH --partition=gpu
+        #SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=1
+        #SBATCH --gres=gpu:1
+        #SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
+        #SBATCH --qos=standard
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+        #SBATCH --time=71:59:59  # D-HH:MM:SS
+        
+        # Purge any module loaded by default
+        module purge > /dev/null 2>&1
+        module load wulver # Load slurm, easybuild
+        module load Anaconda3
+        source $HOME/conda.sh
+        conda activate torch-cuda
+        srun python touch_tensor.py
+        ```
+    
+    === "Lochness"
+    
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=torch_test
+        #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
+        #SBATCH --nodes=1
+        #SBATCH --tasks-per-node=1
+        #SBATCH --partition=datasci
+        #SBATCH --gres=gpu:1
+        #SBATCH --mem=4G
+        
+        # Purge any module loaded by default
+        module purge > /dev/null 2>&1
+        module load Anaconda3
+        source $HOME/conda.sh
+        conda activate torch-cuda
+        srun python touch_tensor.py
+        ```
+
 ### Mamba: The Conda Alternative
 Mamba is a fast, robust, and cross-platform package manager and particularly useful for building complicated environments, where `conda` is unable to 'solve' the required set of packages within a reasonable amount of time.
 User can install packages with `mamba` in the same way as with `conda`.
