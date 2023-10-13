@@ -10,7 +10,7 @@ nav:
     - Clusters:
       - 'Wulver': 'clusters/wulver.md'
       - 'Lochness': 'clusters/lochness.md'
-      - 'Stheno': 'clusters/decommissioned/stheno.md'
+      - 'Decommissioned': 'clusters/decommissioned/stheno.md'
       - 'User access to clusters': 'clusters/cluster_access.md'
       - 'Getting started on Wulver': 'clusters/get_started_on_Wulver.md'
     - 'Policies': 
