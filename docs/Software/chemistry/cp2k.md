@@ -11,13 +11,26 @@ CP2K is widely used in the fields of materials science, chemistry, and physics f
 
 ## Availability
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "CP2K"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    soft = df.query('Software == "CP2K"')
+    print(soft.to_markdown(index=False))
+    ```
+
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    soft = df.query('Software == "CP2K"')
+    print(soft.to_markdown(index=False))
+    ```
+
 ## Application Information, Documentation
 The documentation of CP2K is available at [CP2K Documentation](https://www.cp2k.org/docs). For any issues CP2K simulation, users can contact at [CP2K Forum](https://www.cp2k.org/howto:forum). 
 

@@ -9,13 +9,26 @@ ParaView is widely used in a variety of scientific and engineering fields, inclu
 
 ## Availability
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "ParaView"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    soft = df.query('Software == "ParaView" | Software == "paraview"')
+    print(soft.to_markdown(index=False))
+    ```
+
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    soft = df.query('Software == "ParaView" | Software.str.contains("paraview")')
+    print(soft.to_markdown(index=False))
+    ```
+
 ## Application Information, Documentation
 The documentation of ParaView is available at [ParaView manual](https://docs.paraview.org/en/latest/index.html). To use the ParaView on cluster, users need to use the same version of ParaView on their local machine. You can download the ParaView from [ParaView official download page](https://www.paraview.org/download)
 
@@ -46,7 +59,7 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 		################################################
 		module purge
 		module load wulver # Load the slurm, easybuild 
-		module load foss ParaView 
+		module load ParaView/5.11.0-osmesa 
 		################################################
 		#
 		# Open an ssh tunnel to the login node
@@ -75,7 +88,8 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 		# Run MPI pvserver
 		#
 		################################################
-		mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering
+		host_list=$(srun hostname -s | sort | uniq | paste -s -d, -)
+        mpiexec -np $SLURM_NTASKS -rmk slurm -hosts $host_list pvserver --server-port=$port --force-offscreen-rendering
 		```
 	
     === "Lochness"
@@ -183,7 +197,9 @@ To use ParaView with GPU, you need to use the following job script
 		#
 		################################################
 	
-		mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering --displays=0,1
+		host_list=$(srun hostname -s | sort | uniq | paste -s -d, -)
+
+        mpiexec -np $SLURM_NTASKS -rmk slurm -hosts $host_list pvserver --server-port=$port --force-offscreen-rendering
 		```
 	
 	=== "Lochness"

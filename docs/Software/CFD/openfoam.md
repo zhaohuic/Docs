@@ -9,13 +9,26 @@ The software is widely used in academia, research, and industry, and is known fo
 
 ## Availability
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "OpenFOAM"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    soft = df.query('Software == "OpenFOAM"')
+    print(soft.to_markdown(index=False))
+    ```
+
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    soft = df.query('Software == "OpenFOAM"')
+    print(soft.to_markdown(index=False))
+    ```
+
 ## Application Information, Documentation
 The documentation of OpenFOAM is available at [OpenFOAM Documentation](https://www.openfoam.com/documentation/overview), where you can find the tutorials in OpenFOAM meshing (blockMesh), postprocessing, setting boundary conditions etc. 
 

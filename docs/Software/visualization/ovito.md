@@ -9,13 +9,25 @@ In addition to its visualization capabilities, OVITO also provides a set of buil
 
 ## Availability
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "OVITO"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    soft = df.query('Software == "OVITO"')
+    print(soft.to_markdown(index=False))
+    ```
+
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    soft = df.query('Software == "OVITO"')
+    print(soft.to_markdown(index=False))
+    ```
 
 ## Related Applications
 

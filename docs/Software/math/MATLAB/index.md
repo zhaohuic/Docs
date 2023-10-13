@@ -4,13 +4,26 @@ MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment a
 
 ## Availability
 
-```python exec="on"
-import pandas as pd
+=== "Wulver"
 
-df = pd.read_csv('docs/assets/tables/module.csv')
-soft = df.query('Software == "MATLAB" | Software == "matlab"')
-print(soft.to_markdown(index=False))
-```
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
+    soft = df.query('Software == "MATLAB" | Software == "matlab"')
+    print(soft.to_markdown(index=False))
+    ```
+
+=== "Lochness"
+
+    ```python exec="on"
+    import pandas as pd
+    
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    soft = df.query('Software == "MATLAB" | Software == "matlab"')
+    print(soft.to_markdown(index=False))
+    ```
+
 ## Application Information, Documentation
 The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathworks.com/support/learn-with-matlab-tutorials.html)
 

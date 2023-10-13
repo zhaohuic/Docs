@@ -160,9 +160,15 @@ The following applications are installed on Wulver.
 
     ```python exec="on"
     import pandas as pd
-    df = pd.read_csv('docs/assets/tables/module.csv')
+    df = pd.read_csv('docs/assets/tables/module_wulver.csv')
     print(df.to_markdown(index=False))
     ```
 
+=== "Lochness"
 
+    ```python exec="on"
+    import pandas as pd
+    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
+    print(df.to_markdown(index=False))
+    ```
 
