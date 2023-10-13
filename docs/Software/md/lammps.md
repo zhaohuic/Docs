@@ -63,7 +63,7 @@ some of the common user issues.
         module load wulver # Load slurm, easybuild
         module load foss/2021b LAMMPS
     
-        srun -n 64 -c 2 --cpu-bind=cores lmp -in test.in
+        srun -n $SLURM_NTASKS lmp -in test.in
         ```
 
     === "Lochness"
@@ -86,7 +86,7 @@ some of the common user issues.
         module purge
         module load foss/2021b LAMMPS
     
-        srun -n 32 -c 2 --cpu-bind=cores lmp -in test.in
+        srun -n $SLURM_NTASKS lmp -in test.in
         ```
 
 Then submit the job script using the sbatch command, e.g., assuming the job script name is `test_lammps.slurm`:
