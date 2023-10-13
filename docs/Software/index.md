@@ -156,7 +156,7 @@ man module
 
 The following applications are installed on Wulver.
 
-=== "wulver"
+=== "Wulver"
 
     ```python exec="on"
     import pandas as pd
