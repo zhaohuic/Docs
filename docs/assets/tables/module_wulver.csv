@@ -15,6 +15,7 @@ Autotools,20220317,-,`module load Autotools/20220317`
 intel,2022b,-,`module load intel/2022b`
 intel,2022a,-,`module load intel/2022a`
 intel,2021b,-,`module load intel/2021b`
+ParaView,5.11.0-osmesa,-,`module load ParaView/5.11.0-osmesa`
 ParaView,5.11.0-egl,-,`module load ParaView/5.11.0-egl`
 Mamba,4.14.0-0,-,`module load Mamba/4.14.0-0`
 PyCharm,2022.3.2,-,`module load PyCharm/2022.3.2`

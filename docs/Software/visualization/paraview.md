@@ -59,7 +59,7 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 		################################################
 		module purge
 		module load wulver # Load the slurm, easybuild 
-		module load foss ParaView 
+		module load ParaView/5.11.0-osmesa 
 		################################################
 		#
 		# Open an ssh tunnel to the login node
@@ -88,7 +88,8 @@ You can use ParaView with GPU acceleration, but you need to use GPU nodes on our
 		# Run MPI pvserver
 		#
 		################################################
-		mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering
+		host_list=$(srun hostname -s | sort | uniq | paste -s -d, -)
+        mpiexec -np $SLURM_NTASKS -rmk slurm -hosts $host_list pvserver --server-port=$port --force-offscreen-rendering
 		```
 	
     === "Lochness"
@@ -196,7 +197,9 @@ To use ParaView with GPU, you need to use the following job script
 		#
 		################################################
 	
-		mpiexec -rmk slurm pvserver --server-port=$port --force-offscreen-rendering --displays=0,1
+		host_list=$(srun hostname -s | sort | uniq | paste -s -d, -)
+
+        mpiexec -np $SLURM_NTASKS -rmk slurm -hosts $host_list pvserver --server-port=$port --force-offscreen-rendering
 		```
 	
 	=== "Lochness"
