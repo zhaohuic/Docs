@@ -22,6 +22,7 @@ print(df.to_markdown(index=False))
 The Wulver environment is quite a bit like Lochness, but there are some key differences, especially in filesystems and SLURM partitions and priorities.
 
  Wulver Filesystems are deployed with more attention to PI ownership / group efforts:
+
 1. The `$HOME` directory is not intended for primary storage and will have only 50GB quota. To run the simulations, compilations, etc., users need to use a project directory which has 2TB of storage per PI group. Students can store their files under their corresponding PI’s UCID in the `/project` directory.  For example, if PI’s UCID is `doctorx`, then students need to use the `/project/doctorx/` directory. 
 2. Users can also store temporary files under the `/scratch` directory, likewise under a PI-group directory. For example, PI’s UCID is `doctorx`, so students need to use the `/scratch/doctorx/` directory.  Please note that the files under `/scratch` will be periodically deleted. To store files for longer than computations, please use the `/project` directory.  Files under `/scratch` are not backed up. For best performance simulations should be performed in the `/scratch` directory. Once the simulation is complete, the results should be copied into the `$HOME` or `/project` directory.  Files are deleted from `/scratch` after they are 10 days old.
 
