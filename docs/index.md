@@ -7,7 +7,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 !!! warning
         
-    Please note that due to relocation of the Lochness cluster to the Databank colocation facility in Piscataway, the cluster will be unavailable from October 6th, 2023. We anticipated that the relocation process will require no longer than seven days to complete, however Lochness will be out of service for longer than expected, at least until end-of-day Wed * Oct 18th *.  The reinstallation is complete, but repairs and testing are taking longer than anticipated.
+    Please note that due to relocation of the Lochness cluster to the Databank colocation facility in Piscataway, the cluster will be unavailable from October 6th, 2023. We anticipated that the relocation process will require no longer than seven days to complete, however Lochness will be out of service for longer than expected, at least until end-of-day Wed **Oct 18th**.  The reinstallation is complete, but repairs and testing are taking longer than anticipated.
 
     Key Details:
 
