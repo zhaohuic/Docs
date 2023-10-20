@@ -7,7 +7,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 !!! Info "Cluster Maintenance Updates"
         
-    All the cluster maintenance updates have been relocated to [Cluster Maintenance](news/index.md) section.
+    To see the latest maintenance updates on NJIT cluster, please visit [Cluster Maintenance](news/index.md).
 
 
 ## Current clusters
