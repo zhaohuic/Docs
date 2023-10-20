@@ -75,7 +75,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
@@ -102,3 +102,7 @@ plugins:
   - mkdocstrings
   - awesome-pages
   - autolinks
+  - blog:
+      blog_dir: news
+      authors: false
+      archive: false
