@@ -11,8 +11,8 @@ Apptainer was created to run complex applications on HPC clusters in a simple, p
 Many container platforms are available, but Apptainer is focused on:
 
 * Verifiable reproducibility and security, using cryptographic signatures, an immutable container image format, and in-memory decryption.
-* Integration over isolation by default. Easily make use of GPUs, high speed networks, parallel filesystems on a cluster or server by default.
-* Mobility of compute. The single file SIF container format is easy to transport and share.
+* Integration over isolation by default. Easily make use of GPUs, high-speed networks, parallel filesystems on a cluster or server by default.
+* Mobility of computing. The single file SIF container format is easy to transport and share.
 * A simple, effective security model. You are the same user inside a container as outside, and cannot gain additional privilege on the host system by default. Read more about Security in Apptainer.
 
 
