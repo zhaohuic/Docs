@@ -3,11 +3,11 @@ on:
   push:
     branches:
       - main
-      - alex_patch 
+      - ARCS-Jan-25
       - abhi_patch
     workflow_dispatch:
       - main
-      - alex_patch
+      - ARCS-Jan-25
       - abhi_patch
 permissions:
   contents: write

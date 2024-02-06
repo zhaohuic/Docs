@@ -34,28 +34,26 @@ The most common commands are:
 
 ### SLURM User Commands 
 
-| Task   |      Command      | 
-|----------|:-------------:|
-|Interactive login:|    `srun --pty bash` |
-|Job submission:|   `sbatch [script_file]`|
-|Job deletion:| `scancel [job_id]`|
-|Job status by job:|    `squeue [job_id]`|
-|Job status by user:|   `squeue -u [user_name]`|
-|||
-|Job hold:| `scontrol hold [job_id]`|
-|Job release:|  `scontrol release [job_id]`|
-|List enqueued jobs:|   `squeue`|
-|List nodes:|   `sinfo -N OR scontrol show nodes`|
-|Cluster status:|   `sinfo`|
+| Task                |              Command              | 
+|---------------------|:---------------------------------:|
+| Job submission:     |      `sbatch [script_file]`       |
+| Job deletion:       |        `scancel [job_id]`         |
+| Job status by job:  |         `squeue [job_id]`         |
+| Job status by user: |      `squeue -u [user_name]`      |
+| Job hold:           |     `scontrol hold [job_id]`      |
+| Job release:        |    `scontrol release [job_id]`    |
+| List enqueued jobs: |             `squeue`              |
+| List nodes:         | `sinfo -N OR scontrol show nodes` |
+| Cluster status:     |              `sinfo`              |
  
 
 ## Using SLURM on Wulver
 In Wulver, SLURM submission will have new requirements, intended for a more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group (Principal Investigator) account.
 
-1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user ucid`.
-Replace `ucid` with your NJIT UCID and you can find PI's UCID under `Def Acct` column. For example, if your UCID is `ab1234`, then use the following 
+1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user $LOGNAME`.
+
 ```bash
-   [ab1234@login01 ~]$ sacctmgr show user ab1234
+   [ab1234@login01 ~]$ sacctmgr show user $LOGNAME
       User   Def Acct    Admin
 ---------- ----------  ---------
     ab1234     xy1234      None
@@ -81,17 +79,18 @@ df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
 4. Check Quota
-Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command, and replace `UCID` with your NJIT UCID. For example, if your UCID is `ab1234` then use
-```bash
-[ab1234@login01 ~]$ quota_info ab1234
-Group quotas for xy1234
-   SLURM Service Units (CPU Hours): 277557 (300000 Quota)
-   Storage Usage - Project: 864 GB (42.2 of quota)
-   Storage Usage - Scratch: 342 GB (16.7 of quota)
-Personal quotas for ab1234
-   Storage Usage - Home: 0GB (0% of quota)
+Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command.
+```bash linenums="1"
+[ab1234@login01 slurm_report]$ quota_info ab1234
+Usage for account: xy1234
+   SLURM Service Units: 277557 CPU Hours (of 300000 CPU Hour quota)
+   PROJECT Storage: 867 GB (of 2048 GB quota)
+     User ab1234 Usage: 448 GB (No quota)
+   SCRATCH Storage: 341 GB (of 2048 GB quota)
+     User ab1234 Usage: 241 GB (No quota)
+HOME Storage ab1234 Usage: 20 GB (of 50 GB quota)
 ```
-Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. This command also shows the storage usage of `$HOME` and `/project` directories. For more details, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
+Here, `xy1234` and `ab1234` are the UCIDs of PI and user respectively. `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs (line number 3). This command also displays the storage usage of the `$HOME` and `/project` directories. Users can check the usage of individual and PI group allocations for the `/project` directory. In the example provided, the group members of PI `xy1234` utilized 867 GB out of a 2TB quota (line 4), and the individual user consumed 448 GB, contributing to the total group usage of 867 GB (line 5). For more detailed information on filesystem usage, refer to the [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
 
 ### Example of slurm script
 #### Submitting Jobs on CPU Nodes
@@ -115,7 +114,7 @@ Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (
 * As per the policy, users can request up to 4GB memory per core, therefore the flag  `--mem-per-cpu` is used for memory requirement. 
 * In this above script `--time` indicates the wall time which is used to specify the maximum amount of time that a job is allowed to run. The maximum allowable wall time depends on SLURM QoS, which you can find in [QoS](slurm.md#using-slurm-on-cluster). 
 * To submit the job, use `sbatch submit.sh` where the `submit.sh` is the job script. Once the job has been submitted, the jobs will be in the queue, which will be executed based on priority-based scheduling. 
-* To check the status of the job use `squeue -u UCID` (replace `UCID` with your NJIT UCID) and you should see the following 
+* To check the status of the job use `squeue -u $LOGNAME` and you should see the following 
 ```bash
   JOBID PARTITION     NAME     USER  ST    TIME    NODES  NODELIST(REASON)
    635   general     job_nme   ucid   R   00:02:19    1      n0088
@@ -185,12 +184,12 @@ Replace `PI_ucid` with PI's NJIT UCID.
 
 !!! warning
 
-    Login nodes are not designed for running computationally intensive jobs. You can use the head node to edit and manage your files, or to run small-scale interactive jobs. The CPU usage is limited per user on the head node. Therefore, for serious comuting either submit the job using `sbatch` command or start an interactive session on the compute node.
+    Login nodes are not designed for running computationally intensive jobs. You can use the head node to edit and manage your files, or to run small-scale interactive jobs. The CPU usage is limited per user on the head node. Therefore, for serious computing either submit the job using `sbatch` command or start an interactive session on the compute node.
 
 !!! note 
        
-    Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not parallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`, as this will request 1 CPU per GPU. It's important to keep in mind that using multiple cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
+    Please note that if you are using GPUs, check whether your script is parallelized. If your script is not parallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`, as this will request 1 CPU per GPU. It's important to keep in mind that using multiple cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
 
 #### Additional Resources
 
-- SLURM Tutorial List: https://slurm.schedmd.com/tutorials.html
+- [SLURM Tutorial List](https://slurm.schedmd.com/tutorials.html)

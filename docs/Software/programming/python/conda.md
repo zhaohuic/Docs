@@ -34,7 +34,7 @@ module a `Anaconda3` module. Users can use `Anaconda3` to create virtual Python 
 
 ## Create and Activate a Conda Virtual Environment
 
-Load the miniconda Module
+Load the Anaconda Module
 
 ```
 module load Anaconda3
@@ -49,6 +49,9 @@ Once you create an environment, you need to activate the environment to install 
 Use `conda activate ENV` to activate the Conda environment (`ENV` is the name of the environment). Following the activation of the conda environment, the name of the environment appears at the left of the hostname in the terminal. 
 
 ```bash
+login1-41 ~ >: module load Anaconda3
+login1-41 ~ >: source conda.sh
+login1-41 ~ >: conda create --name ENV python=3.9
 login1-41 ~ >: conda activate ENV
 (ENV) login-41 ~ >:
 ```
@@ -386,7 +389,7 @@ User can use the following job script to run the script.
 
     When working with Python, it is generally advised to avoid mixing package management tools such as pip and conda within the same environment. Pip and Conda manage dependencies differently, and their conflict can lead to compatibility issues and unexpected behavior. Mixing the two can result in an environment where packages installed with one tool may not interact seamlessly with those installed using the other. 
 
-### Mamba: The Conda Alternative
+## Mamba: The Conda Alternative
 Mamba is a fast, robust, and cross-platform package manager and particularly useful for building complicated environments, where `conda` is unable to 'solve' the required set of packages within a reasonable amount of time.
 Users can install packages with `mamba` in the same way as with `conda`.
 ```bash
@@ -399,3 +402,94 @@ source conda.sh
 conda activate env_name
 mamba install scipy
 ```
+## Export and Import Conda Environment
+Exporting and importing Conda environments allows users to capture and reproduce the exact set of dependencies for a project. With Conda, a popular package and environment management system, users can export an environment, including all installed packages, into a YAML file. This file can then be shared or version-controlled. Importing the environment from the YAML file on another system ensures consistent dependencies, making it easier to recreate the development or execution environment. 
+
+!!! tips
+
+    When installing Python packages via Conda, ensure that you perform the installation on the compute node rather than the login node. The CPU and memory resources on login nodes are limited, and installing Python packages on the login node can be time-consuming. To avoid this, initiate an [tnteractive session with compute node](slurm.md#interactive-session-on-a-compute-node).
+
+### Export Conda Environment 
+To export a conda environment to a new directory or a different machine, you need to activate the environment first that you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment) on how to activate the environment. Once your environment is activated, you can export it to a YAML file:
+```console
+conda env export > my_environment.yml
+```
+The YAML should look like this
+
+```yaml
+name: my_env
+channels:
+- defaults
+dependencies:
+- _libgcc_mutex=0.1=main
+- _openmp_mutex=5.1=1_gnu
+- blas=1.0=mkl
+
+<ouput snipped>
+
+#the last line is the path of the env
+prefix: /home/a/abc3/.conda/envs/my_env.
+```
+Next, edit the `my_environment.yml` file to make sure it has the correct environment name and other settings. The last line of the file specifies the path of the environment.
+
+Once the YAML file is ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster file transfer](cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa) for details on transferring the files to clusters.
+
+### Import Environment on New Machine
+On the new machine, first load Anaconda and initialize conda as before. Then, create the
+environment from the YAML file:
+
+```bash
+conda env create -f my_environment.yml
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+<ouput snipped>
+
+Downloading and Extracting Packages
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+# $ conda activate my_env
+#
+# To deactivate an active environment, use
+#
+# $ conda deactivate
+```
+After running this command, Conda will set up the environment as it was on the original machine, including downloading and installing packages. To activate the New Environment use `conda activate my_env` where `my_env` is the environment name.
+You can check your current environments using `conda env list`.
+
+### Importing to a Different Location
+If you want to import the conda environment to a different location, use the `--prefix` or `-p` option
+```console
+conda env create -f my_environment.yml -p /project/hpcadmins/abc3/conda_env/my_env
+```
+This will create the environment in the specified directory instead of the default conda environment directory. Please note that in that case, you need to provide the full path of the environment to activate it.
+
+```bash
+conda activate /project/hpcadmins/abc3/conda_env/my_env
+(/project/hpcadmins/abc3/conda_env/my_env) abc3@login01:~$ conda env list
+# conda environments:
+#
+base /apps/easybuild/software/Anaconda3/2023.09-0
+* /project/hpcadmins/abc3/conda_env/my_env
+```
+By following these steps, you can successfully export a conda environment from one machine and import it to another, ensuring a consistent working environment across different machines or directories.
+
+!!! warning
+    
+    It is advisable to use the `/project` directory to store the Conda environment rather than using the `$HOME` directory. On Wulver, the storage space on `$HOME` is limited (50G) and cannot be increased. See [Wulver Filesystems](get_started_on_Wulver.md#wulver-filesystems) for details. 
+
+## Conda User Commands 
+
+| Task                                       |                        Command                         | 
+|--------------------------------------------|:------------------------------------------------------:|
+| Activate environment:                      |          `conda activate [environment_name]`           |
+| Deactivate environment:                    |         `conda deactivate [environment_name]`          |
+| Show the list of environments:             |                    `conda env list`                    |
+| Delete environment:                        |           `conda remove [environment_name]`            |
+| Export environment:                        |      `conda env export > [environment_name].yml`       |
+| Import environment from YAML:              |      `conda env create -f [environment_name].yml`      |
+| Import environment to different location:  | `conda env create -f [environment_name].yml -p [PATH]` | 
