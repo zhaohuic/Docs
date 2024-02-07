@@ -4,7 +4,7 @@ Access and usages policies for the lochness cluster
 
 * Access
     * Faculty members can request access to lochness for themselves and their students by sending an email to hpc@njit.edu.  There is no charge for using lochness.
-    * For courses send an email to hpc@njit.edu to discuss requirements
+    * For courses, send an email to hpc@njit.edu to discuss requirements
 
 * Storage
     * Users are given a quota of 100GB
@@ -19,4 +19,6 @@ Access and usages policies for the lochness cluster
 * Condo
     * Lochness has a private pool ownership model. Users buy nodes which are then incorporated into the cluster as a private partition.
 
-As of Sep 1, 2022 no further addition will be incorporated into Lochness
+!!! warning 
+
+    As of Jan 16, no new Lochness accounts will be created and Lochness will be decommissioned once the Wulver migration is complete.
