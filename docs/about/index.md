@@ -24,6 +24,7 @@ hide:
 | [Kevin Walsh](#kevin-walsh) | Assistant Director, Advanced Computing Infrastructure | (973) 596-5747 | walsh@njit.edu | GITC 2202 |
 | [Kate Cahill](#kate-cahil)                                       |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
 | [Abhishek Mukherjee](#abhishek-mukherjee) | Research Computing Facilitator | (973) 642-4132 | abhishek.mukherjee@njit.edu | GITC 2316B |
+| [Hui(Julia) Zhao](#hui-zhao) | Research Computing Facilitator | (973) 596-2727 | hui.zhao@njit.edu | GITC 2316B |
 
 
 # Research and Academic Technologies
