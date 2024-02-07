@@ -81,4 +81,4 @@ You can schedule appointments with Abhishek to consult on problems or questions 
 Schedule an appointment directly on Abhishek's calendar from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc)
 
 ## Hui(Julia) Zhao
-
+![Hui(Julia) Zhao](../assets/images/julia.png){ align=left, width="300" }
