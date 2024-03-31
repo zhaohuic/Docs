@@ -28,7 +28,7 @@ If the shared condo module does not satisfy the needs of the PI, a private pool 
     * Wall time maximum - 72 hours
     * Additional SUs may be purchased at a cost of $0.005/SU
     * The minimum purchase is 50,000 SU ($500)
-    * Jobs can be preempted by those with higher priority jobs when they are in the queue
+    * Jobs can be superseded by those with higher priority jobs
 
 * Low Priority
     * Not charged against SU allocation
