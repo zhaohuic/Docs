@@ -58,7 +58,6 @@ In Wulver, SLURM submission will have new requirements, intended for a more fair
 ---------- ----------  ---------
     ab1234     xy1234      None
 ```
-
 2. Wulver has three partitions, differing in GPUs or RAM available:
 
 ```python exec="on"
