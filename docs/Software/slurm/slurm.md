@@ -82,7 +82,7 @@ print(df.to_markdown(index=False))
 Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command. 
 ```bash linenums="1"
 [ab1234@login01 ~]$ module load wulver
-[ab1234@login01 ~]$ quota_info.sh $LOGNAME
+[ab1234@login01 ~]$ quota_info $LOGNAME
 Usage for account: xy1234
    SLURM Service Units (CPU Hours): 277557 (300000 Quota)
    PROJECT Storage: 867 GB (of 2048 GB quota)
