@@ -50,7 +50,7 @@ The most common commands are:
 ## Using SLURM on Wulver
 In Wulver, SLURM submission will have new requirements, intended for a more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group (Principal Investigator) account.
 
-1. To specify the job use `--account=PI_ucid`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user $LOGNAME`, and you can find PI's UCID under `Def Acct` column.
+1. To specify the job, use `--account=PI_ucid`.  You can specify `--account` as either an `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user $LOGNAME`, and you can find the PI's UCID under `Def Acct` column.
 
 ```bash
    [ab1234@login01 ~]$ sacctmgr show user $LOGNAME
