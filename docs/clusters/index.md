@@ -2,7 +2,7 @@
 
 * [Wulver](wulver.md) is NJIT's newest High Performance Cluster made available to users in Jan 2024.
 
-![Wulver](../assets/images/Wulver-schematic.pdf){ width=80% height=80%}
+![Wulver](../assets/images/Wulver-schematic.png){ width=80% height=80%}
 
 
 # Old cluster
