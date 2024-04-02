@@ -74,7 +74,7 @@ Once you submit this job script, you will see an output file indicating the port
     Please note that JupyterLab or Jupyter Notebook is not available as a module on Wulver, as users can build those packages via Conda. Please see [Conda Documentation](conda.md) for details. Jupyter Notebook can also be accessed on Wulver via [Open OnDemand](https://openondemand.org/). We will provide the instructions soon.
 
 ## Jupyter Notebook on Wulver
-As mentioned above, users need to install Jupyter Notebook on the Conda Environment. Once the [Conda Environment](conda.md#activate-and-deactivate-conda-environment) is activated users can install Jupyter Notebook via `conda isntall -c conda-forge jupyter notebook` command. Here we provide a sample SLURM script on how to start Jupyter Notebook session on Wulver.
+As mentioned above, users need to install Jupyter Notebook on the Conda Environment. Once the [Conda Environment](conda.md#activate-and-deactivate-conda-environment) is activated users can install Jupyter Notebook via `conda install -c conda-forge jupyter notebook` command. Here we provide a sample SLURM script on how to start Jupyter Notebook session on Wulver.
 
 ??? example "Sample Batch Script to run Jupyter Notebook"
 

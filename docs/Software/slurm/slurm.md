@@ -50,7 +50,7 @@ The most common commands are:
 ## Using SLURM on Wulver
 In Wulver, SLURM submission will have new requirements, intended for a more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group (Principal Investigator) account.
 
-1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user $LOGNAME`.
+1. To specify the job, use `--account=PI_ucid`.  You can specify `--account` as either an `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user $LOGNAME`, and you can find the PI's UCID under `Def Acct` column.
 
 ```bash
    [ab1234@login01 ~]$ sacctmgr show user $LOGNAME
@@ -58,7 +58,6 @@ In Wulver, SLURM submission will have new requirements, intended for a more fair
 ---------- ----------  ---------
     ab1234     xy1234      None
 ```
-Your PI's UCID is `xy1234`.
 2. Wulver has three partitions, differing in GPUs or RAM available:
 
 ```python exec="on"
@@ -79,18 +78,19 @@ df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
 4. Check Quota
-Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command.
+Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command. 
 ```bash linenums="1"
-[ab1234@login01 slurm_report]$ quota_info ab1234
+[ab1234@login01 ~]$ module load wulver
+[ab1234@login01 ~]$ quota_info $LOGNAME
 Usage for account: xy1234
-   SLURM Service Units: 277557 CPU Hours (of 300000 CPU Hour quota)
+   SLURM Service Units (CPU Hours): 277557 (300000 Quota)
    PROJECT Storage: 867 GB (of 2048 GB quota)
-     User ab1234 Usage: 448 GB (No quota)
-   SCRATCH Storage: 341 GB (of 2048 GB quota)
-     User ab1234 Usage: 241 GB (No quota)
-HOME Storage ab1234 Usage: 20 GB (of 50 GB quota)
+     User ab1234 Usage: 11 GB (No quota)
+   SCRATCH Storage: 791 GB (of 10240 GB quota)
+     User ab1234 Usage: 50 GB (No quota)
+HOME Storage ab1234 Usage: 0 GB (of 50 GB quota)
 ```
-Here, `xy1234` and `ab1234` are the UCIDs of PI and user respectively. `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs (line number 3). This command also displays the storage usage of the `$HOME` and `/project` directories. Users can check the usage of individual and PI group allocations for the `/project` directory. In the example provided, the group members of PI `xy1234` utilized 867 GB out of a 2TB quota (line 4), and the individual user consumed 448 GB, contributing to the total group usage of 867 GB (line 5). For more detailed information on filesystem usage, refer to the [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
+Here, 'xy1234' represents the UCID of the PI, and 'SLURM Service Units (CPU Hours): 277557 (300000 Quota)' indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. Please ensure that you load the 'wulver' module before running the 'quota_info' command. This command also displays the storage usage of directories such as $HOME, /project, and /scratch. Users can view both the group usage and individual usage of each storage. In the given example, the group usage from the 2TB project quota is 867 GB, with the user's usage being 11 GB out of that 867 GB. For more details file system quota, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
 
 ### Example of slurm script
 #### Submitting Jobs on CPU Nodes
