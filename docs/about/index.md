@@ -35,7 +35,6 @@ hide:
 | Charles Yan | Research Technology Support Specialist | (973) 596-2907 | cyan@njit.edu | GITC 2301 |
 
 
-
 ## Alex Pacheco
 
 ![Alex Pacheco](../assets/images/pacheco.jpg){ align=left, width="300" }
@@ -80,5 +79,6 @@ You can schedule appointments with Abhishek to consult on problems or questions 
 
 Schedule an appointment directly on Abhishek's calendar from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc)
 
-
+## Hui(Julia) Zhao
+![Hui(Julia) Zhao](../assets/images/julia.jpg){ align=left, width="300" }
 
