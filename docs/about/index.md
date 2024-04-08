@@ -81,4 +81,5 @@ Schedule an appointment directly on Abhishek's calendar from [![Calendar](../ass
 
 ## Hui(Julia) Zhao
 ![Hui(Julia) Zhao](../assets/images/julia.jpg){ align=left, width="300" }
+
 Hui(Julia) joined NJIT in December 2023. Julia has over twenty years combined experience as a Bioinformatician, Unix System Administrator and High Performance Computing engineer, with expertise in system and application configuration and user support. She helps user apply high-performance computing techniques to address diverse challenges in scientific computing. 
