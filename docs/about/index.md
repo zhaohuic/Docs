@@ -10,7 +10,6 @@ hide:
 |:------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------:|:-----:|:-----:|:---------:|
 |                                     [Alex Pacheco](#alex-pacheco)                                      |       Associate CIO - Advanced Research Computing       | (973) 596-2672 | alex.pacheco@njit.edu | GITC 5401 |
 |                                  [Gedaliah Wolosh](#gedaliah-wolosh)                                   |      Director, High Performance Research Computing      | (973) 596-5436 | gwolosh@njit.edu | GITC 5203 |
-|                                      [David Perel](#david-perel)                                       |      Director, Research and Academic Technologies       | (973) 596-3356 | davidp@njit.edu | GITC 2201 |
 |                                       [Kate Cahill](#kate-cahil)                                       |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
 |                                      [Kevin Walsh](#kevin-walsh)                                       |  Assistant Director, Advanced Computing Infrastructure  | (973) 596-5747 | walsh@njit.edu | GITC 2202 | |
 
@@ -31,7 +30,6 @@ hide:
 
 | Name | Title | Phone | Email | Office |
 |:----:|:-----:|:-----:|:-----:|:------:|
-| [David Perel](#david-perel) | Director, Research and Academic Technologies | (973) 596-3356 | davidp@njit.edu | GITC 2201 |
 | Rick Gaine | Research Technology System Administrator | (973) 596-5441 | rgaine@njit.edu | GITC 2316B |
 | Charles Yan | Research Technology Support Specialist | (973) 596-2907 | cyan@njit.edu | GITC 2301 |
 
@@ -83,3 +81,4 @@ Schedule an appointment directly on Abhishek's calendar from [![Calendar](../ass
 
 ## Hui(Julia) Zhao
 ![Hui(Julia) Zhao](../assets/images/julia.jpg){ align=left, width="300" }
+Hui(Julia) joined NJIT in December 2023. Julia has over twenty years combined experience as a Bioinformatician, Unix System Administrator and High Performance Computing engineer, with expertise in system and application configuration and user support. She helps user apply high-performance computing techniques to address diverse challenges in scientific computing. 
