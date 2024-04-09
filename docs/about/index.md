@@ -10,7 +10,6 @@ hide:
 |:------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------:|:-----:|:-----:|:---------:|
 |                                     [Alex Pacheco](#alex-pacheco)                                      |       Associate CIO - Advanced Research Computing       | (973) 596-2672 | alex.pacheco@njit.edu | GITC 5401 |
 |                                  [Gedaliah Wolosh](#gedaliah-wolosh)                                   |      Director, High Performance Research Computing      | (973) 596-5436 | gwolosh@njit.edu | GITC 5203 |
-|                                      [David Perel](#david-perel)                                       |      Director, Research and Academic Technologies       | (973) 596-3356 | davidp@njit.edu | GITC 2201 |
 |                                       [Kate Cahill](#kate-cahil)                                       |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
 |                                      [Kevin Walsh](#kevin-walsh)                                       |  Assistant Director, Advanced Computing Infrastructure  | (973) 596-5747 | walsh@njit.edu | GITC 2202 | |
 
@@ -24,13 +23,13 @@ hide:
 | [Kevin Walsh](#kevin-walsh) | Assistant Director, Advanced Computing Infrastructure | (973) 596-5747 | walsh@njit.edu | GITC 2202 |
 | [Kate Cahill](#kate-cahil)                                       |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
 | [Abhishek Mukherjee](#abhishek-mukherjee) | Research Computing Facilitator | (973) 642-4132 | abhishek.mukherjee@njit.edu | GITC 2316B |
+| [Hui(Julia) Zhao](#hui-zhao) | Research Computing Facilitator | (973) 596-2727 | hui.zhao@njit.edu | GITC 2316B |
 
 
 # Research and Academic Technologies
 
 | Name | Title | Phone | Email | Office |
 |:----:|:-----:|:-----:|:-----:|:------:|
-| [David Perel](#david-perel) | Director, Research and Academic Technologies | (973) 596-3356 | davidp@njit.edu | GITC 2201 |
 | Rick Gaine | Research Technology System Administrator | (973) 596-5441 | rgaine@njit.edu | GITC 2316B |
 | Charles Yan | Research Technology Support Specialist | (973) 596-2907 | cyan@njit.edu | GITC 2301 |
 
@@ -55,17 +54,15 @@ Dr. Wolosh has been at NJIT for over twenty years working in research computing.
 Schedule an appointment with Gedaliah [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendar.google.com/calendar/selfsched?sstoken=UUdmZjlnUlItR09GfGRlZmF1bHR8YTQ0MmFjMWU4N2ZiODUxZjEzMTIwZGZlMWI4MjlkZjQ)
 
 
-## David Perel
-
 ## Kate Cahill
 
 ![Kate Cahill](../assets/images/kate.png){ align=left, width="300" }
 
 Kate started at NJIT in September 2023. Previously, she was the Education & Training Specialist at the Ohio Supercomputer Center for 8 years, where she led the training programs for OSC as well as external education programs related to HPC and computational science for the XSEDE project as well as other grant-funded efforts.
 
+
 ## Kevin Walsh
 <a href="https://www.linkedin.com/in/kevin-walsh-computes">![https://www.linkedin.com/in/kevin-walsh-computes](../assets/images/linkedin-color.svg){ width="15" }</a>
-
 
 
 ## Abhishek Mukherjee 
@@ -81,4 +78,7 @@ You can schedule appointments with Abhishek to consult on problems or questions 
 Schedule an appointment directly on Abhishek's calendar from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc)
 
 
+## Hui(Julia) Zhao
+![Hui(Julia) Zhao](../assets/images/julia.jpg){ align=left, width="300" }
 
+Hui(Julia) joined NJIT in December 2023, following twenty years in a similar role at Memorial Sloan Kettering Cancer Center. Julia's experience includes roles as a Bioinformatician, Unix System Administrator and High Performance Computing Engineer, with expertise in system and application configuration and user support. She helps user apply high-performance computing techniques to address diverse challenges in scientific computing. 
