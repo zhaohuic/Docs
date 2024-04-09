@@ -54,17 +54,15 @@ Dr. Wolosh has been at NJIT for over twenty years working in research computing.
 Schedule an appointment with Gedaliah [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendar.google.com/calendar/selfsched?sstoken=UUdmZjlnUlItR09GfGRlZmF1bHR8YTQ0MmFjMWU4N2ZiODUxZjEzMTIwZGZlMWI4MjlkZjQ)
 
 
-## David Perel
-
 ## Kate Cahill
 
 ![Kate Cahill](../assets/images/kate.png){ align=left, width="300" }
 
 Kate started at NJIT in September 2023. Previously, she was the Education & Training Specialist at the Ohio Supercomputer Center for 8 years, where she led the training programs for OSC as well as external education programs related to HPC and computational science for the XSEDE project as well as other grant-funded efforts.
 
+
 ## Kevin Walsh
 <a href="https://www.linkedin.com/in/kevin-walsh-computes">![https://www.linkedin.com/in/kevin-walsh-computes](../assets/images/linkedin-color.svg){ width="15" }</a>
-
 
 
 ## Abhishek Mukherjee 
@@ -79,7 +77,8 @@ You can schedule appointments with Abhishek to consult on problems or questions 
 
 Schedule an appointment directly on Abhishek's calendar from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc)
 
+
 ## Hui(Julia) Zhao
 ![Hui(Julia) Zhao](../assets/images/julia.jpg){ align=left, width="300" }
 
-Hui(Julia) joined NJIT in December 2023. Julia has over twenty years combined experience as a Bioinformatician, Unix System Administrator and High Performance Computing engineer, with expertise in system and application configuration and user support. She helps user apply high-performance computing techniques to address diverse challenges in scientific computing. 
+Hui(Julia) joined NJIT in December 2023, following twenty years in a similar role at Memorial Sloan Kettering Cancer Center. Julia's experience includes roles as a Bioinformatician, Unix System Administrator and High Performance Computing Engineer, with expertise in system and application configuration and user support. She helps user apply high-performance computing techniques to address diverse challenges in scientific computing. 
