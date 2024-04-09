@@ -42,16 +42,16 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         #!/bin/bash -l
         # NOTE the -l (login) flag!
         #SBATCH -J gmx2023
-        #SBATCH -o test.out
-        #SBATCH -e test.err
+        #SBATCH -o test.%x.%j.out
+        #SBATCH -e test.%x.%j.err
         #SBATCH --mail-type=ALL
         #SBATCH --partition=gpu
         #SBATCH --qos=standard
         #SBATCH --time 72:00:00   # Max 3 days
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=4
+        #SBATCH --nodes=2
+        #SBATCH --ntasks-per-node=2
         #SBATCH --cpus-per-task=2
-        #SBATCH --gres=gpu:2  
+        #SBATCH --gpus-per-node=4  
         #SBATCH --account=PI_ucid  # Replace PI_ucid with the UCID of PI, if you don't know PI's UCID use "sacctmgr show user username" on the login screen, replace "username" with your UCID
 
         module purge
@@ -64,7 +64,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         cp -r $INPUT_DIR/* $OUTPUT_DIR/
         cd $OUTPUT_DIR
 
-        gmx mdrun -v -deffnm em -ntmpi 8 -ntomp 2 -nb gpu
+        srun gmx_mpi mdrun -deffnm run -cpi -v -ntomp 2 -pin on -tunepme -dlb yes -nb gpu -noappend
         ```
     === "Lochness"
         
@@ -114,15 +114,14 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         #!/bin/bash -l
         # NOTE the -l (login) flag!
         #SBATCH -J gmx2021
-        #SBATCH -o test.out
-        #SBATCH -e test.err
+        #SBATCH -o test.%x.%j.out
+        #SBATCH -e test.%x.%j.err
         #SBATCH --mail-type=ALL
         #SBATCH --partition=general
         #SBATCH --qos=standard
         #SBATCH --time 72:00:00   # Max 3 days
         #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=4
-        #SBATCH --cpus-per-task=2
+        #SBATCH --ntasks-per-node=8
         #SBATCH --account=PI_ucid  # Replace PI_ucid with the UCID of PI, if you don't know PI's UCID use "sacctmgr show user username" on the login screen, replace "username" with your UCID
 
         module purge
@@ -135,7 +134,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         cp -r $INPUT_DIR/* $OUTPUT_DIR/
         cd $OUTPUT_DIR
 
-        gmx mdrun -v -deffnm em -ntmpi 8 -ntomp 2 -nb gpu
+        srun gmx_mpi mdrun -v -deffnm em -cpi -v -ntomp 1 -pin on -tunepme -dlb yes -noappend
         ```
     === "Lochness"
         
@@ -175,7 +174,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         # Run simulation
         #
         ##############################################
-        gmx mdrun -v -deffnm em -nt 16 -nb gpu
+        srun gmx_mpi mdrun -v -deffnm em -cpi -v -ntomp 2 -pin on -tunepme -dlb yes -nb gpu -noappend
         ```
 The tutorial in the above-mentioned job script can be found in 
 

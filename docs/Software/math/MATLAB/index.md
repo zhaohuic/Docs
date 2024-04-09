@@ -40,7 +40,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
 		#SBATCH --error=%x.%j.err # prints the error message
         #SBATCH --partition=general
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=1
         #SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
 		#SBATCH --qos=standard
@@ -52,7 +52,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         module load wulver # Load the slurm, easybuild 
         module load MATLAB
     
-        matlab --nodisplay --nosplash -r test
+        matlab -nodisplay -nosplash -r test
     
         ```
 
@@ -62,7 +62,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         #!/bin/bash
         #SBATCH -J test_matlab
         #SBATCH --partition=public
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=1
         #SBATCH - t 30:00
         
@@ -70,7 +70,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         module purge
         module load MATLAB/2022a
     
-        matlab --nodisplay --nosplash -r test
+        matlab -nodisplay -nosplash -r test
     
         ```
 
@@ -91,8 +91,10 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         ```slurm
         #!/bin/bash
         #SBATCH -J test_matlab
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+		#SBATCH --error=%x.%j.err # prints the error message
         #SBATCH --partition=general
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=32
         #SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
 		#SBATCH --qos=standard
@@ -105,7 +107,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         module load MATLAB
     
         # Run matlab
-        matlab -nodisplay --nosplash -r for_loop.m
+        matlab -nodisplay -nosplash -r 'for_loop; quit'
         ```
 
     === "Lochness"
@@ -114,16 +116,16 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         #!/bin/bash
         #SBATCH -J test_matlab
         #SBATCH --partition=public
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=32
-        #SBATCH - t 30:00
+        #SBATCH --time=30:00
         
         # Load matlab module
         module purge
         module load MATLAB/2022a
     
         # Run matlab
-        matlab -nodisplay --nosplash -r for_loop.m
+        matlab -nodisplay -nosplash -r 'for_loop; quit'
         ```
 
 ??? example "Sample Parallel MATLAB script: for_loop.m"
