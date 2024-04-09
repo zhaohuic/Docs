@@ -54,17 +54,15 @@ Dr. Wolosh has been at NJIT for over twenty years working in research computing.
 Schedule an appointment with Gedaliah [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendar.google.com/calendar/selfsched?sstoken=UUdmZjlnUlItR09GfGRlZmF1bHR8YTQ0MmFjMWU4N2ZiODUxZjEzMTIwZGZlMWI4MjlkZjQ)
 
 
-## David Perel
-
 ## Kate Cahill
 
 ![Kate Cahill](../assets/images/kate.png){ align=left, width="300" }
 
 Kate started at NJIT in September 2023. Previously, she was the Education & Training Specialist at the Ohio Supercomputer Center for 8 years, where she led the training programs for OSC as well as external education programs related to HPC and computational science for the XSEDE project as well as other grant-funded efforts.
 
+
 ## Kevin Walsh
 <a href="https://www.linkedin.com/in/kevin-walsh-computes">![https://www.linkedin.com/in/kevin-walsh-computes](../assets/images/linkedin-color.svg){ width="15" }</a>
-
 
 
 ## Abhishek Mukherjee 
@@ -78,6 +76,7 @@ Abhishek Mukherjee is a computational scientist and has experience in multidisci
 You can schedule appointments with Abhishek to consult on problems or questions you are encountering related to your work using the high-performance computing and big data resources at NJIT. Please, before making appointments with [Abhishek Mukherjee](#abhishek-mukherjee), send your query to [hpc@njit.edu](mailto:hpc@njit.edu), so that an incident number will be created which is required to schedule an appointment.
 
 Schedule an appointment directly on Abhishek's calendar from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc)
+
 
 ## Hui(Julia) Zhao
 ![Hui(Julia) Zhao](../assets/images/julia.jpg){ align=left, width="300" }
